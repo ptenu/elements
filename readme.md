@@ -7,8 +7,8 @@ A design system of basic re-usable web components.
 You can use the components by including the following in your HTML head:
 
 ```html
-<link rel="stylesheet" href="https://static.peterboroughtenants.app/build/ptu-elements.css">
-<script type="module" src="https://static.peterboroughtenants.app/build/ptu-elements.esm.js"></script>
-<script nomodule="" src="https://static.peterboroughtenants.app/build/ptu-elements.js"></script>
+<link rel="stylesheet" href="https://static.peterboroughtenants.app/elements/build/ptu-elements.css">
+    <script type="module" src="https://static.peterboroughtenants.app/elements/build/ptu-elements.esm.js"></script>
+    <script nomodule="" src="https://static.peterboroughtenants.app/elements/build/ptu-elements.js"></script>
 ```
 
