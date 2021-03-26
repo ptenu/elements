@@ -1,0 +1,177 @@
+ptu-button {
+  display: inline-block !important;
+  --btn-colour: var(--dark);
+
+  &[colour=primary] {
+    --btn-colour: var(--primary);
+  }
+  &[colour=dark] {
+    --btn-colour: var(--primary-dark);
+  }
+  &[colour=pale] {
+    --btn-colour: var(--primary-light);
+  }
+  &[colour=white] {
+    --btn-colour: rgba(255,255,255,0.98);
+  }
+  &[colour=black] {
+    --btn-colour: var(--black);
+  }
+  &[colour=red] {
+    --btn-colour: var(--red);
+  }
+  &[colour=sand] {
+    --btn-colour: var(--sand);
+  }
+  &[colour=yellow] {
+    --btn-colour: var(--yellow);
+  }
+  &[colour=green] {
+    --btn-colour: var(--green);
+  }
+  &[colour=blue] {
+    --btn-colour: var(--blue);
+  }
+
+  button {
+  
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: .44rem 1rem;
+    border-width: 2px;
+    color: var(--white);
+    border-color: rgba(0,0,0,.05);
+    border-radius: var(--global-radius);
+    transition-duration: .22s;
+    transition-property: background-color, border-color;
+    background-color: var(--btn-colour);
+    font-weight: 600;
+    font-size: 1.12rem;
+    margin: 0 1rem 0.45rem 0;
+
+    > i {
+      font-size: 133%;
+      line-height: 78%;
+    }
+
+    > *:not(:first-child) {
+      margin-left: .66em;
+    }
+
+    &:focus {
+      outline: none;
+      box-shadow: 0px 0px 0px 3px var(--yellow), 0px 0px 0px 2px inset rgba(0,0,0,.12);
+    }
+
+    &:active {
+      transform: translateY(2px);
+    }
+  }
+}
+
+ptu-button[outlined] {
+  display: inline-block;
+  --btn-colour: var(--dark);
+
+  &[colour=primary] {
+    --btn-colour: var(--primary);
+  }
+  &[colour=dark] {
+    --btn-colour: var(--primary-dark);
+  }
+  &[colour=pale] {
+    --btn-colour: var(--primary-light);
+  }
+  &[colour=white] {
+    --btn-colour: var(--white);
+  }
+  &[colour=black] {
+    --btn-colour: var(--black);
+  }
+  &[colour=red] {
+    --btn-colour: var(--red);
+  }
+  &[colour=sand] {
+    --btn-colour: var(--sand);
+  }
+  &[colour=yellow] {
+    --btn-colour: var(--yellow);
+  }
+  &[colour=green] {
+    --btn-colour: var(--green);
+  }
+  &[colour=blue] {
+    --btn-colour: var(--blue);
+  }
+
+  button {
+    border-width: 2px;
+    color: var(--btn-colour);
+    border-color: var(--btn-colour);
+    border-radius: var(--global-radius);
+    background-color: transparent;
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.033)
+    }
+  }
+}
+
+ptu-button[link] {
+  display: inline-block;
+  --btn-colour: var(--dark);
+
+  &[colour=primary] {
+    --btn-colour: var(--primary);
+  }
+  &[colour=dark] {
+    --btn-colour: var(--primary-dark);
+  }
+  &[colour=pale] {
+    --btn-colour: var(--primary-light);
+  }
+  &[colour=white] {
+    --btn-colour: var(--white);
+  }
+  &[colour=black] {
+    --btn-colour: var(--black);
+  }
+  &[colour=red] {
+    --btn-colour: var(--red);
+  }
+  &[colour=sand] {
+    --btn-colour: var(--sand);
+  }
+  &[colour=yellow] {
+    --btn-colour: var(--yellow);
+  }
+  &[colour=green] {
+    --btn-colour: var(--green);
+  }
+  &[colour=blue] {
+    --btn-colour: var(--blue);
+  }
+
+  button {
+    border-width: 2px 0 2px 0;
+    color: var(--btn-colour);
+    border-color: transparent;
+    border-radius: 0;
+    padding: .44rem .12rem;
+    background-color: transparent;
+
+    &:hover {
+      background-color: transparent;
+      border-bottom-color: var(--btn-colour);
+    }
+
+    &:focus {
+      outline: none;
+      background-color: var(--yellow);
+      box-shadow: none;
+      border-bottom-color: var(--black);
+      color: var(--black) !important;
+    }
+  }
+}

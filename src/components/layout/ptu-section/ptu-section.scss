@@ -1,0 +1,29 @@
+ptu-section section {
+  display: grid;
+  margin: 0 auto;
+  padding: 2rem 1.33rem;
+  max-width: var(--breakpoint-lg);
+  gap: 1rem 2rem;
+  grid-template-columns: 9fr 4fr;
+  grid-auto-flow: dense;
+
+  &[full-width] {
+    margin: 0;
+    max-width: 100%;
+  }
+
+  * {
+    display: block;
+    grid-column: 1 / -2;
+    max-width: var(--breakpoint-sm);
+  }
+
+  .right {
+    grid-column: -2 / -1;
+  }
+
+  .full-width {
+    grid-column: 1 / -1;
+    max-width: initial;
+  }
+}
