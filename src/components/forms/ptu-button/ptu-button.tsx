@@ -1,4 +1,4 @@
-import { Component, h, Method, Prop, State } from '@stencil/core';
+import { Component, h, Prop, State } from '@stencil/core';
 
 @Component({
   tag: 'ptu-button',
@@ -14,7 +14,7 @@ export class PtuButton {
 
   @State() isLoading: boolean = false;
 
-  handleClick = (e:Event) => {
+  handleClick = () => {
     if (this.loads) {
       this.isLoading = true;
     }
