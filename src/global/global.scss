@@ -25,11 +25,11 @@
 
 /* provide ability to overide text colour to maintain accessability */
 [text-colour=white] {
-    color: var(--primary) !important;
+    color: #fff !important;
     * { color: #fff !important }
 }
 [text-colour=black] {
-    color: var(--primary) !important;
+    color: var(--black) !important;
     * { color: var(--black) !important }
 }
 [text-colour=primary] {

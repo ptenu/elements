@@ -8,6 +8,7 @@ import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
     interface PtuButton {
         "icon": string;
+        "loads": boolean;
     }
     interface PtuSection {
         "fullWidth": boolean;
@@ -34,6 +35,7 @@ declare global {
 declare namespace LocalJSX {
     interface PtuButton {
         "icon"?: string;
+        "loads"?: boolean;
     }
     interface PtuSection {
         "fullWidth"?: boolean;

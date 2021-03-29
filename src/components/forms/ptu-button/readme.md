@@ -7,9 +7,10 @@
 
 ## Properties
 
-| Property | Attribute | Description | Type     | Default     |
-| -------- | --------- | ----------- | -------- | ----------- |
-| `icon`   | `icon`    |             | `string` | `undefined` |
+| Property | Attribute | Description | Type      | Default     |
+| -------- | --------- | ----------- | --------- | ----------- |
+| `icon`   | `icon`    |             | `string`  | `undefined` |
+| `loads`  | `loads`   |             | `boolean` | `false`     |
 
 
 ----------------------------------------------
