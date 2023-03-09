@@ -1,7 +1,7 @@
 :host {
   box-sizing: border-box;
   display: block;
-  background-color: var(--colour-grey-900);
+  background-color: var(--colour-accent-900);
   color: var(--colour-grey-50);
   max-width: 100%;
 }

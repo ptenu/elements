@@ -13,21 +13,6 @@ footer {
   margin: 2rem 0;
 }
 
-footer::before {
-  position: absolute;
-  box-sizing: border-box;
-  display: block;
-  content: " ";
-  background-color: var(--colour-brand-sand);
-  border: 2px solid var(--colour-background);
-  border-radius: var(--border-radius);
-  height: 12px;
-  left: -1.1rem;
-  right: -1.1rem;
-  top: calc(-2rem - 6px);
-  z-index: 100;
-}
-
 .full-width {
   grid-column: 1 / -1;
 }
