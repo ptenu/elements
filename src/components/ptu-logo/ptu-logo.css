@@ -1,0 +1,22 @@
+:host {
+  display: flex;
+  max-height: 1.66em;
+  width: 100px;
+  align-items: center;
+  justify-content: center;
+}
+
+svg {
+  height: 100%;
+  width: 100%;
+}
+
+a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+a:focus {
+  background-color: var(--colour-focus);
+}

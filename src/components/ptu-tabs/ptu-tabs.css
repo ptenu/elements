@@ -1,0 +1,18 @@
+:host {
+  display: block;
+  box-sizing: border-box;
+  background-color: var(--colour-brand-sand);
+}
+
+ptu-section {
+  padding-bottom: 0;
+  padding-top: .5rem;
+}
+
+ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  gap: calc(var(--layout-gap) / 2);
+}

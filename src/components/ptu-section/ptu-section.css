@@ -1,0 +1,22 @@
+:host {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: calc(var(--layout-gap) * 1.5);
+  box-sizing: border-box;
+  width: 1100px;
+  max-width: 100%;
+  padding: 0 var(--layout-gap);
+  margin: 0 auto;
+}
+
+.sidebar_none {
+  grid-column: 1 /-1;
+}
+
+.sidebar_left {
+  grid-column: -3 / -1;
+}
+
+.sidebar_right {
+  grid-column: 1 / 3;
+}

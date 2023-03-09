@@ -1,0 +1,13 @@
+:host {
+  display: inline-block;
+  box-sizing: border-box;
+  font-size: 66%;
+  text-align: center;
+  vertical-align: middle;
+  text-transform: uppercase;
+  border-radius: var(--border-radius);
+  padding: .2em .44em;
+  line-height: 1.2em;
+  color: rgb(10,10,10,.80);
+  user-select: all;
+}

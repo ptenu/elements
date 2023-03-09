@@ -1,0 +1,31 @@
+:host {
+  box-sizing: border-box;
+  display: block;
+  background-color: var(--colour-grey-900);
+  color: var(--colour-grey-50);
+  max-width: 100%;
+}
+
+.header-section {
+  padding: 0 var(--layout-gap);
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.right-aligned {
+  margin-left: auto;
+  position: relative;
+}
+
+.right-aligned:before {
+  position: absolute;
+  content: "";
+  top: .66em;
+  bottom: .66em;
+  left: -1ch;
+  border-left: 1px solid var(--colour-background);
+}

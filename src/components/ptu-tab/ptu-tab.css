@@ -1,0 +1,32 @@
+:host {
+  display: list-item;
+  box-sizing: border-box;
+}
+
+a {
+  display: block;
+  color: var(--colour-blue-700);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  background-color: transparent;
+  padding: .5em 1em .66em 1em;
+  border-top-left-radius: var(--border-radius);
+  border-top-right-radius: var(--border-radius);
+}
+
+a:hover {
+  background-color: rgba(2,2,2,.13);
+  color: var(--colour-blue-900);
+  text-decoration-thickness: 2px;
+}
+
+a.active {
+  background-color: var(--colour-background);
+}
+
+a:focus {
+  background-color: var(--colour-focus);
+  color: var(--colour-text);
+  outline: none;
+  text-decoration-thickness: 3px;
+}

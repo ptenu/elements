@@ -1,0 +1,13 @@
+:host {
+  display: block;
+  padding: calc(var(--layout-gap) * 2) 0 calc(var(--layout-gap) + 8px) 0;
+}
+
+
+article {
+  border: 3px solid var(--colour-brand-main);
+  padding: .5em 1em;
+  border-radius: var(--border-radius);
+  color: var(--colour-brand-main);
+  text-align: center;
+}

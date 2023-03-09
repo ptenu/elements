@@ -1,0 +1,52 @@
+:host {
+  display: block;
+  box-sizing: border-box;
+  background-color: var(--colour-brand-sand);
+  margin-top: auto;
+}
+
+footer {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--layout-gap);
+  margin: 2rem 0;
+}
+
+footer::before {
+  position: absolute;
+  box-sizing: border-box;
+  display: block;
+  content: " ";
+  background-color: var(--colour-brand-sand);
+  border: 2px solid var(--colour-background);
+  border-radius: var(--border-radius);
+  height: 12px;
+  left: -1.1rem;
+  right: -1.1rem;
+  top: calc(-2rem - 6px);
+  z-index: 100;
+}
+
+.full-width {
+  grid-column: 1 / -1;
+}
+
+.logo {
+  margin-bottom: 1em;
+}
+
+.logo svg {
+  height: 2em;
+  object-fit: contain;
+}
+
+.legal {
+  font-size: small;
+  font-weight: 500;
+}
+
+address {
+  font-style: normal;
+  font-weight: 300;
+}

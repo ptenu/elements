@@ -1,0 +1,10 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  margin: var(--layout-gap) 0;
+}
+
+label {
+  font-size: 1.12rem;
+  margin-bottom: 0.44rem;
+}
