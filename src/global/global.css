@@ -76,7 +76,7 @@
   --colour-shadow: var(--colour-grey-800);
 
   /* Other properties */
-  --border-radius: 3px;
+  --border-radius: 7px;
   --container-width: 1200px;
   --layout-gap: 1rem;
 }
@@ -193,9 +193,12 @@ table {
 
 button,
 input,
+input[type="search"],
 optgroup,
 select,
 textarea {
+  appearance: none;
+  box-sizing: border-box;
   font-family: inherit;
   font-size: 100%;
   font-weight: inherit;
@@ -214,7 +217,6 @@ button,
 [type='button'],
 [type='reset'],
 [type='submit'] {
-  -webkit-appearance: button;
   background-color: transparent;
   background-image: none;
 }
@@ -234,11 +236,6 @@ progress {
 ::-webkit-inner-spin-button,
 ::-webkit-outer-spin-button {
   height: auto;
-}
-
-[type='search'] {
-  -webkit-appearance: textfield;
-  outline-offset: -2px;
 }
 
 ::-webkit-search-decoration {
@@ -532,105 +529,41 @@ dt + dd {
   border-top: 1px solid var(--colour-grey-400);
 }
 
-input, textarea, select {
-  border-radius: var(--border-radius);
+input,
+input[type="search"],
+textarea,
+select {
   background-color: var(--colour-grey-50);
-  border: 1px solid var(--colour-border);
-  padding: .33em .66em;
-  margin: 6px 0;
-  box-shadow: 3px 3px 6px -6px inset var(--colour-shadow);
+  color: var(--colour-text);
+  font-weight: inherit;
+  font-size: inherit;
+  font-family: inherit;
+  outline: 3px solid transparent;
+  padding: .5ch 1ch;
+  border: 2px solid var(--colour-text);
+  border-radius: var(--border-radius);
 }
 
 input:hover, textarea:hover, select:hover {
-  box-shadow: 3px 3px 6px -6px inset var(--colour-shadow),
-  0 0 0 1px inset var(--colour-grey-300);
+  box-shadow: 0 0 0 2px inset var(--colour-grey-200);
 }
 
-input:focus, textarea:focus, select:focus {
-  border-radius: var(--border-radius);
-  background-color: var(--colour-grey-50);
-  border: 1px solid var(--colour-grey-800);
-  outline: 4px solid var(--colour-focus);
-  box-shadow: 3px 3px 6px -6px inset var(--colour-shadow),
-              0 0 0 2px inset var(--colour-grey-800);
+input:focus,
+input[type="search"]:focus,
+textarea:focus,
+select:focus {
+  outline: 3px solid var(--colour-focus);
+  box-shadow: 0 0 0 1px inset var(--colour-text);
 }
 
 input[disabled] {
   background-color: var(--colour-grey-200);
+  border-color: var(--colour-grey-600);
   cursor: not-allowed;
-  box-shadow: none;
 }
 
 input[readonly] {
   cursor: not-allowed;
-}
-
-button,
-[type='button'],
-[type='reset'],
-[type='submit'] {
-  border-radius: var(--border-radius);
-  background-color: var(--colour-grey-200);
-  border: 1px solid rgba(10,10,10,.23);
-  padding: .33em .66em;
-  margin: 6px;
-  box-shadow: 1px 3px 1px -2px inset rgba(255,255,255,.33),
-              -1px -3px 2px -2px inset rgba(0,0,0,.12),
-              2px 2px 5px rgba(0,0,0,.1);
-  cursor: pointer;
-  font-size: 90%;
-  font-weight: 400;
-}
-
-button:hover,
-[type='button']:hover,
-[type='reset']:hover,
-[type='submit']:hover {
-  box-shadow: 1px 3px 1px -2px inset rgba(255,255,255,.33),
-  -1px -3px 2px -2px inset rgba(0,0,0,.12),
-              2px 2px 5px rgba(0,0,0,.1);
-  background-color: var(--colour-grey-300);
-  border: 1px solid rgba(10,10,10,.23);
-}
-
-button:focus,
-[type='button']:focus,
-[type='reset']:focus,
-[type='submit']:focus {
-  box-shadow: 1px 3px 1px -2px inset rgba(255,255,255,.33),
-  -1px -3px 2px -2px inset rgba(0,0,0,.12),
-              2px 2px 5px rgba(0,0,0,.1);
-  background-color: var(--colour-grey-300);
-  border: 1px solid rgba(10,10,10,.33);
-  outline: 4px solid var(--colour-focus)
-}
-
-button:active,
-[type='button']:active,
-[type='reset']:active,
-[type='submit']:active {
-  box-shadow: 1px 3px 6px -6px inset var(--colour-shadow),
-              0 0 0 1px inset rgba(10,10,10,.12);
-}
-
-.danger-button {
-  color: var(--colour-red-700);
-}
-
-.primary-button {
-  background-color: var(--colour-link);
-  color: #fff;
-}
-
-.primary-button:hover,
-.primary-button:focus
-{
-  background-color: var(--colour-link-hover);
-}
-
-[disabled], [disabled]:hover, [disabled]:active {
-  cursor: not-allowed;
-  box-shadow: none;
 }
 
 .prose table, .prose pre {
@@ -1016,4 +949,120 @@ pre {
   margin: 1rem 0;
   border-radius: var(--border-radius);
   color: var(--colour-blue-900);
+}
+
+select {
+  position: relative;
+  min-width: 10ch;
+}
+
+select:not([multiple]):not([size]) {
+  padding-right: 3.5ch;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='24' height='24'%3E%3Cpath fill='none' d='M0 0h24v24H0z'/%3E%3Cpath d='M12 15l-4.243-4.243 1.415-1.414L12 12.172l2.828-2.829 1.415 1.414z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: calc(100% - .5ch) center;
+  background-size: 2.5ch;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  font-size: inherit;
+  width: 1.88em;
+  height: 1.88em;
+  padding: 0;
+  margin: 3px;
+  line-height: 0;
+  vertical-align: calc(1.88em / -2.66);
+  cursor: pointer;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 90%;
+}
+
+input[type="radio"] {
+  border-radius: 100%;
+}
+
+input[type="checkbox"]:checked,
+input[type="radio"]:checked {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='24' height='24'%3E%3Cpath fill='none' d='M0 0h24v24H0z'/%3E%3Cpath fill='none' stroke='RGB(24, 24, 27)' stroke-width='2' d='M10 15.172l9.192-9.193 1.415 1.414L10 18l-6.364-6.364 1.414-1.414z'/%3E%3C/svg%3E");
+  border-width: 2px;
+  border-color: var(--colour-text);
+}
+
+button,
+.button,
+[type='button'],
+[type='reset'],
+[type='submit'] {
+  appearance: none;
+  border-radius: var(--border-radius);
+  background-color: var(--colour-grey-200);
+  border: 1px solid rgba(10,10,10,.23);
+  padding: .33em .66em .44em .66em;
+  cursor: pointer;
+  font-size: 90%;
+  font-weight: 400;
+  margin: 3px;
+  text-shadow: 0 0 6px rgba(200,200,200, .66);
+  box-shadow: 0 -2px 0 inset rgba(10,10,10,.23);
+}
+
+.danger-button {
+  background-color: var(--colour-red-700);
+  text-shadow: 0 0 6px rgba(200,200,200, .48);
+  color: #fff;
+}
+
+.primary-button {
+  background-color: var(--colour-link);
+  text-shadow: 0 0 6px rgba(200,200,200, .48);
+  color: #fff;
+}
+
+.success-button {
+  background-color: var(--colour-green-600);
+  text-shadow: 0 0 6px rgba(200,200,200, .48);
+  color: #fff;
+}
+
+.warning-button {
+  background-color: var(--colour-yellow-600);
+  text-shadow: 0 0 6px rgba(200,200,200, .48);
+  color: #fff;
+}
+
+button:hover:not([disabled]),
+.button:hover:not([disabled]),
+[type='button']:hover:not([disabled]),
+[type='reset']:hover:not([disabled]),
+[type='submit']:hover:not([disabled]) {
+  box-shadow: 0 -2px 0 inset rgba(10,10,10,.23),
+              0 0 30px inset rgba(10,10,10,.16);
+;
+}
+
+button:focus:not([disabled]),
+.button:focus:not([disabled]),
+[type='button']:focus:not([disabled]),
+[type='reset']:focus:not([disabled]),
+[type='submit']:focus:not([disabled]) {
+  outline: 3px solid var(--colour-focus);
+  border: 1px solid var(--colour-text);
+  box-shadow: 0 -2px 0 inset rgba(10,10,10,.33);
+}
+
+button:active:not([disabled]),
+.button:active:not([disabled]),
+[type='button']:active:not([disabled]),
+[type='reset']:active:not([disabled]),
+[type='submit']:active:not([disabled]) {
+  box-shadow: 0 -1px 0 inset rgba(10,10,10,.55);
+}
+
+button[disabled], input[disabled] {
+  background-color: var(--colour-grey-200);
+  border-color: var(--colour-grey-300);
+  cursor: not-allowed;
+  box-shadow: none;
 }

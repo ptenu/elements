@@ -12,8 +12,7 @@ export class PtuChip {
   render() {
     return (
       <Host style={{
-        backgroundColor: `var(--colour-${this.colour}-200)`,
-        border: "1px solid rgba(10,10,10,0.12)"
+        backgroundColor: `var(--colour-${this.colour}-200)`
       }}>
         <slot></slot>
       </Host>

@@ -6,8 +6,10 @@
   vertical-align: middle;
   text-transform: uppercase;
   border-radius: var(--border-radius);
-  padding: .2em .44em;
-  line-height: 1.2em;
+  padding: .33em .44em;
+  line-height: 1em;
   color: rgb(10,10,10,.80);
   user-select: all;
+  font-weight: 450;
+  border: 1px solid rgba(10,10,10,0.18) !important;
 }
