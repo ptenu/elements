@@ -9,12 +9,13 @@ export class PtuCheckbox {
 
   @Prop() name: string;
   @Prop() value: string;
+  @Prop() isChecked: boolean;
 
   render() {
     return (
       <Host>
         <label>
-          <input type="checkbox" name={this.name} value={this.value}/>
+          <input type="checkbox" name={this.name} value={this.value} checked={this.isChecked}/>
           <slot></slot>
         </label>
       </Host>

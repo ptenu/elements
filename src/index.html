@@ -74,10 +74,21 @@
   </hgroup>
   <article class="prose">
     <h4 id="form-controls"><a href="#form-controls">#</a> Form Controls</h4>
-    <ptu-fieldset label="Question 1" inline>
-      <ptu-checkbox name="q1" value="1">Renting</ptu-checkbox>
+    <ptu-fieldset label="Question 1">
+      <ptu-checkbox is-checked name="q1" value="1">Renting</ptu-checkbox>
       <ptu-checkbox name="q1" value="2">Own my own home</ptu-checkbox>
       <ptu-checkbox name="q1" value="2">Living with friends or family</ptu-checkbox>
+    </ptu-fieldset>
+
+    <ptu-fieldset label="Full name" inline>
+      <ptu-text-input label="Given name" name="given_name" width="25"></ptu-text-input>
+      <ptu-text-input label="Family name" name="family_name" width="25"></ptu-text-input>
+    </ptu-fieldset>
+
+    <ptu-fieldset label="Date of birth" inline description="An example date field">
+      <ptu-text-input label="Day" name="dob_day" width="2"></ptu-text-input>
+      <ptu-text-input label="Month" name="dob_month" width="2"></ptu-text-input>
+      <ptu-text-input label="Year" name="dob_year" width="4"></ptu-text-input>
     </ptu-fieldset>
 
     <h4 id="forms"><a href="#forms">#</a> Forms</h4>
@@ -275,55 +286,6 @@
 
   </article>
 
-  <section class="legal-prose">
-    <header>
-      <hgroup>
-        <div class="code">
-          <label>policy</label>
-          C
-        </div>
-        <h1>Confidentiality Policy</h1>
-      </hgroup>
-
-      <p>The confidentiality policy governs the protection of information
-        gathered during home visits and casework which should be treated as
-        confidential.
-      </p>
-      <p>This policy also sets out the circumstances under which such information
-        may be released and situations where it is required to break
-        confidentiality.
-      </p>
-    </header>
-
-    <h3>General</h3>
-    <h4>Principle</h4>
-    <p>The purpose of confidentiality is to prevent disclosure to third parties
-      (i.e., people who are not members of the Union) information about members
-      which could be harmful if it was released.
-    </p>
-    <p>Confidential information includes:—</p>
-    <ol>
-      <li>personal data as defined by the Data Protection Act(s);</li>
-      <li>
-        details of any support the Union is providing to a particular member, as
-        well as details of their living situation, finances, court proceedings;
-        and
-      </li>
-      <li>anything else which has an impact on one or more persons’ privacy.</li>
-    </ol>
-    <p>It SHOULD be presumed that any misuse or unauthorised disclosure of personal
-      or confidential information will be harmful to the person it refers to (the
-      “subject”).
-    </p>
-
-    <h4>Duty of confidentiality</h4>
-    <p>Union members who have proper access to, or otherwise come to know,
-      confidential information MUST NOT disclose it to any other person, unless an
-      exception in this document applies.
-    </p>
-
-
-  </section>
 
   <dl slot="sidebar">
     <dt>Attribute</dt>

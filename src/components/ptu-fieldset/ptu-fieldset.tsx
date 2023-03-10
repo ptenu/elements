@@ -8,15 +8,21 @@ import {Component, Host, h, Prop} from '@stencil/core';
 export class PtuFieldset {
 
   @Prop() label: string;
-  @Prop() inline: boolean;
+  @Prop() inline: boolean = false;
+  @Prop() errorText: string | null = null;
+  @Prop() description: string | null = null;
 
   render() {
     return (
       <Host>
         <fieldset>
           <legend>{this.label}</legend>
-          <p>This is description or help text that helps the user complete the question.</p>
-          <p class="error">This is some reason why you dun goofed and need to try again.</p>
+          {this.description && (
+            <p>{this.description}</p>
+          )}
+          {this.errorText && (
+            <p class="error">{this.errorText}</p>
+          )}
           <ul class={this.inline ? "flex-list" : ""}>
             <slot></slot>
           </ul>

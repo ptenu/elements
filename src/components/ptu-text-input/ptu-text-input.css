@@ -1,0 +1,17 @@
+ptu-text-input {
+  position: relative;
+  display: list-item;
+  width: auto;
+}
+
+ptu-text-input input {
+  position: relative;
+  width: 100%;
+}
+
+ptu-text-input label {
+  display: block;
+  font-weight: 300;
+  font-style: italic;
+  font-size: 80%;
+}

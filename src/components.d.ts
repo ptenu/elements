@@ -9,6 +9,7 @@ export namespace Components {
     interface PtuCallout {
     }
     interface PtuCheckbox {
+        "isChecked": boolean;
         "name": string;
         "value": string;
     }
@@ -22,6 +23,8 @@ export namespace Components {
         "name": string;
     }
     interface PtuFieldset {
+        "description": string | null;
+        "errorText": string | null;
         "inline": boolean;
         "label": string;
     }
@@ -47,6 +50,14 @@ export namespace Components {
         "selected": boolean;
     }
     interface PtuTabs {
+    }
+    interface PtuTextInput {
+        "autocomplete": string;
+        "initialValue": string | null;
+        "label": string;
+        "name": string;
+        "type": string;
+        "width": number;
     }
     interface PtuVisibilityToggle {
         "elementId": string;
@@ -137,6 +148,12 @@ declare global {
         prototype: HTMLPtuTabsElement;
         new (): HTMLPtuTabsElement;
     };
+    interface HTMLPtuTextInputElement extends Components.PtuTextInput, HTMLStencilElement {
+    }
+    var HTMLPtuTextInputElement: {
+        prototype: HTMLPtuTextInputElement;
+        new (): HTMLPtuTextInputElement;
+    };
     interface HTMLPtuVisibilityToggleElement extends Components.PtuVisibilityToggle, HTMLStencilElement {
     }
     var HTMLPtuVisibilityToggleElement: {
@@ -158,6 +175,7 @@ declare global {
         "ptu-section": HTMLPtuSectionElement;
         "ptu-tab": HTMLPtuTabElement;
         "ptu-tabs": HTMLPtuTabsElement;
+        "ptu-text-input": HTMLPtuTextInputElement;
         "ptu-visibility-toggle": HTMLPtuVisibilityToggleElement;
     }
 }
@@ -165,6 +183,7 @@ declare namespace LocalJSX {
     interface PtuCallout {
     }
     interface PtuCheckbox {
+        "isChecked"?: boolean;
         "name"?: string;
         "value"?: string;
     }
@@ -178,6 +197,8 @@ declare namespace LocalJSX {
         "name"?: string;
     }
     interface PtuFieldset {
+        "description"?: string | null;
+        "errorText"?: string | null;
         "inline"?: boolean;
         "label"?: string;
     }
@@ -204,6 +225,14 @@ declare namespace LocalJSX {
     }
     interface PtuTabs {
     }
+    interface PtuTextInput {
+        "autocomplete"?: string;
+        "initialValue"?: string | null;
+        "label"?: string;
+        "name"?: string;
+        "type"?: string;
+        "width"?: number;
+    }
     interface PtuVisibilityToggle {
         "elementId"?: string;
     }
@@ -222,6 +251,7 @@ declare namespace LocalJSX {
         "ptu-section": PtuSection;
         "ptu-tab": PtuTab;
         "ptu-tabs": PtuTabs;
+        "ptu-text-input": PtuTextInput;
         "ptu-visibility-toggle": PtuVisibilityToggle;
     }
 }
@@ -243,6 +273,7 @@ declare module "@stencil/core" {
             "ptu-section": LocalJSX.PtuSection & JSXBase.HTMLAttributes<HTMLPtuSectionElement>;
             "ptu-tab": LocalJSX.PtuTab & JSXBase.HTMLAttributes<HTMLPtuTabElement>;
             "ptu-tabs": LocalJSX.PtuTabs & JSXBase.HTMLAttributes<HTMLPtuTabsElement>;
+            "ptu-text-input": LocalJSX.PtuTextInput & JSXBase.HTMLAttributes<HTMLPtuTextInputElement>;
             "ptu-visibility-toggle": LocalJSX.PtuVisibilityToggle & JSXBase.HTMLAttributes<HTMLPtuVisibilityToggleElement>;
         }
     }

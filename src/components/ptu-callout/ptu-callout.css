@@ -8,7 +8,6 @@ article {
   padding: .5em 1em;
   border-radius: var(--border-radius);
   background-color: var(--colour-accent-50);
-  border: 2px solid var(--colour-accent-700);
   color: var(--colour-accent-700);
   font-weight: 600;
   text-align: center;
