@@ -1023,7 +1023,7 @@ button,
   font-weight: 400;
   margin: 3px;
   text-shadow: 0 0 6px rgba(200,200,200, .66);
-  box-shadow: 0 -2px 0 inset rgba(10,10,10,.23);
+  box-shadow: 0 -2px 0 inset rgba(10,10,10,.16);
 }
 
 .danger-button {
@@ -1055,7 +1055,7 @@ button:hover:not([disabled]),
 [type='button']:hover:not([disabled]),
 [type='reset']:hover:not([disabled]),
 [type='submit']:hover:not([disabled]) {
-  box-shadow: 0 -2px 0 inset rgba(10,10,10,.23),
+  box-shadow: 0 -2px 0 inset rgba(10,10,10,.10),
               0 0 30px inset rgba(10,10,10,.16);
 ;
 }

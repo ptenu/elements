@@ -1,0 +1,62 @@
+ptu-option {
+  display: list-item;
+}
+
+ptu-option label {
+  position: relative;
+  display: flex;
+  gap: .66em;
+  border-radius: var(--border-radius);
+  background-color: var(--colour-grey-50);
+  border: 1px solid rgba(10,10,10,.23);
+  padding: .70em 1em .78em .90em;
+  cursor: pointer;
+  font-size: 90%;
+  font-weight: 400;
+  text-shadow: 0 0 6px rgba(200,200,200, .66);
+  box-shadow: 0 -2px 0 inset rgba(10,10,10,.17);
+}
+
+ptu-option label:focus-within {
+  outline: 3px solid var(--colour-focus);
+  border: 1px solid var(--colour-text);
+  box-shadow: 0 -2px 0 inset rgba(10,10,10,.33);
+}
+
+ptu-option label.selected {
+  background-color: var(--colour-accent-50);
+  border: 1px solid var(--colour-text);
+}
+
+ptu-option input[type="radio"],
+ptu-option input[type="checkbox"]{
+  height: 1em;
+  width: 1em;
+  background-color: var(--colour-grey-50);
+  border: 1px solid var(--colour-grey-400);
+  cursor: pointer;
+  margin: .33em 0;
+}
+
+ptu-option input[type="radio"] {
+  border-radius: 100%;
+}
+
+ptu-option input[type="radio"]:checked,
+ptu-option input[type="checkbox"]:checked {
+  border-width: 2px;
+  border-color: var(--colour-blue-800);
+  background-color: var(--colour-blue-800);
+  box-shadow: 0 0 0 2px inset var(--colour-grey-50);
+}
+
+ptu-option input[type="radio"]:focus,
+ptu-option input[type="checkbox"]:focus {
+  outline: none;
+}
+
+ptu-option header,
+ptu-option .label-header {
+  font-weight: 600;
+  font-size: 110%;
+}

@@ -18,7 +18,7 @@ export class PtuFieldset {
     return (
       <Host>
         <fieldset>
-          <legend class="required">
+          <legend class={this.required && "required"}>
             {this.label}
             {this.optional && (
               <span class="tag">(Optional)</span>

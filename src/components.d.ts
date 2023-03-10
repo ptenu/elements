@@ -44,6 +44,12 @@ export namespace Components {
     }
     interface PtuNavbar {
     }
+    interface PtuOption {
+        "checked": boolean;
+        "name": string;
+        "radio": boolean;
+        "value": string;
+    }
     interface PtuSection {
         "sidebar": "none" | "left" | "right";
     }
@@ -132,6 +138,12 @@ declare global {
         prototype: HTMLPtuNavbarElement;
         new (): HTMLPtuNavbarElement;
     };
+    interface HTMLPtuOptionElement extends Components.PtuOption, HTMLStencilElement {
+    }
+    var HTMLPtuOptionElement: {
+        prototype: HTMLPtuOptionElement;
+        new (): HTMLPtuOptionElement;
+    };
     interface HTMLPtuSectionElement extends Components.PtuSection, HTMLStencilElement {
     }
     var HTMLPtuSectionElement: {
@@ -174,6 +186,7 @@ declare global {
         "ptu-logo": HTMLPtuLogoElement;
         "ptu-nav-menu": HTMLPtuNavMenuElement;
         "ptu-navbar": HTMLPtuNavbarElement;
+        "ptu-option": HTMLPtuOptionElement;
         "ptu-section": HTMLPtuSectionElement;
         "ptu-tab": HTMLPtuTabElement;
         "ptu-tabs": HTMLPtuTabsElement;
@@ -220,6 +233,12 @@ declare namespace LocalJSX {
     }
     interface PtuNavbar {
     }
+    interface PtuOption {
+        "checked"?: boolean;
+        "name"?: string;
+        "radio"?: boolean;
+        "value"?: string;
+    }
     interface PtuSection {
         "sidebar"?: "none" | "left" | "right";
     }
@@ -252,6 +271,7 @@ declare namespace LocalJSX {
         "ptu-logo": PtuLogo;
         "ptu-nav-menu": PtuNavMenu;
         "ptu-navbar": PtuNavbar;
+        "ptu-option": PtuOption;
         "ptu-section": PtuSection;
         "ptu-tab": PtuTab;
         "ptu-tabs": PtuTabs;
@@ -274,6 +294,7 @@ declare module "@stencil/core" {
             "ptu-logo": LocalJSX.PtuLogo & JSXBase.HTMLAttributes<HTMLPtuLogoElement>;
             "ptu-nav-menu": LocalJSX.PtuNavMenu & JSXBase.HTMLAttributes<HTMLPtuNavMenuElement>;
             "ptu-navbar": LocalJSX.PtuNavbar & JSXBase.HTMLAttributes<HTMLPtuNavbarElement>;
+            "ptu-option": LocalJSX.PtuOption & JSXBase.HTMLAttributes<HTMLPtuOptionElement>;
             "ptu-section": LocalJSX.PtuSection & JSXBase.HTMLAttributes<HTMLPtuSectionElement>;
             "ptu-tab": LocalJSX.PtuTab & JSXBase.HTMLAttributes<HTMLPtuTabElement>;
             "ptu-tabs": LocalJSX.PtuTabs & JSXBase.HTMLAttributes<HTMLPtuTabsElement>;

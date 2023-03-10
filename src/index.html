@@ -85,10 +85,30 @@
       <ptu-text-input label="Family name" name="family_name" width="25"></ptu-text-input>
     </ptu-fieldset>
 
-    <ptu-fieldset label="Date of birth" inline description="An example date field">
+    <ptu-fieldset optional label="Date of birth" inline description="An example date field">
       <ptu-text-input label="Day" name="dob_day" width="2"></ptu-text-input>
       <ptu-text-input label="Month" name="dob_month" width="2"></ptu-text-input>
       <ptu-text-input label="Year" name="dob_year" width="4"></ptu-text-input>
+    </ptu-fieldset>
+
+    <ptu-fieldset required label="Postcode" inline description="A postcode field">
+      <ptu-text-input label="e.g. PE2" name="incode" width="4"></ptu-text-input>
+      <ptu-text-input label="e.g. 1AA" name="outcode" width="3"></ptu-text-input>
+    </ptu-fieldset>
+
+    <ptu-fieldset label="Options" inline description="An example of option boxes">
+      <ptu-option radio name="tenure" value="1">
+        <header class="label-header">Renting</header>
+        I am a member of a pan-european party
+      </ptu-option>
+      <ptu-option radio name="tenure" value="2">
+        <header class="label-header">Own my own home</header>
+        I am a member of a pan-european party
+      </ptu-option>
+      <ptu-option radio name="tenure" value="3">
+        <header class="label-header">Living with friends / family</header>
+        I am a member of a pan-european party
+      </ptu-option>
     </ptu-fieldset>
 
     <h4 id="forms"><a href="#forms">#</a> Forms</h4>
