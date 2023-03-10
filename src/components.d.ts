@@ -8,6 +8,10 @@ import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
     interface PtuCallout {
     }
+    interface PtuCheckbox {
+        "name": string;
+        "value": string;
+    }
     interface PtuChip {
         "colour": "grey" | "blue" | "green" | "red" | "yellow" | "outline";
     }
@@ -16,6 +20,10 @@ export namespace Components {
         "errorText": string | false;
         "label": string;
         "name": string;
+    }
+    interface PtuFieldset {
+        "inline": boolean;
+        "label": string;
     }
     interface PtuFooter {
     }
@@ -51,6 +59,12 @@ declare global {
         prototype: HTMLPtuCalloutElement;
         new (): HTMLPtuCalloutElement;
     };
+    interface HTMLPtuCheckboxElement extends Components.PtuCheckbox, HTMLStencilElement {
+    }
+    var HTMLPtuCheckboxElement: {
+        prototype: HTMLPtuCheckboxElement;
+        new (): HTMLPtuCheckboxElement;
+    };
     interface HTMLPtuChipElement extends Components.PtuChip, HTMLStencilElement {
     }
     var HTMLPtuChipElement: {
@@ -62,6 +76,12 @@ declare global {
     var HTMLPtuFieldElement: {
         prototype: HTMLPtuFieldElement;
         new (): HTMLPtuFieldElement;
+    };
+    interface HTMLPtuFieldsetElement extends Components.PtuFieldset, HTMLStencilElement {
+    }
+    var HTMLPtuFieldsetElement: {
+        prototype: HTMLPtuFieldsetElement;
+        new (): HTMLPtuFieldsetElement;
     };
     interface HTMLPtuFooterElement extends Components.PtuFooter, HTMLStencilElement {
     }
@@ -125,8 +145,10 @@ declare global {
     };
     interface HTMLElementTagNameMap {
         "ptu-callout": HTMLPtuCalloutElement;
+        "ptu-checkbox": HTMLPtuCheckboxElement;
         "ptu-chip": HTMLPtuChipElement;
         "ptu-field": HTMLPtuFieldElement;
+        "ptu-fieldset": HTMLPtuFieldsetElement;
         "ptu-footer": HTMLPtuFooterElement;
         "ptu-grid": HTMLPtuGridElement;
         "ptu-hero": HTMLPtuHeroElement;
@@ -142,6 +164,10 @@ declare global {
 declare namespace LocalJSX {
     interface PtuCallout {
     }
+    interface PtuCheckbox {
+        "name"?: string;
+        "value"?: string;
+    }
     interface PtuChip {
         "colour"?: "grey" | "blue" | "green" | "red" | "yellow" | "outline";
     }
@@ -150,6 +176,10 @@ declare namespace LocalJSX {
         "errorText"?: string | false;
         "label"?: string;
         "name"?: string;
+    }
+    interface PtuFieldset {
+        "inline"?: boolean;
+        "label"?: string;
     }
     interface PtuFooter {
     }
@@ -179,8 +209,10 @@ declare namespace LocalJSX {
     }
     interface IntrinsicElements {
         "ptu-callout": PtuCallout;
+        "ptu-checkbox": PtuCheckbox;
         "ptu-chip": PtuChip;
         "ptu-field": PtuField;
+        "ptu-fieldset": PtuFieldset;
         "ptu-footer": PtuFooter;
         "ptu-grid": PtuGrid;
         "ptu-hero": PtuHero;
@@ -198,8 +230,10 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "ptu-callout": LocalJSX.PtuCallout & JSXBase.HTMLAttributes<HTMLPtuCalloutElement>;
+            "ptu-checkbox": LocalJSX.PtuCheckbox & JSXBase.HTMLAttributes<HTMLPtuCheckboxElement>;
             "ptu-chip": LocalJSX.PtuChip & JSXBase.HTMLAttributes<HTMLPtuChipElement>;
             "ptu-field": LocalJSX.PtuField & JSXBase.HTMLAttributes<HTMLPtuFieldElement>;
+            "ptu-fieldset": LocalJSX.PtuFieldset & JSXBase.HTMLAttributes<HTMLPtuFieldsetElement>;
             "ptu-footer": LocalJSX.PtuFooter & JSXBase.HTMLAttributes<HTMLPtuFooterElement>;
             "ptu-grid": LocalJSX.PtuGrid & JSXBase.HTMLAttributes<HTMLPtuGridElement>;
             "ptu-hero": LocalJSX.PtuHero & JSXBase.HTMLAttributes<HTMLPtuHeroElement>;

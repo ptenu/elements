@@ -1,0 +1,50 @@
+:host {
+  display: block;
+  box-sizing: border-box;
+}
+
+fieldset {
+  appearance: none;
+  position: relative;
+  padding: .66em 0;
+  margin: var(--layout-gap) 0;
+  border: none;
+}
+
+legend {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  font-weight: 600;
+  font-size: 120%;
+}
+
+p {
+  margin: 0;
+  font-weight: 300;
+}
+
+.error {
+  padding: .44em 1em;
+  border-left: 5px solid var(--colour-red-500);
+  background-color: var(--colour-red-100);
+  color: var(--colour-red-900);
+  border-radius: var(--border-radius);
+  font-weight: 400;
+}
+
+p + p {
+  margin-top: .66em;
+}
+
+ul {
+  list-style: none;
+  margin: 1em 0;
+  padding: 0;
+}
+
+ul.flex-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2ch;
+}

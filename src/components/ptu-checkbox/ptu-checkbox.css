@@ -1,0 +1,10 @@
+ptu-checkbox {
+  display: list-item;
+}
+
+ptu-checkbox label {
+  display: flex;
+  gap: 1ch;
+  align-items: center;
+  justify-content: flex-start;
+}

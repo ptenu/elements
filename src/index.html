@@ -74,9 +74,11 @@
   </hgroup>
   <article class="prose">
     <h4 id="form-controls"><a href="#form-controls">#</a> Form Controls</h4>
-    <ptu-field label="Question 1" control-id="123">
-      <input type="text" id="123" />
-    </ptu-field>
+    <ptu-fieldset label="Question 1" inline>
+      <ptu-checkbox name="q1" value="1">Renting</ptu-checkbox>
+      <ptu-checkbox name="q1" value="2">Own my own home</ptu-checkbox>
+      <ptu-checkbox name="q1" value="2">Living with friends or family</ptu-checkbox>
+    </ptu-fieldset>
 
     <h4 id="forms"><a href="#forms">#</a> Forms</h4>
     <form>
