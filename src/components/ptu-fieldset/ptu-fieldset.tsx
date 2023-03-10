@@ -11,12 +11,19 @@ export class PtuFieldset {
   @Prop() inline: boolean = false;
   @Prop() errorText: string | null = null;
   @Prop() description: string | null = null;
+  @Prop() optional: boolean = false;
+  @Prop() required: boolean = false;
 
   render() {
     return (
       <Host>
         <fieldset>
-          <legend>{this.label}</legend>
+          <legend class="required">
+            {this.label}
+            {this.optional && (
+              <span class="tag">(Optional)</span>
+            )}
+          </legend>
           {this.description && (
             <p>{this.description}</p>
           )}

@@ -17,14 +17,14 @@ fieldset {
 legend {
   position: relative;
   padding: 0;
-  margin: 0;
+  margin: 0 0 -.33em 0;
   font-weight: 600;
   font-size: 130%;
 }
 
 p {
-  margin: 0;
   font-weight: 300;
+  margin: calc(var(--layout-gap) / 2) 0 var(--layout-gap) 0;
 }
 
 .error {
@@ -42,7 +42,7 @@ p + p {
 
 ul {
   list-style: none;
-  margin: 1em 0;
+  margin: var(--layout-gap) 0;
   padding: 0;
   display: flex;
   flex-wrap: wrap;
@@ -55,4 +55,21 @@ ul {
 
 ul.flex-list {
   flex-direction: row;
+}
+
+.tag {
+  font-size: 60%;
+  color: var(--colour-grey-500);
+  margin: 0.44em;
+  vertical-align: top;
+}
+
+.required::before {
+  position: absolute;
+  display: block;
+  content: "*";
+  color: var(--colour-red-500);
+  margin: 0.44em .1em 0 0;
+  left: -.66em;
+  top: -.44em;
 }

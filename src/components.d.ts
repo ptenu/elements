@@ -27,6 +27,8 @@ export namespace Components {
         "errorText": string | null;
         "inline": boolean;
         "label": string;
+        "optional": boolean;
+        "required": boolean;
     }
     interface PtuFooter {
     }
@@ -201,6 +203,8 @@ declare namespace LocalJSX {
         "errorText"?: string | null;
         "inline"?: boolean;
         "label"?: string;
+        "optional"?: boolean;
+        "required"?: boolean;
     }
     interface PtuFooter {
     }
