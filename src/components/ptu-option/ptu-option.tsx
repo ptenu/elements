@@ -14,22 +14,18 @@ export class PtuOption {
   @Prop() radio: boolean = false;
   @Prop() checked: boolean = false;
 
-  setChecked(target) {
-    this.isSelected = target.checked;
-    console.log(this.isSelected, target)
-  }
 
   render() {
     return (
       <Host>
-        <label htmlFor={this.name + '__' + this.value} class={this.isSelected && "selected"}>
-          <input id={this.name + '__' + this.value}
-                 type={this.radio ? "radio" : "checkbox"}
-                 name={this.name}
-                 checked={this.checked}
-                 value={this.value}
-                 onChange={(e) => this.setChecked(e.target)}
-          />
+        <input id={this.name + '__' + this.value}
+               type={this.radio ? "radio" : "checkbox"}
+               name={this.name}
+               checked={this.checked}
+               value={this.value}
+        />
+        <label htmlFor={this.name + '__' + this.value}>
+
             <div>
               <slot></slot>
             </div>

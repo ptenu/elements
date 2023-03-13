@@ -85,6 +85,12 @@
       <ptu-text-input label="Family name" name="family_name" width="25"></ptu-text-input>
     </ptu-fieldset>
 
+    <ptu-fieldset label="Security words" inline>
+      <ptu-text-input label="1" name="word_1" width="10"></ptu-text-input>
+      <ptu-text-input label="2" name="word_2" width="10"></ptu-text-input>
+      <ptu-text-input label="3" name="word_3" width="10"></ptu-text-input>
+    </ptu-fieldset>
+
     <ptu-fieldset optional label="Date of birth" inline description="An example date field">
       <ptu-text-input label="Day" name="dob_day" width="2"></ptu-text-input>
       <ptu-text-input label="Month" name="dob_month" width="2"></ptu-text-input>
@@ -98,16 +104,13 @@
 
     <ptu-fieldset label="Options" inline description="An example of option boxes">
       <ptu-option radio name="tenure" value="1">
-        <header class="label-header">Renting</header>
-        I am a member of a pan-european party
+        Renting
       </ptu-option>
       <ptu-option radio name="tenure" value="2">
-        <header class="label-header">Own my own home</header>
-        I am a member of a pan-european party
+        Own your own home
       </ptu-option>
       <ptu-option radio name="tenure" value="3">
-        <header class="label-header">Living with friends / family</header>
-        I am a member of a pan-european party
+        Living with friends or family
       </ptu-option>
     </ptu-fieldset>
 
