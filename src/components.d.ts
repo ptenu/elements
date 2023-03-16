@@ -11,6 +11,7 @@ export namespace Components {
     interface PtuCheckbox {
         "isChecked": boolean;
         "name": string;
+        "radio": boolean;
         "value": string;
     }
     interface PtuChip {
@@ -200,6 +201,7 @@ declare namespace LocalJSX {
     interface PtuCheckbox {
         "isChecked"?: boolean;
         "name"?: string;
+        "radio"?: boolean;
         "value"?: string;
     }
     interface PtuChip {
