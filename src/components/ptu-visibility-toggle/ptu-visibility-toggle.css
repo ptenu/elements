@@ -15,6 +15,7 @@ button {
   font-size: inherit;
   padding: calc(var(--layout-gap) / 2) 1ch calc(var(--layout-gap) / 2) .5ch;
   border-bottom: 1px solid transparent;
+  align-items: center;
 }
 
 button:hover {

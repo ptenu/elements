@@ -40,6 +40,8 @@ export namespace Components {
     interface PtuLogo {
         "variant": "colour" | "white";
     }
+    interface PtuMembershipCard {
+    }
     interface PtuNavMenu {
         "visible": boolean;
     }
@@ -127,6 +129,12 @@ declare global {
         prototype: HTMLPtuLogoElement;
         new (): HTMLPtuLogoElement;
     };
+    interface HTMLPtuMembershipCardElement extends Components.PtuMembershipCard, HTMLStencilElement {
+    }
+    var HTMLPtuMembershipCardElement: {
+        prototype: HTMLPtuMembershipCardElement;
+        new (): HTMLPtuMembershipCardElement;
+    };
     interface HTMLPtuNavMenuElement extends Components.PtuNavMenu, HTMLStencilElement {
     }
     var HTMLPtuNavMenuElement: {
@@ -185,6 +193,7 @@ declare global {
         "ptu-grid": HTMLPtuGridElement;
         "ptu-hero": HTMLPtuHeroElement;
         "ptu-logo": HTMLPtuLogoElement;
+        "ptu-membership-card": HTMLPtuMembershipCardElement;
         "ptu-nav-menu": HTMLPtuNavMenuElement;
         "ptu-navbar": HTMLPtuNavbarElement;
         "ptu-option": HTMLPtuOptionElement;
@@ -230,6 +239,8 @@ declare namespace LocalJSX {
     interface PtuLogo {
         "variant"?: "colour" | "white";
     }
+    interface PtuMembershipCard {
+    }
     interface PtuNavMenu {
         "visible"?: boolean;
     }
@@ -271,6 +282,7 @@ declare namespace LocalJSX {
         "ptu-grid": PtuGrid;
         "ptu-hero": PtuHero;
         "ptu-logo": PtuLogo;
+        "ptu-membership-card": PtuMembershipCard;
         "ptu-nav-menu": PtuNavMenu;
         "ptu-navbar": PtuNavbar;
         "ptu-option": PtuOption;
@@ -294,6 +306,7 @@ declare module "@stencil/core" {
             "ptu-grid": LocalJSX.PtuGrid & JSXBase.HTMLAttributes<HTMLPtuGridElement>;
             "ptu-hero": LocalJSX.PtuHero & JSXBase.HTMLAttributes<HTMLPtuHeroElement>;
             "ptu-logo": LocalJSX.PtuLogo & JSXBase.HTMLAttributes<HTMLPtuLogoElement>;
+            "ptu-membership-card": LocalJSX.PtuMembershipCard & JSXBase.HTMLAttributes<HTMLPtuMembershipCardElement>;
             "ptu-nav-menu": LocalJSX.PtuNavMenu & JSXBase.HTMLAttributes<HTMLPtuNavMenuElement>;
             "ptu-navbar": LocalJSX.PtuNavbar & JSXBase.HTMLAttributes<HTMLPtuNavbarElement>;
             "ptu-option": LocalJSX.PtuOption & JSXBase.HTMLAttributes<HTMLPtuOptionElement>;
