@@ -106,6 +106,7 @@
   border-width: 0;
   border-style: solid;
   border-color: var(--colour-border);
+  text-rendering: optimizeLegibility;
 }
 
 ::before,
