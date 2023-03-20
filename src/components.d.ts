@@ -6,6 +6,10 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
+    interface PtuAvatar {
+        "name": string;
+        "src": string | false;
+    }
     interface PtuCallout {
     }
     interface PtuCheckbox {
@@ -78,6 +82,12 @@ export namespace Components {
     }
 }
 declare global {
+    interface HTMLPtuAvatarElement extends Components.PtuAvatar, HTMLStencilElement {
+    }
+    var HTMLPtuAvatarElement: {
+        prototype: HTMLPtuAvatarElement;
+        new (): HTMLPtuAvatarElement;
+    };
     interface HTMLPtuCalloutElement extends Components.PtuCallout, HTMLStencilElement {
     }
     var HTMLPtuCalloutElement: {
@@ -193,6 +203,7 @@ declare global {
         new (): HTMLPtuVisibilityToggleElement;
     };
     interface HTMLElementTagNameMap {
+        "ptu-avatar": HTMLPtuAvatarElement;
         "ptu-callout": HTMLPtuCalloutElement;
         "ptu-checkbox": HTMLPtuCheckboxElement;
         "ptu-chip": HTMLPtuChipElement;
@@ -215,6 +226,10 @@ declare global {
     }
 }
 declare namespace LocalJSX {
+    interface PtuAvatar {
+        "name"?: string;
+        "src"?: string | false;
+    }
     interface PtuCallout {
     }
     interface PtuCheckbox {
@@ -286,6 +301,7 @@ declare namespace LocalJSX {
         "elementId"?: string;
     }
     interface IntrinsicElements {
+        "ptu-avatar": PtuAvatar;
         "ptu-callout": PtuCallout;
         "ptu-checkbox": PtuCheckbox;
         "ptu-chip": PtuChip;
@@ -311,6 +327,7 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
+            "ptu-avatar": LocalJSX.PtuAvatar & JSXBase.HTMLAttributes<HTMLPtuAvatarElement>;
             "ptu-callout": LocalJSX.PtuCallout & JSXBase.HTMLAttributes<HTMLPtuCalloutElement>;
             "ptu-checkbox": LocalJSX.PtuCheckbox & JSXBase.HTMLAttributes<HTMLPtuCheckboxElement>;
             "ptu-chip": LocalJSX.PtuChip & JSXBase.HTMLAttributes<HTMLPtuChipElement>;
