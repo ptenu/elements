@@ -14,7 +14,7 @@ export class PtuAvatar {
     const nameArray = name.split(" ");
     const initials = [
       nameArray[0].charAt(0),
-      nameArray[1].charAt(0)
+      nameArray.pop().charAt(0)
     ]
 
     return initials.join("");
@@ -24,7 +24,7 @@ export class PtuAvatar {
     const inputMin = 1;
     const inputMax = 26;
     const outputMin = 0;
-    const outputMax = 350;
+    const outputMax = 360;
 
     if (value < inputMin) {
       value = inputMin;
@@ -39,8 +39,13 @@ export class PtuAvatar {
 
   getRGB(name: string): number {
     const alphabet = "abcdefghijklmnopqrstuvwxyz";
-    let char = name.charAt(0);
-    let hue = alphabet.indexOf(char.toLowerCase());
+    const nameArray = name.split(" ");
+
+    const firstChar = name.charAt(0);
+    const lastChar = nameArray[0].charAt(nameArray[0].length - 1);
+
+    let hue = alphabet.indexOf(firstChar.toLowerCase());
+    hue = ( hue + alphabet.indexOf(lastChar.toLowerCase()) ) / 2;
     return this.mapRange(hue);
   }
 
