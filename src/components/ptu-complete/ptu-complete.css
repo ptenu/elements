@@ -1,0 +1,36 @@
+:host {
+  display: block;
+  border-radius: calc(var(--border-radius) * 2);
+  padding: var(--layout-gap);
+  background-color: var(--colour-grey-300);
+  margin: var(--layout-gap) 0;
+  box-sizing: content-box;
+  box-shadow: 0 0 0 1px inset rgba(10,10,10,.12);
+  color: var(--colour-background)
+}
+
+
+header {
+  font-size: 30pt;
+  font-weight: 780;
+  text-align: center;
+  margin-bottom: calc(var(--layout-gap) * 0.2);
+  line-height: 1;
+  color: inherit;
+}
+
+section {
+  max-width: 50ch;
+  text-align: center;
+  margin: auto;
+  color: inherit;
+}
+
+footer {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 20pt;
+  margin: var(--layout-gap) 0 0 0;
+  color: inherit;
+  font-weight: 670;
+}

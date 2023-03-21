@@ -94,7 +94,7 @@
   --colour-shadow: var(--colour-grey-800);
 
   /* Other properties */
-  --border-radius: 2px;
+  --border-radius: 4px;
   --container-width: 1200px;
   --layout-gap: 1rem;
 }
@@ -489,7 +489,7 @@ svg {
 
 .card {
   background-color: var(--colour-grey-200);
-  border-radius: var(--border-radius);
+  border-radius: calc(var(--border-radius) * 2);
   padding: .5em 1em;
   font-weight: 300;
 }
