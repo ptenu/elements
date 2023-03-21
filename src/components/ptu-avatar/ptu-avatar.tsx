@@ -23,8 +23,8 @@ export class PtuAvatar {
   mapRange(value: number): number {
     const inputMin = 1;
     const inputMax = 26;
-    const outputMin = 100;
-    const outputMax = 200;
+    const outputMin = 0;
+    const outputMax = 350;
 
     if (value < inputMin) {
       value = inputMin;
@@ -37,33 +37,25 @@ export class PtuAvatar {
     return (value - inputMin) * (outputMax - outputMin) / (inputMax - inputMin) + outputMin;
   }
 
-  getRGB(name: string): Array<string> {
+  getRGB(name: string): number {
     const alphabet = "abcdefghijklmnopqrstuvwxyz";
-    let rgbValue = []
-    for (let i = 0; i < 3; i++) {
-      let char = name.charAt(i);
-
-      if (i === 2) {
-        char = name.slice(name.length - 1);
-      }
-
-      let pos = alphabet.indexOf(char.toLowerCase());
-      rgbValue[i] = this.mapRange(pos++);
-    }
-    console.log(rgbValue)
-    return rgbValue;
+    let char = name.charAt(0);
+    let hue = alphabet.indexOf(char.toLowerCase());
+    return this.mapRange(hue);
   }
 
   render() {
     return (
       <Host>
         <article title={this.name}
-                 style={{backgroundColor: `rgb(${this.getRGB(this.name).join(", ")})`}}
+                 style={{backgroundColor: `hsl(${this.getRGB(this.name)}deg 58% 33%`}}
         >
           {this.src && (
             <img src={this.src} />
           )}
-          <p>{this.getInitials(this.name)}</p>
+          {!this.src && (
+            <p>{this.getInitials(this.name)}</p>
+          )}
         </article>
       </Host>
     );
