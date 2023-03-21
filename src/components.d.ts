@@ -26,6 +26,9 @@ export namespace Components {
         "headline": string;
         "status": string;
     }
+    interface PtuFacepile {
+        "label": string | null;
+    }
     interface PtuField {
         "controlId": string;
         "errorText": string | false;
@@ -116,6 +119,12 @@ declare global {
     var HTMLPtuCompleteElement: {
         prototype: HTMLPtuCompleteElement;
         new (): HTMLPtuCompleteElement;
+    };
+    interface HTMLPtuFacepileElement extends Components.PtuFacepile, HTMLStencilElement {
+    }
+    var HTMLPtuFacepileElement: {
+        prototype: HTMLPtuFacepileElement;
+        new (): HTMLPtuFacepileElement;
     };
     interface HTMLPtuFieldElement extends Components.PtuField, HTMLStencilElement {
     }
@@ -219,6 +228,7 @@ declare global {
         "ptu-checkbox": HTMLPtuCheckboxElement;
         "ptu-chip": HTMLPtuChipElement;
         "ptu-complete": HTMLPtuCompleteElement;
+        "ptu-facepile": HTMLPtuFacepileElement;
         "ptu-field": HTMLPtuFieldElement;
         "ptu-fieldset": HTMLPtuFieldsetElement;
         "ptu-footer": HTMLPtuFooterElement;
@@ -257,6 +267,9 @@ declare namespace LocalJSX {
         "colour"?: "green" | "red" | "grey" | "yellow";
         "headline"?: string;
         "status"?: string;
+    }
+    interface PtuFacepile {
+        "label"?: string | null;
     }
     interface PtuField {
         "controlId"?: string;
@@ -323,6 +336,7 @@ declare namespace LocalJSX {
         "ptu-checkbox": PtuCheckbox;
         "ptu-chip": PtuChip;
         "ptu-complete": PtuComplete;
+        "ptu-facepile": PtuFacepile;
         "ptu-field": PtuField;
         "ptu-fieldset": PtuFieldset;
         "ptu-footer": PtuFooter;
@@ -350,6 +364,7 @@ declare module "@stencil/core" {
             "ptu-checkbox": LocalJSX.PtuCheckbox & JSXBase.HTMLAttributes<HTMLPtuCheckboxElement>;
             "ptu-chip": LocalJSX.PtuChip & JSXBase.HTMLAttributes<HTMLPtuChipElement>;
             "ptu-complete": LocalJSX.PtuComplete & JSXBase.HTMLAttributes<HTMLPtuCompleteElement>;
+            "ptu-facepile": LocalJSX.PtuFacepile & JSXBase.HTMLAttributes<HTMLPtuFacepileElement>;
             "ptu-field": LocalJSX.PtuField & JSXBase.HTMLAttributes<HTMLPtuFieldElement>;
             "ptu-fieldset": LocalJSX.PtuFieldset & JSXBase.HTMLAttributes<HTMLPtuFieldsetElement>;
             "ptu-footer": LocalJSX.PtuFooter & JSXBase.HTMLAttributes<HTMLPtuFooterElement>;

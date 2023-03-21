@@ -1,0 +1,43 @@
+ptu-facepile {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  position: relative;
+  list-style: none;
+  gap: .3ch;
+}
+
+ptu-facepile ptu-avatar {
+  transition-duration: 150ms;
+  margin-right: -1.5ch;
+}
+
+ptu-facepile ptu-avatar:not(:first-child) {
+  filter: drop-shadow(1px 1px 1px rgba(10,10,10,.23));
+}
+
+ptu-facepile ptu-avatar:hover {
+  margin: 0 .08ch 0 1.1ch;
+}
+
+ptu-facepile ptu-avatar:first-child {
+  margin-left: 0;
+}
+
+ptu-facepile ptu-avatar:last-of-type {
+  margin-right: 0;
+}
+
+ptu-facepile li {
+  margin: 0;
+}
+
+ptu-facepile p.facepile-label {
+  padding: 0;
+  line-height: 1;
+  font-weight: 500;
+  margin: 0 0 0 1ch;
+  font-size: 1.066em;
+  color: var(--colour-grey-700)
+}
