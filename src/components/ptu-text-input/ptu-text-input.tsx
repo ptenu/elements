@@ -8,7 +8,7 @@ import {Component, Host, h, Prop} from '@stencil/core';
 export class PtuTextInput {
 
   @Prop() name: string;
-  @Prop() label: string;
+  @Prop() label: string | null;
   @Prop() initialValue: string | null = null;
   @Prop() type = "text";
   @Prop() autocomplete: string = 'off';
@@ -23,9 +23,11 @@ export class PtuTextInput {
                value={this.initialValue}
                autocomplete={this.autocomplete}
         />
-        <label htmlFor={this.name + `__input`}>
-          {this.label}
-        </label>
+        {this.label && (
+          <label htmlFor={this.name + `__input`}>
+            {this.label}
+          </label>
+        )}
       </Host>
     );
   }

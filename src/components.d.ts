@@ -26,8 +26,14 @@ export namespace Components {
         "headline": string;
         "status": string;
     }
+    interface PtuDatatable {
+        "caption": string;
+        "maxItems": number;
+    }
+    interface PtuDetails {
+    }
     interface PtuFacepile {
-        "label": string | null;
+        "max": number;
     }
     interface PtuField {
         "controlId": string;
@@ -80,7 +86,7 @@ export namespace Components {
     interface PtuTextInput {
         "autocomplete": string;
         "initialValue": string | null;
-        "label": string;
+        "label": string | null;
         "name": string;
         "type": string;
         "width": number;
@@ -119,6 +125,18 @@ declare global {
     var HTMLPtuCompleteElement: {
         prototype: HTMLPtuCompleteElement;
         new (): HTMLPtuCompleteElement;
+    };
+    interface HTMLPtuDatatableElement extends Components.PtuDatatable, HTMLStencilElement {
+    }
+    var HTMLPtuDatatableElement: {
+        prototype: HTMLPtuDatatableElement;
+        new (): HTMLPtuDatatableElement;
+    };
+    interface HTMLPtuDetailsElement extends Components.PtuDetails, HTMLStencilElement {
+    }
+    var HTMLPtuDetailsElement: {
+        prototype: HTMLPtuDetailsElement;
+        new (): HTMLPtuDetailsElement;
     };
     interface HTMLPtuFacepileElement extends Components.PtuFacepile, HTMLStencilElement {
     }
@@ -228,6 +246,8 @@ declare global {
         "ptu-checkbox": HTMLPtuCheckboxElement;
         "ptu-chip": HTMLPtuChipElement;
         "ptu-complete": HTMLPtuCompleteElement;
+        "ptu-datatable": HTMLPtuDatatableElement;
+        "ptu-details": HTMLPtuDetailsElement;
         "ptu-facepile": HTMLPtuFacepileElement;
         "ptu-field": HTMLPtuFieldElement;
         "ptu-fieldset": HTMLPtuFieldsetElement;
@@ -268,8 +288,14 @@ declare namespace LocalJSX {
         "headline"?: string;
         "status"?: string;
     }
+    interface PtuDatatable {
+        "caption"?: string;
+        "maxItems"?: number;
+    }
+    interface PtuDetails {
+    }
     interface PtuFacepile {
-        "label"?: string | null;
+        "max"?: number;
     }
     interface PtuField {
         "controlId"?: string;
@@ -322,7 +348,7 @@ declare namespace LocalJSX {
     interface PtuTextInput {
         "autocomplete"?: string;
         "initialValue"?: string | null;
-        "label"?: string;
+        "label"?: string | null;
         "name"?: string;
         "type"?: string;
         "width"?: number;
@@ -336,6 +362,8 @@ declare namespace LocalJSX {
         "ptu-checkbox": PtuCheckbox;
         "ptu-chip": PtuChip;
         "ptu-complete": PtuComplete;
+        "ptu-datatable": PtuDatatable;
+        "ptu-details": PtuDetails;
         "ptu-facepile": PtuFacepile;
         "ptu-field": PtuField;
         "ptu-fieldset": PtuFieldset;
@@ -364,6 +392,8 @@ declare module "@stencil/core" {
             "ptu-checkbox": LocalJSX.PtuCheckbox & JSXBase.HTMLAttributes<HTMLPtuCheckboxElement>;
             "ptu-chip": LocalJSX.PtuChip & JSXBase.HTMLAttributes<HTMLPtuChipElement>;
             "ptu-complete": LocalJSX.PtuComplete & JSXBase.HTMLAttributes<HTMLPtuCompleteElement>;
+            "ptu-datatable": LocalJSX.PtuDatatable & JSXBase.HTMLAttributes<HTMLPtuDatatableElement>;
+            "ptu-details": LocalJSX.PtuDetails & JSXBase.HTMLAttributes<HTMLPtuDetailsElement>;
             "ptu-facepile": LocalJSX.PtuFacepile & JSXBase.HTMLAttributes<HTMLPtuFacepileElement>;
             "ptu-field": LocalJSX.PtuField & JSXBase.HTMLAttributes<HTMLPtuFieldElement>;
             "ptu-fieldset": LocalJSX.PtuFieldset & JSXBase.HTMLAttributes<HTMLPtuFieldsetElement>;
