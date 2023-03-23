@@ -23,7 +23,6 @@ export class PtuFacepile {
         el.attributes.getNamedItem("src") && el.attributes.getNamedItem("src").value
       ]
     }
-    console.log(peeps)
     return peeps
   }
 

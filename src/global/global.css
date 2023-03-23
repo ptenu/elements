@@ -1,10 +1,67 @@
 @font-face {
   font-family: "SofiaSans";
-  src: url("https://static.peterboroughtenants.app/fonts/SofiaSans-VariableFont_wght.ttf")
-       format("truetype");
-  font-weight: 100 1000;
+  src: url("https://static.peterboroughtenants.app/fonts/SofiaSans-Regular.ttf")
+  format("truetype");
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
 }
 
+@font-face {
+  font-family: "SofiaSans";
+  src: url("https://static.peterboroughtenants.app/fonts/SofiaSans-Italic.ttf")
+  format("truetype");
+  font-style: italic;
+  font-weight: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SofiaSans";
+  src: url("https://static.peterboroughtenants.app/fonts/SofiaSans-Light.ttf")
+  format("truetype");
+  font-style: normal;
+  font-weight: 200;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SofiaSans";
+  src: url("https://static.peterboroughtenants.app/fonts/SofiaSans-SemiBold.ttf")
+  format("truetype");
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SofiaSans";
+  src: url("https://static.peterboroughtenants.app/fonts/SofiaSans-Bold.ttf")
+  format("truetype");
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+}
+
+@supports (font-variation-settings : normal) {
+  @font-face {
+    font-family: "SofiaSans";
+    src: url("https://static.peterboroughtenants.app/fonts/SofiaSans-VariableFont_wght.ttf")
+    format("truetype");
+    font-weight: 100 1000;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "SofiaSans";
+    src: url("https://static.peterboroughtenants.app/fonts/SofiaSans-Italic-VariableFont_wght.ttf")
+    format("truetype");
+    font-weight: 100 1000;
+    font-style: italic;
+    font-display: swap;
+  }
+}
 
 :root {
   /* Custom properties */
@@ -445,10 +502,12 @@ hgroup h6 {
   margin-bottom: .33em;
   font-style: normal;
   text-align: inherit;
+  font-family: var(--font-family);
 }
 
 ptu-hero .title {
-  color: var(--colour-text)
+  color: var(--colour-text);
+  font-family: var(--font-family);
 }
 
 a {
