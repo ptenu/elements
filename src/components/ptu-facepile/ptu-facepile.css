@@ -18,10 +18,10 @@ ptu-avatar:not(:first-child) {
   filter: drop-shadow(1px 1px 1px rgba(10,10,10,.23));
 }
 
-ptu-avatar:hover,
+ptu-avatar:hover:not(:last-of-type),
 ptu-avatar:focus
 {
-  margin: 0 .08ch 0 1.1ch;
+  margin: 0 -0.8ch 0 -1ch;
 }
 
 ptu-avatar:focus {
