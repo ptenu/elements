@@ -1,3 +1,82 @@
 :host {
   display: block;
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
 }
+
+* {
+  box-sizing: border-box;
+}
+
+table {
+  width: 100%;
+  display: table;
+  border-collapse: collapse;
+}
+
+caption {
+  position: relative;
+  width: 100%;
+  border-bottom: 1px solid var(--colour-grey-400);
+  color: var(--colour-grey-700);
+  text-align: left;
+  clear: both;
+}
+
+caption p,
+caption h1
+{
+  margin: 0;
+  display: inline-block;
+}
+
+caption p {
+  float: right;
+}
+
+caption h1 {
+  font-size: 1.22em;
+  font-weight: 500;
+}
+
+tr {
+
+}
+
+tr + tr td {
+  border-top: 1px solid var(--colour-grey-300);
+}
+
+td {
+  font-weight: 300;
+  padding: .12em .5ch;
+  margin: 0;
+}
+
+footer {
+  display: block;
+  position: relative;
+  width: 100%;
+  border-top: 1px solid var(--colour-grey-400);
+  color: var(--colour-grey-700);
+}
+
+a {
+  color: var(--colour-link);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+}
+
+a:focus {
+  background-color: var(--colour-focus);
+  color: var(--colour-text);
+  outline: none;
+  text-decoration-thickness: 3px;
+}
+
+a:hover {
+  color: var(--colour-link-hover);
+  text-decoration-thickness: 2px;
+}
+

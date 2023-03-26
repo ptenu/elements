@@ -28,7 +28,6 @@ export namespace Components {
     }
     interface PtuDatatable {
         "caption": string;
-        "maxItems": number;
     }
     interface PtuDetails {
     }
@@ -73,6 +72,8 @@ export namespace Components {
     }
     interface PtuPageHeader {
         "headline": string;
+    }
+    interface PtuRow {
     }
     interface PtuSection {
         "sidebar": "none" | "left" | "right";
@@ -210,6 +211,12 @@ declare global {
         prototype: HTMLPtuPageHeaderElement;
         new (): HTMLPtuPageHeaderElement;
     };
+    interface HTMLPtuRowElement extends Components.PtuRow, HTMLStencilElement {
+    }
+    var HTMLPtuRowElement: {
+        prototype: HTMLPtuRowElement;
+        new (): HTMLPtuRowElement;
+    };
     interface HTMLPtuSectionElement extends Components.PtuSection, HTMLStencilElement {
     }
     var HTMLPtuSectionElement: {
@@ -260,6 +267,7 @@ declare global {
         "ptu-navbar": HTMLPtuNavbarElement;
         "ptu-option": HTMLPtuOptionElement;
         "ptu-page-header": HTMLPtuPageHeaderElement;
+        "ptu-row": HTMLPtuRowElement;
         "ptu-section": HTMLPtuSectionElement;
         "ptu-tab": HTMLPtuTabElement;
         "ptu-tabs": HTMLPtuTabsElement;
@@ -289,8 +297,7 @@ declare namespace LocalJSX {
         "status"?: string;
     }
     interface PtuDatatable {
-        "caption"?: string;
-        "maxItems"?: number;
+        "caption": string;
     }
     interface PtuDetails {
     }
@@ -336,6 +343,8 @@ declare namespace LocalJSX {
     interface PtuPageHeader {
         "headline"?: string;
     }
+    interface PtuRow {
+    }
     interface PtuSection {
         "sidebar"?: "none" | "left" | "right";
     }
@@ -376,6 +385,7 @@ declare namespace LocalJSX {
         "ptu-navbar": PtuNavbar;
         "ptu-option": PtuOption;
         "ptu-page-header": PtuPageHeader;
+        "ptu-row": PtuRow;
         "ptu-section": PtuSection;
         "ptu-tab": PtuTab;
         "ptu-tabs": PtuTabs;
@@ -406,6 +416,7 @@ declare module "@stencil/core" {
             "ptu-navbar": LocalJSX.PtuNavbar & JSXBase.HTMLAttributes<HTMLPtuNavbarElement>;
             "ptu-option": LocalJSX.PtuOption & JSXBase.HTMLAttributes<HTMLPtuOptionElement>;
             "ptu-page-header": LocalJSX.PtuPageHeader & JSXBase.HTMLAttributes<HTMLPtuPageHeaderElement>;
+            "ptu-row": LocalJSX.PtuRow & JSXBase.HTMLAttributes<HTMLPtuRowElement>;
             "ptu-section": LocalJSX.PtuSection & JSXBase.HTMLAttributes<HTMLPtuSectionElement>;
             "ptu-tab": LocalJSX.PtuTab & JSXBase.HTMLAttributes<HTMLPtuTabElement>;
             "ptu-tabs": LocalJSX.PtuTabs & JSXBase.HTMLAttributes<HTMLPtuTabsElement>;

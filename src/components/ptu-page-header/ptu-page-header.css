@@ -11,7 +11,7 @@
 
 header {
   max-width: 60ch;
-  color: var(--colour-accent-700);
+  color: var(--colour-accent-800);
   padding: var(--layout-gap) 0;
 }
 
@@ -21,18 +21,6 @@ h1 {
   line-height: 1.12;
   color: inherit;
   margin: 0;
-}
-
-h1::before {
-  position: absolute;
-  content: " ";
-  display: block;
-  box-sizing: border-box;
-  top: .1em;
-  width: 4px;
-  bottom: .1em;
-  margin-left: calc(var(--layout-gap) * -0.88);
-  background-color: var(--colour-brand-main);
 }
 
 section {
