@@ -19,7 +19,7 @@ export namespace Components {
         "value": string;
     }
     interface PtuChip {
-        "colour": "grey" | "blue" | "green" | "red" | "yellow" | "outline";
+        "colour": "grey" | "blue" | "green" | "red" | "yellow" | "outline" | string;
     }
     interface PtuComplete {
         "colour": "green" | "red" | "grey" | "yellow";
@@ -74,6 +74,8 @@ export namespace Components {
         "headline": string;
     }
     interface PtuRow {
+        "status": string;
+        "statusColour": "grey" | "outline" | "blue" | "green" | "yellow" | "red";
     }
     interface PtuSection {
         "sidebar": "none" | "left" | "right";
@@ -289,7 +291,7 @@ declare namespace LocalJSX {
         "value"?: string;
     }
     interface PtuChip {
-        "colour"?: "grey" | "blue" | "green" | "red" | "yellow" | "outline";
+        "colour"?: "grey" | "blue" | "green" | "red" | "yellow" | "outline" | string;
     }
     interface PtuComplete {
         "colour"?: "green" | "red" | "grey" | "yellow";
@@ -344,6 +346,8 @@ declare namespace LocalJSX {
         "headline"?: string;
     }
     interface PtuRow {
+        "status"?: string;
+        "statusColour"?: "grey" | "outline" | "blue" | "green" | "yellow" | "red";
     }
     interface PtuSection {
         "sidebar"?: "none" | "left" | "right";

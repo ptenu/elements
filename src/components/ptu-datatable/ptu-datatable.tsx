@@ -19,9 +19,49 @@ export class PtuDatatable {
     for (let i = offset; i < offset + this.maxItems && i < this.root.childElementCount; i++) {
       let row = this.root.children.item(i)
       rows.push(row);
-      console.log(row)
     }
     return rows;
+  }
+
+  firstItemOnPage() {
+    return this.offset + 1
+  }
+
+  lastItemOnPage() {
+    if (this.offset + this.maxItems + 1 > this.root.childElementCount) {
+      return this.root.childElementCount
+    }
+
+    return this.offset + this.maxItems
+  }
+
+  setOffset(pageIndex: number) {
+    this.offset = this.maxItems * pageIndex;
+  }
+
+  pages(): Array<any> {
+    const pageCount = this.root.childElementCount / this.maxItems;
+    let pages = [];
+    for (let i = 0; i <= pageCount; i++) {
+      let className = "page-button";
+      if (i == this.currentPageIndex()) {
+        className += " active";
+      }
+      pages.push((
+        <button class={className} onClick={() => this.setOffset(i)}>
+          {i+1}
+        </button>
+      ))
+    }
+
+    return pages;
+  }
+
+  currentPageIndex() {
+    if (this.offset === 0) {
+      return this.offset
+    }
+    return this.maxItems / this.offset;
   }
 
   render() {
@@ -31,15 +71,19 @@ export class PtuDatatable {
           <caption>
             <h1>{this.caption}</h1>
             <p>
-              {this.offset + 1} -
-              {this.offset + this.maxItems + 1 > this.root.childElementCount && this.root.childElementCount}
-              {this.offset + this.maxItems + 1 <= this.root.childElementCount && this.offset + this.maxItems + 1}
+              {this.firstItemOnPage()} - {this.lastItemOnPage()}
               <span> of </span>
               {this.root.childElementCount}
             </p>
           </caption>
+          <thead>
+          <tr>
+            <th>#</th>
+            <th colSpan={2}>Item</th>
+          </tr>
+          </thead>
           <tbody>
-          {this.getRows().map(row => (
+          {this.getRows(this.offset).map(row => (
             <tr>
               <td>
                 {row.getAttribute("href") && (
@@ -52,12 +96,21 @@ export class PtuDatatable {
               <td>
                 {row.innerHTML}
               </td>
+              {row.getAttribute("status") && (
+                <td>
+                  <ptu-chip colour={row.getAttribute("statusColour")}>
+                    {row.getAttribute("status")}
+                  </ptu-chip>
+                </td>
+              )}
             </tr>
           ))}
           </tbody>
         </table>
         <footer>
-          The footer
+          <nav>
+            {this.pages()}
+          </nav>
         </footer>
       </Host>
     );

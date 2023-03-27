@@ -1,4 +1,4 @@
-import { Component, Host, h } from '@stencil/core';
+import { Component, Host, h, Prop } from '@stencil/core';
 
 @Component({
   tag: 'ptu-row',
@@ -6,6 +6,9 @@ import { Component, Host, h } from '@stencil/core';
   shadow: true,
 })
 export class PtuRow {
+
+  @Prop() status: string;
+  @Prop() statusColour: "grey" | "outline" | "blue" | "green" | "yellow" | "red";
 
   render() {
     return (

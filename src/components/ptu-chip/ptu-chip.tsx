@@ -7,7 +7,7 @@ import {Component, Host, h, Prop} from '@stencil/core';
 })
 export class PtuChip {
 
-  @Prop() colour: "grey" | "blue" | "green" | "red" | "yellow" | "outline" = "grey";
+  @Prop() colour: "grey" | "blue" | "green" | "red" | "yellow" | "outline" | string = "grey";
 
   render() {
     return (

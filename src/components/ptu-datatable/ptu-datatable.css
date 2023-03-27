@@ -36,7 +36,7 @@ caption p {
 }
 
 caption h1 {
-  font-size: 1.22em;
+  font-size: 1.12em;
   font-weight: 500;
 }
 
@@ -48,18 +48,29 @@ tr + tr td {
   border-top: 1px solid var(--colour-grey-300);
 }
 
-td {
+td, th {
   font-weight: 300;
   padding: .12em .5ch;
   margin: 0;
 }
 
 footer {
-  display: block;
+  display: flex;
   position: relative;
   width: 100%;
   border-top: 1px solid var(--colour-grey-400);
   color: var(--colour-grey-700);
+  padding: .33em 0;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer nav {
+  display: flex;
+  gap: .5ch;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
 }
 
 a {
@@ -80,3 +91,37 @@ a:hover {
   text-decoration-thickness: 2px;
 }
 
+th {
+  text-align: left;
+  font-weight: 400;
+  border-bottom: 1px solid var(--colour-grey-400);
+  background-color: var(--colour-grey-200);
+}
+
+.page-button {
+  color: var(--colour-link);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: inherit;
+  font-family: inherit;
+}
+
+.page-button.active {
+  font-weight: 500;
+  color: var(--colour-text);
+}
+
+.page-button:focus {
+  background-color: var(--colour-focus);
+  color: var(--colour-text);
+  outline: none;
+  text-decoration-thickness: 3px;
+}
+
+.page-button:hover {
+  color: var(--colour-link-hover);
+  text-decoration-thickness: 2px;
+}
