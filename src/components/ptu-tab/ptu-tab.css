@@ -5,7 +5,7 @@
 
 a {
   display: block;
-  color: var(--colour-blue-700);
+  color: var(--colour-link);
   text-decoration: underline;
   text-decoration-thickness: 1px;
   background-color: transparent;
@@ -15,8 +15,8 @@ a {
 }
 
 a:hover {
-  background-color: rgba(2,2,2,.13);
-  color: var(--colour-blue-900);
+  background-color: hsl(33, 20%, 82%);
+  color: var(--colour-link-hover);
   text-decoration-thickness: 2px;
 }
 

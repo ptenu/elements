@@ -13,75 +13,75 @@
   --colour-grey-800: #27272A;
   --colour-grey-900: #18181B;
 
-  /* BRAND */
-  --colour-brand-main: #e40046;
-  --colour-brand-background: #fe004e;
-  --colour-brand-sand: #d7d2cb;
+  /* RED */
+  --colour-red-50: hsl(341 21% 87%);
+  --colour-red-100: hsl(341 47% 81%);
+  --colour-red-200: hsl(341 64% 72%);
+  --colour-red-300: hsl(341 73% 63%);
+  --colour-red-400: hsl(341 78% 54%);
+  --colour-red-500: hsl(341 100% 45%);
+  --colour-red-600: hsl(341 100% 35%);
+  --colour-red-700: hsl(341 100% 25%);
+  --colour-red-800: hsl(341 100% 15%);
+  --colour-red-900: hsl(341 100% 8%);
 
   /* ACCENT */
-  --colour-accent-50: #dad7dc;
-  --colour-accent-100: #b5b0b8;
-  --colour-accent-200: #908895;
-  --colour-accent-300: #7e7483;
-  --colour-accent-400: #594d60;
-  --colour-accent-500: #594d60;
-  --colour-accent-600: #46394E;
-  --colour-accent-700: #3f3346;
-  --colour-accent-800: #312837;
-  --colour-accent-900: #231d27;
+  --colour-accent-50: hsl(271 21% 87%);
+  --colour-accent-100: hsl(271 47% 81%);
+  --colour-accent-200: hsl(271 64% 72%);
+  --colour-accent-300: hsl(271 73% 63%);
+  --colour-accent-400: hsl(271 78% 54%);
+  --colour-accent-500: hsl(271 100% 45%);
+  --colour-accent-600: hsl(271 100% 35%);
+  --colour-accent-700: hsl(271 100% 25%);
+  --colour-accent-800: hsl(271 100% 15%);
+  --colour-accent-900: hsl(271 100% 8%);
 
   /* BLUE */
-  --colour-blue-50: #f0f9ff;
-  --colour-blue-100: #e0f2fe;
-  --colour-blue-200: #bae6fd;
-  --colour-blue-300: #7dd3fc;
-  --colour-blue-400: #38bdf8;
-  --colour-blue-500: #0ea5e9;
-  --colour-blue-600: #0284c7;
-  --colour-blue-700: #0369a1;
-  --colour-blue-800: #075985;
-  --colour-blue-900: #0c4a6e;
-
-  /* RED */
-  --colour-red-50: #fef2f2;
-  --colour-red-100: #fee2e2;
-  --colour-red-200: #fecaca;
-  --colour-red-300: #fca5a5;
-  --colour-red-400: #f87171;
-  --colour-red-500: #ef4444;
-  --colour-red-600: #dc2626;
-  --colour-red-700: #b91c1c;
-  --colour-red-800: #991b1b;
-  --colour-red-900: #7f1d1d;
+  --colour-blue-50: hsl(200 21% 87%);
+  --colour-blue-100: hsl(200 47% 81%);
+  --colour-blue-200: hsl(200 64% 72%);
+  --colour-blue-300: hsl(200 73% 63%);
+  --colour-blue-400: hsl(200 78% 54%);
+  --colour-blue-500: hsl(200 100% 45%);
+  --colour-blue-600: hsl(200 100% 35%);
+  --colour-blue-700: hsl(200 100% 25%);
+  --colour-blue-800: hsl(200 100% 15%);
+  --colour-blue-900: hsl(200 100% 8%);
 
   /* YELLOW */
-  --colour-yellow-50: #fefce8;
-  --colour-yellow-100: #fef9c3;
-  --colour-yellow-200: #fef08a;
-  --colour-yellow-300: #fde047;
-  --colour-yellow-400: #facc15;
-  --colour-yellow-500: #eab308;
-  --colour-yellow-600: #ca8a04;
-  --colour-yellow-700: #a16207;
-  --colour-yellow-800: #854d0e;
-  --colour-yellow-900: #713f12;
+  --colour-yellow-50: hsl(33 21% 87%);
+  --colour-yellow-100: hsl(33 47% 81%);
+  --colour-yellow-200: hsl(33 64% 72%);
+  --colour-yellow-300: hsl(33 73% 63%);
+  --colour-yellow-400: hsl(33 78% 54%);
+  --colour-yellow-500: hsl(33 100% 45%);
+  --colour-yellow-600: hsl(33 100% 35%);
+  --colour-yellow-700: hsl(33 100% 25%);
+  --colour-yellow-800: hsl(33 100% 15%);
+  --colour-yellow-900: hsl(33 100% 8%);
 
   /* GREEN */
-  --colour-green-50: #f7fee7;
-  --colour-green-100: #ecfccb;
-  --colour-green-200: #d9f99d;
-  --colour-green-300: #bef264;
-  --colour-green-400: #a3e635;
-  --colour-green-500: #84cc16;
-  --colour-green-600: #65a30d;
-  --colour-green-700: #4d7c0f;
-  --colour-green-800: #3f6212;
-  --colour-green-900: #365314;
+  --colour-green-50: hsl(83 21% 87%);
+  --colour-green-100: hsl(83 47% 81%);
+  --colour-green-200: hsl(83 64% 72%);
+  --colour-green-300: hsl(83 73% 63%);
+  --colour-green-400: hsl(83 78% 54%);
+  --colour-green-500: hsl(83 100% 45%);
+  --colour-green-600: hsl(83 100% 35%);
+  --colour-green-700: hsl(83 100% 25%);
+  --colour-green-800: hsl(83 100% 15%);
+  --colour-green-900: hsl(83 100% 8%);
+
+  /* BRAND */
+  --colour-brand-main: var(--colour-red-500);
+  --colour-brand-background: var(--colour-red-500);
+  --colour-brand-sand: var(--colour-yellow-50);
 
   /* Control colours */
-  --colour-text: var(--colour-grey-900);
-  --colour-link: var(--colour-blue-700);
-  --colour-link-hover: var(--colour-blue-900);
+  --colour-text: var(--colour-accent-900);
+  --colour-link: var(--colour-blue-600);
+  --colour-link-hover: var(--colour-blue-800);
   --colour-focus: var(--colour-yellow-300);
   --colour-background: var(--colour-grey-100);
   --colour-border: var(--colour-grey-500);
