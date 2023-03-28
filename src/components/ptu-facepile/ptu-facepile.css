@@ -14,10 +14,6 @@ ptu-avatar {
   border-radius: 100%;
 }
 
-ptu-avatar:not(:first-child) {
-  filter: drop-shadow(1px 1px 1px rgba(10,10,10,.23));
-}
-
 ptu-avatar:hover:not(:last-of-type),
 ptu-avatar:focus
 {

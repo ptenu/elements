@@ -37,7 +37,7 @@ export class PtuAvatar {
     return (value - inputMin) * (outputMax - outputMin) / (inputMax - inputMin) + outputMin;
   }
 
-  getRGB(name: string): number {
+  getHue(name: string): number {
     const alphabet = "abcdefghijklmnopqrstuvwxyz";
     const nameArray = name.split(" ");
 
@@ -53,7 +53,10 @@ export class PtuAvatar {
     return (
       <Host>
         <article title={this.name}
-                 style={{backgroundColor: `hsl(${this.getRGB(this.name)}deg 58% 33%`}}
+                 style={{
+                   backgroundColor: `hsl(${this.getHue(this.name)}deg 64% 72%`,
+                   color: `hsl(${this.getHue(this.name)}deg 100% 15%`
+        }}
         >
           {this.src && (
             <img src={this.src} />

@@ -80,7 +80,7 @@
 
   /* Control colours */
   --colour-text: var(--colour-accent-900);
-  --colour-link: var(--colour-blue-600);
+  --colour-link: var(--colour-blue-700);
   --colour-link-hover: var(--colour-blue-800);
   --colour-focus: var(--colour-yellow-300);
   --colour-background: var(--colour-grey-100);
@@ -432,9 +432,9 @@ hgroup h6 {
 }
 
 .title {
-  font-size: 41pt;
+  font-size: 5vmax;
   line-height: 1em;
-  font-weight: 800;
+  font-weight: 700;
   max-width: 26ch;
   margin-bottom: .33em;
   font-style: normal;
@@ -445,6 +445,8 @@ hgroup h6 {
 ptu-hero .title {
   color: var(--colour-text);
   font-family: var(--font-family);
+  padding: 0;
+  margin: 0 0 1.5vmax 0;
 }
 
 a {
@@ -1018,38 +1020,33 @@ button,
 [type='submit'] {
   appearance: none;
   border-radius: var(--border-radius);
-  background-color: var(--colour-grey-200);
-  border: 1px solid rgba(10,10,10,.23);
+  background-color: var(--colour-blue-50);
+  border: 1px solid hsl(190 28% 10% / .18);
   padding: .33em .66em .44em .66em;
   cursor: pointer;
   font-size: 90%;
-  font-weight: 400;
+  font-weight: 600;
   margin: 3px;
-  text-shadow: 0 0 6px rgba(200,200,200, .66);
-  box-shadow: 0 -2px 0 inset rgba(10,10,10,.16);
+  box-shadow: 0 -2px 0 inset hsl(190 28% 10% / .22);
 }
 
 .danger-button {
-  background-color: var(--colour-red-700);
-  text-shadow: 0 0 6px rgba(200,200,200, .48);
+  background-color: var(--colour-red-600);
   color: #fff;
 }
 
 .primary-button {
-  background-color: var(--colour-link);
-  text-shadow: 0 0 6px rgba(200,200,200, .48);
+  background-color: var(--colour-blue-600);
   color: #fff;
 }
 
 .success-button {
-  background-color: var(--colour-green-600);
-  text-shadow: 0 0 6px rgba(200,200,200, .48);
+  background-color: var(--colour-green-700);
   color: #fff;
 }
 
 .warning-button {
   background-color: var(--colour-yellow-600);
-  text-shadow: 0 0 6px rgba(200,200,200, .48);
   color: #fff;
 }
 
@@ -1058,8 +1055,8 @@ button:hover:not([disabled]),
 [type='button']:hover:not([disabled]),
 [type='reset']:hover:not([disabled]),
 [type='submit']:hover:not([disabled]) {
-  box-shadow: 0 -2px 0 inset rgba(10,10,10,.10),
-              0 0 30px inset rgba(10,10,10,.16);
+  box-shadow: 0 -2px 0 inset hsl(190 28% 10% / .44),
+              0 0 30px inset hsl(190 33% 10% / .16);
 ;
 }
 
@@ -1069,8 +1066,8 @@ button:focus:not([disabled]),
 [type='reset']:focus:not([disabled]),
 [type='submit']:focus:not([disabled]) {
   outline: 3px solid var(--colour-focus);
-  border: 1px solid var(--colour-text);
-  box-shadow: 0 -2px 0 inset rgba(10,10,10,.33);
+  border: 1px solid hsl(190 28% 10% / .55);
+  box-shadow: 0 -2px 0 inset hsl(190 28% 10% / .44);
 }
 
 button:active:not([disabled]),
@@ -1078,8 +1075,8 @@ button:active:not([disabled]),
 [type='button']:active:not([disabled]),
 [type='reset']:active:not([disabled]),
 [type='submit']:active:not([disabled]) {
-  box-shadow: 0 -1px 0 inset rgba(10,10,10,.55),
-              0 0 30px inset rgba(10,10,10,.21);
+  box-shadow: 0 -1px 0 inset hsl(190 28% 10% / .55),
+              0 0 30px inset hsl(190 28% 10% / .21);
 }
 
 button[disabled], input[disabled] {

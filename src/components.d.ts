@@ -71,7 +71,12 @@ export namespace Components {
         "value": string;
     }
     interface PtuPageHeader {
+        "category": string;
+        "categoryColour": "red" | "blue" | "accent" | "yellow" | "green";
+        "categoryHref": string;
         "headline": string;
+        "topic": string;
+        "topicHref": string;
     }
     interface PtuRow {
         "status": string;
@@ -343,7 +348,12 @@ declare namespace LocalJSX {
         "value"?: string;
     }
     interface PtuPageHeader {
+        "category"?: string;
+        "categoryColour"?: "red" | "blue" | "accent" | "yellow" | "green";
+        "categoryHref"?: string;
         "headline"?: string;
+        "topic"?: string;
+        "topicHref"?: string;
     }
     interface PtuRow {
         "status"?: string;

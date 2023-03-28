@@ -12,9 +12,9 @@
 
 header {
   font-size: 30pt;
-  font-weight: 780;
+  font-weight: 700;
   text-align: center;
-  margin-bottom: calc(var(--layout-gap) * 0.2);
+  margin-bottom: var(--layout-gap);
   line-height: 1;
   color: inherit;
 }
@@ -24,6 +24,7 @@ section {
   text-align: center;
   margin: auto;
   color: inherit;
+  font-size: 15pt;
 }
 
 footer {
@@ -32,5 +33,5 @@ footer {
   font-size: 20pt;
   margin: var(--layout-gap) 0 0 0;
   color: inherit;
-  font-weight: 670;
+  font-weight: 600;
 }

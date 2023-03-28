@@ -1,16 +1,16 @@
 :host {
+  --colour-grey-100: var(--colour-grey-200);
+
   display: inline-block;
   box-sizing: border-box;
-  font-size: 66%;
+  font-size: .75em;
   text-align: center;
   vertical-align: middle;
   text-transform: uppercase;
   border-radius: var(--border-radius);
   padding: .33em .44em;
   line-height: 1em;
-  color: rgb(10,10,10,.80);
   user-select: all;
-  font-weight: 450;
-  border: 1px solid rgba(10,10,10,0.18) !important;
+  font-weight: 700;
   white-space: nowrap;
 }
