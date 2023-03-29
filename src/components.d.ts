@@ -11,6 +11,8 @@ export namespace Components {
         "src": string | false;
     }
     interface PtuCallout {
+        "dialingCode": string;
+        "localNumber": string;
     }
     interface PtuCheckbox {
         "isChecked": boolean;
@@ -288,6 +290,8 @@ declare namespace LocalJSX {
         "src"?: string | false;
     }
     interface PtuCallout {
+        "dialingCode"?: string;
+        "localNumber"?: string;
     }
     interface PtuCheckbox {
         "isChecked"?: boolean;
