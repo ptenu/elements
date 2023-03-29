@@ -1018,6 +1018,10 @@ button,
 [type='button'],
 [type='reset'],
 [type='submit'] {
+  --hover-colour: hsl(190 33% 10% / .16);
+  --edge-color: hsl(190 28% 10% / .22);
+  --edge-color-hover: hsl(190 28% 10% / .44);
+  --edge-color-focus: hsl(190 28% 8% / .66);
   appearance: none;
   border-radius: var(--border-radius);
   background-color: var(--colour-blue-50);
@@ -1027,25 +1031,41 @@ button,
   font-size: 90%;
   font-weight: 600;
   margin: 3px;
-  box-shadow: 0 -2px 0 inset hsl(190 28% 10% / .22);
+  box-shadow: 0 -2px 0 inset var(--edge-color);
 }
 
 .danger-button {
+  --hover-colour:  hsl(341 33% 10% / .41);
+  --edge-color: hsl(341 28% 8% / .44);
+  --edge-color-hover: hsl(341 28% 8% / .55);
+  --edge-color-focus: hsl(190 28% 8% / .66);
   background-color: var(--colour-red-600);
   color: #fff;
 }
 
 .primary-button {
+  --hover-colour:  hsl(190 33% 10% / .41);
+  --edge-color: hsl(190 28% 8% / .44);
+  --edge-color-hover: hsl(190 28% 8% / .55);
+  --edge-color-focus: hsl(190 28% 8% / .66);
   background-color: var(--colour-blue-600);
   color: #fff;
 }
 
 .success-button {
+  --hover-colour:  hsl(83 33% 10% / .41);
+  --edge-color: hsl(83 28% 8% / .44);
+  --edge-color-hover: hsl(83 28% 8% / .55);
+  --edge-color-focus: hsl(83 28% 8% / .66);
   background-color: var(--colour-green-700);
   color: #fff;
 }
 
 .warning-button {
+  --hover-colour:  hsl(33 33% 10% / .41);
+  --edge-color: hsl(33 28% 8% / .33);
+  --edge-color-hover: hsl(33 28% 8% / .44);
+  --edge-color-focus: hsl(33 28% 8% / .55);
   background-color: var(--colour-yellow-600);
   color: #fff;
 }
@@ -1055,8 +1075,8 @@ button:hover:not([disabled]),
 [type='button']:hover:not([disabled]),
 [type='reset']:hover:not([disabled]),
 [type='submit']:hover:not([disabled]) {
-  box-shadow: 0 -2px 0 inset hsl(190 28% 10% / .44),
-              0 0 30px inset hsl(190 33% 10% / .16);
+  box-shadow: 0 -2px 0 inset var(--edge-color-hover),
+              0 0 30px inset var(--hover-colour);
 ;
 }
 
@@ -1066,8 +1086,8 @@ button:focus:not([disabled]),
 [type='reset']:focus:not([disabled]),
 [type='submit']:focus:not([disabled]) {
   outline: 3px solid var(--colour-focus);
-  border: 1px solid hsl(190 28% 10% / .55);
-  box-shadow: 0 -2px 0 inset hsl(190 28% 10% / .44);
+  border: 1px solid var(--edge-color);
+  box-shadow: 0 -2px 0 inset var(--edge-color-focus);
 }
 
 button:active:not([disabled]),
@@ -1075,8 +1095,8 @@ button:active:not([disabled]),
 [type='button']:active:not([disabled]),
 [type='reset']:active:not([disabled]),
 [type='submit']:active:not([disabled]) {
-  box-shadow: 0 -1px 0 inset hsl(190 28% 10% / .55),
-              0 0 30px inset hsl(190 28% 10% / .21);
+  box-shadow: 0 -1px 0 inset var(--edge-color-focus),
+              0 0 30px inset var(--hover-colour);
 }
 
 button[disabled], input[disabled] {
