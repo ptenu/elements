@@ -1,32 +1,32 @@
 <!DOCTYPE html>
-<html dir="ltr" lang="en">
+<html dir='ltr' lang='en'>
 <head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0"/>
+  <meta charset='utf-8' />
+  <meta name='viewport' content='width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0' />
   <title>PTU Elements</title>
 
-  <link rel="stylesheet" href="/build/ptu-elements.css"/>
+  <link rel='stylesheet' href='/build/ptu-elements.css' />
 
-  <script type="module" src="/build/ptu-elements.esm.js"></script>
-  <script nomodule src="/build/ptu-elements.js"></script>
+  <script type='module' src='/build/ptu-elements.esm.js'></script>
+  <script nomodule src='/build/ptu-elements.js'></script>
 </head>
 <body>
 <ptu-navbar>
-  <ptu-logo variant="colour"></ptu-logo>
-  <aside slot="right">
-    <ptu-visibility-toggle element-id="main-menu">Menu</ptu-visibility-toggle>
+  <ptu-logo variant='colour'></ptu-logo>
+  <aside slot='right'>
+    <ptu-visibility-toggle element-id='main-menu'>Menu</ptu-visibility-toggle>
   </aside>
 </ptu-navbar>
-<ptu-nav-menu id="main-menu">
+<ptu-nav-menu id='main-menu'>
   <section>
     <hgroup>
       <h5>About us</h5>
     </hgroup>
     <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#">What we do</a></li>
-      <li><a href="#">News</a></li>
-      <li><a href="#">Join</a></li>
+      <li><a href='#'>Home</a></li>
+      <li><a href='#'>What we do</a></li>
+      <li><a href='#'>News</a></li>
+      <li><a href='#'>Join</a></li>
     </ul>
   </section>
   <section>
@@ -34,9 +34,9 @@
       <h5>Guidance</h5>
     </hgroup>
     <ul>
-      <li><a href="#">Getting help</a></li>
-      <li><a href="#">Common problems for tenants</a></li>
-      <li><a href="#">Advice for landlords</a></li>
+      <li><a href='#'>Getting help</a></li>
+      <li><a href='#'>Common problems for tenants</a></li>
+      <li><a href='#'>Advice for landlords</a></li>
     </ul>
   </section>
   <section>
@@ -44,36 +44,36 @@
       <h5>For members</h5>
     </hgroup>
     <ul>
-      <li><a href="#">Manage your membership</a></li>
-      <li><a href="#">Request help</a></li>
-      <li><a href="#">Renew or update your payment details</a></li>
-      <li><a href="#">View the union's policies</a></li>
+      <li><a href='#'>Manage your membership</a></li>
+      <li><a href='#'>Request help</a></li>
+      <li><a href='#'>Renew or update your payment details</a></li>
+      <li><a href='#'>View the union's policies</a></li>
     </ul>
   </section>
 </ptu-nav-menu>
 <ptu-hero>
-  <h1 class="title">We Fight for Renters. <br> Together, We Win.</h1>
+  <h1 class='title'>We Fight for Renters. <br> Together, We Win.</h1>
   <p><b>Peterborough Tenants Union — like a trade union, but for renters.</b></p>
   <p><b>We stand up for each other and campaign to get a better deal for everyone.</b></p>
 </ptu-hero>
 
-<ptu-page-header headline="This is the title of a page or a headline of an article"
-                 category="guidance"
-                 category-href="/"
-                 category-colour="accent"
-                 topic="Evictions"
+<ptu-page-header headline='This is the title of a page or a headline of an article'
+                 category='guidance'
+                 category-href='/'
+                 category-colour='accent'
+                 topic='Evictions'
                  topic-href='/'
 >
-This is some subtitle text
+  This is some subtitle text
 </ptu-page-header>
 
 <ptu-tabs>
-  <ptu-tab href="/home" selected>View</ptu-tab>
-  <ptu-tab href="#">Edit</ptu-tab>
-  <ptu-tab href="#">History</ptu-tab>
+  <ptu-tab href='/home' selected>View</ptu-tab>
+  <ptu-tab href='#'>Edit</ptu-tab>
+  <ptu-tab href='#'>History</ptu-tab>
 </ptu-tabs>
 
-<ptu-section class="top-padding" sidebar="right">
+<ptu-section class='top-padding' sidebar='right'>
   <hgroup>
     <h1>
       Kitchen sink
@@ -83,37 +83,60 @@ This is some subtitle text
     </p>
   </hgroup>
 
-  <article class="prose">
+  <article class='prose'>
 
-    <ptu-complete headline="You're all set" status="Success" colour="green">
+    <ptu-complete headline="You're all set" status='Success' colour='green'>
       This is some detail of what's happened, what the user might need to do next etc.
     </ptu-complete>
 
-    <ptu-facepile max="7">
-      <ptu-avatar name="Anne Person"></ptu-avatar>
-      <ptu-avatar name="Skippedy Doodar"></ptu-avatar>
-      <ptu-avatar name="Ben Dover"></ptu-avatar>
+    <ptu-details summary='What happens next?'>
+      <p>Your membership is provisional for the first four weeks. If your paid via direct debit and
+        we are not able to successfully take a payment during this time, or it comes to light
+        that you are a landlord, then we may reject your membership. If this happens we'll let you know.</p>
+      <p>After the four weeks, we'll send you a membership card and welcome pack.</p>
+    </ptu-details>
+    <ptu-details summary='How I log in?'>
+      <p>
+        We don't use passwords, so to log in you'll need to use a one-time code.
+      </p>
+      <p>
+        When you enter your email address on the log-in screen, we'll email you three words.
+        These words are selected randomly. Enter the three words in order on the next screen
+        and you'll be logged in.
+      </p>
+      <p>You can only use these words once and they expire after 15 minutes., next time you log in, new ones will be
+        sent to you.</p>
+    </ptu-details>
+
+    <ptu-facepile max='7'>
+      <ptu-avatar name='Anne Person'></ptu-avatar>
+      <ptu-avatar name='Skippedy Doodar'></ptu-avatar>
+      <ptu-avatar name='Ben Dover'></ptu-avatar>
       <ptu-avatar name="Myaul d'Foe"></ptu-avatar>
-      <ptu-avatar name="Toby Bigspots"></ptu-avatar>
-      <ptu-avatar src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Official_portrait_of_Jeremy_Corbyn_crop_2%2C_2020.jpg/64px-Official_portrait_of_Jeremy_Corbyn_crop_2%2C_2020.jpg" name="Jeremy Corbyn"></ptu-avatar>
-      <ptu-avatar name="Rishi Sunak"></ptu-avatar>
-      <ptu-avatar name="Keith Starmer"></ptu-avatar>
-      <ptu-avatar name="Pancakes McGee"></ptu-avatar>
-      <ptu-avatar name="MIKA"></ptu-avatar>
-      <ptu-avatar name="Abigail Lemonparty"></ptu-avatar>
-      <ptu-avatar name="Jean-luke Picard"></ptu-avatar>
+      <ptu-avatar name='Toby Bigspots'></ptu-avatar>
+      <ptu-avatar
+        src='https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Official_portrait_of_Jeremy_Corbyn_crop_2%2C_2020.jpg/64px-Official_portrait_of_Jeremy_Corbyn_crop_2%2C_2020.jpg'
+        name='Jeremy Corbyn'></ptu-avatar>
+      <ptu-avatar name='Rishi Sunak'></ptu-avatar>
+      <ptu-avatar name='Keith Starmer'></ptu-avatar>
+      <ptu-avatar name='Pancakes McGee'></ptu-avatar>
+      <ptu-avatar name='MIKA'></ptu-avatar>
+      <ptu-avatar name='Abigail Lemonparty'></ptu-avatar>
+      <ptu-avatar name='Jean-luke Picard'></ptu-avatar>
       <ptu-avatar name="Harry Potta'"></ptu-avatar>
-      <ptu-avatar name="Lampus Gonglepidgeon"></ptu-avatar>
-      <ptu-avatar name="Kathy Mingle"></ptu-avatar>
+      <ptu-avatar name='Lampus Gonglepidgeon'></ptu-avatar>
+      <ptu-avatar name='Kathy Mingle'></ptu-avatar>
     </ptu-facepile>
 
     <h4>Data table</h4>
-    <ptu-datatable caption="Example table">
-      <ptu-row id="ABC1234" href="/1" status="Good" statusColour="green">This is a child node! With really long text which will make it overflow on at least mobile and maybe desktop also</ptu-row>
-      <ptu-row id="ABC1234" href="/1" status="Good" statusColour="green">This is a child node!</ptu-row>
-      <ptu-row id="ABC1234" href="/1" status="Good" statusColour="green">This is a child node!</ptu-row>
-      <ptu-row id="ABC1234" href="/1" status="Good" statusColour="green">This is a child node!</ptu-row>
-      <ptu-row id="ABC1234" href="/1" status="Good" statusColour="green">This is a child node!</ptu-row>
+    <ptu-datatable caption='Example table'>
+      <ptu-row id='ABC1234' href='/1' status='Good' statusColour='green'>This is a child node! With really long text
+        which will make it overflow on at least mobile and maybe desktop also
+      </ptu-row>
+      <ptu-row id='ABC1234' href='/1' status='Good' statusColour='green'>This is a child node!</ptu-row>
+      <ptu-row id='ABC1234' href='/1' status='Good' statusColour='green'>This is a child node!</ptu-row>
+      <ptu-row id='ABC1234' href='/1' status='Good' statusColour='green'>This is a child node!</ptu-row>
+      <ptu-row id='ABC1234' href='/1' status='Good' statusColour='green'>This is a child node!</ptu-row>
 
     </ptu-datatable>
 
@@ -121,124 +144,124 @@ This is some subtitle text
     <ptu-membership-card></ptu-membership-card>
 
 
-    <h4 id="form-controls"><a href="#form-controls">#</a> Form Controls</h4>
-    <ptu-fieldset label="Notice" error-text="This field is required." description="What type of notice did you get?">
-      <ptu-checkbox radio name="q1" value="21">Section 21</ptu-checkbox>
-      <ptu-checkbox radio name="q1" value="8">Section 8</ptu-checkbox>
-      <ptu-checkbox radio name="q1" value="0">I didn't get a notice letter</ptu-checkbox>
+    <h4 id='form-controls'><a href='#form-controls'>#</a> Form Controls</h4>
+    <ptu-fieldset label='Notice' error-text='This field is required.' description='What type of notice did you get?'>
+      <ptu-checkbox radio name='q1' value='21'>Section 21</ptu-checkbox>
+      <ptu-checkbox radio name='q1' value='8'>Section 8</ptu-checkbox>
+      <ptu-checkbox radio name='q1' value='0'>I didn't get a notice letter</ptu-checkbox>
     </ptu-fieldset>
 
-    <ptu-fieldset label="Full name" inline>
-      <ptu-text-input label="Given name" name="given_name" width="25"></ptu-text-input>
-      <ptu-text-input label="Family name" name="family_name" width="25"></ptu-text-input>
+    <ptu-fieldset label='Full name' inline>
+      <ptu-text-input label='Given name' name='given_name' width='25'></ptu-text-input>
+      <ptu-text-input label='Family name' name='family_name' width='25'></ptu-text-input>
     </ptu-fieldset>
 
-    <ptu-fieldset label="Security words" inline>
-      <ptu-text-input label="1" name="word_1" width="10"></ptu-text-input>
-      <ptu-text-input label="2" name="word_2" width="10"></ptu-text-input>
-      <ptu-text-input label="3" name="word_3" width="10"></ptu-text-input>
+    <ptu-fieldset label='Security words' inline>
+      <ptu-text-input label='1' name='word_1' width='10'></ptu-text-input>
+      <ptu-text-input label='2' name='word_2' width='10'></ptu-text-input>
+      <ptu-text-input label='3' name='word_3' width='10'></ptu-text-input>
     </ptu-fieldset>
 
-    <ptu-fieldset optional label="Date of birth" inline description="An example date field">
-      <ptu-text-input label="Day" name="dob_day" width="2"></ptu-text-input>
-      <ptu-text-input label="Month" name="dob_month" width="2"></ptu-text-input>
-      <ptu-text-input label="Year" name="dob_year" width="4"></ptu-text-input>
+    <ptu-fieldset optional label='Date of birth' inline description='An example date field'>
+      <ptu-text-input label='Day' name='dob_day' width='2'></ptu-text-input>
+      <ptu-text-input label='Month' name='dob_month' width='2'></ptu-text-input>
+      <ptu-text-input label='Year' name='dob_year' width='4'></ptu-text-input>
     </ptu-fieldset>
 
-    <ptu-fieldset required label="Postcode" inline description="A postcode field">
-      <ptu-text-input label="e.g. PE2" name="incode" width="4"></ptu-text-input>
-      <ptu-text-input label="e.g. 1AA" name="outcode" width="3"></ptu-text-input>
+    <ptu-fieldset required label='Postcode' inline description='A postcode field'>
+      <ptu-text-input label='e.g. PE2' name='incode' width='4'></ptu-text-input>
+      <ptu-text-input label='e.g. 1AA' name='outcode' width='3'></ptu-text-input>
     </ptu-fieldset>
 
-    <ptu-fieldset label="Options" inline description="An example of option boxes">
-      <ptu-option radio name="tenure" value="1">
+    <ptu-fieldset label='Options' inline description='An example of option boxes'>
+      <ptu-option radio name='tenure' value='1'>
         Renting
       </ptu-option>
-      <ptu-option radio name="tenure" value="2">
+      <ptu-option radio name='tenure' value='2'>
         Own your own home
       </ptu-option>
-      <ptu-option radio name="tenure" value="3">
+      <ptu-option radio name='tenure' value='3'>
         Living with friends or family
       </ptu-option>
     </ptu-fieldset>
 
-    <h4 id="forms"><a href="#forms">#</a> Forms</h4>
+    <h4 id='forms'><a href='#forms'>#</a> Forms</h4>
     <form>
       <p>
-        <label for="example-input-email">Email address</label>
-        <input type="email" id="example-input-email">
+        <label for='example-input-email'>Email address</label>
+        <input type='email' id='example-input-email'>
       </p>
       <p>
-        <label for="example-input-number">Number</label>
-        <input type="number" id="example-input-number">
+        <label for='example-input-number'>Number</label>
+        <input type='number' id='example-input-number'>
       </p>
       <p>
-        <label for="example-input-password">Password</label>
-        <input type="password" id="example-input-password">
+        <label for='example-input-password'>Password</label>
+        <input type='password' id='example-input-password'>
       </p>
       <p>
-        <label for="example-input-search">Search</label>
-        <input type="search" id="example-input-search">
+        <label for='example-input-search'>Search</label>
+        <input type='search' id='example-input-search'>
       </p>
       <p>
-        <label for="example-input-tel">Telephone number</label>
-        <input type="tel" id="example-input-tel">
+        <label for='example-input-tel'>Telephone number</label>
+        <input type='tel' id='example-input-tel'>
       </p>
       <p>
-        <label for="example-input-text">Text</label>
-        <input type="text" id="example-input-text">
+        <label for='example-input-text'>Text</label>
+        <input type='text' id='example-input-text'>
       </p>
       <p>
-        <label for="example-input-readonly">Read-only</label>
-        <input type="text" readonly value="Can't touch this!">
+        <label for='example-input-readonly'>Read-only</label>
+        <input type='text' readonly value="Can't touch this!">
       </p>
       <p>
-        <label for="example-input-disabled">Disabled</label>
-        <input type="text" disabled value="Not available">
+        <label for='example-input-disabled'>Disabled</label>
+        <input type='text' disabled value='Not available'>
       </p>
       <p>
-        <label for="example-input-url">URL</label>
-        <input type="url" id="example-input-url">
+        <label for='example-input-url'>URL</label>
+        <input type='url' id='example-input-url'>
       </p>
       <p>
-        <label for="example-input-color">Color</label>
-        <input type="color" id="example-input-color">
+        <label for='example-input-color'>Color</label>
+        <input type='color' id='example-input-color'>
       </p>
       <p>
-        <label for="example-input-date">Date</label>
-        <input type="date" id="example-input-date">
+        <label for='example-input-date'>Date</label>
+        <input type='date' id='example-input-date'>
       </p>
       <p>
-        <label for="example-input-date-time">Date / Time</label>
-        <input type="datetime" id="example-input-date-time">
+        <label for='example-input-date-time'>Date / Time</label>
+        <input type='datetime' id='example-input-date-time'>
       </p>
       <p>
-        <label for="example-input-date-time-local">Date / Time local</label>
-        <input type="datetime-local" id="example-input-date-time-local">
+        <label for='example-input-date-time-local'>Date / Time local</label>
+        <input type='datetime-local' id='example-input-date-time-local'>
       </p>
       <p>
-        <label for="example-input-month">Month</label>
-        <input type="month" id="example-input-month">
+        <label for='example-input-month'>Month</label>
+        <input type='month' id='example-input-month'>
       </p>
       <p>
-        <label for="example-input-week">Week</label>
-        <input type="week" id="example-input-week">
+        <label for='example-input-week'>Week</label>
+        <input type='week' id='example-input-week'>
       </p>
       <p>
-        <label for="example-input-time">Time</label>
-        <input type="time" id="example-input-time">
+        <label for='example-input-time'>Time</label>
+        <input type='time' id='example-input-time'>
       </p>
       <p>
-        <label for="example-input-file">File input</label>
-        <input type="file" id="example-input-file">
+        <label for='example-input-file'>File input</label>
+        <input type='file' id='example-input-file'>
       </p>
       <p>
-        <label for="example-input-range">Range input</label>
-        <input type="range" id="example-input-range" min="1" max="4" value="3">
+        <label for='example-input-range'>Range input</label>
+        <input type='range' id='example-input-range' min='1' max='4' value='3'>
       </p>
       <p>
-        <label for="example-select1">Select</label>
-        <select id="example-select1">
+        <label for='example-select1'>Select</label>
+        <select id='example-select1'>
           <option>1</option>
           <option>2</option>
           <option>3</option>
@@ -247,8 +270,8 @@ This is some subtitle text
         </select>
       </p>
       <p>
-        <label for="example-select1a">Select with size</label>
-        <select id="example-select1a" size="2">
+        <label for='example-select1a'>Select with size</label>
+        <select id='example-select1a' size='2'>
           <option>1</option>
           <option>2</option>
           <option>3</option>
@@ -257,8 +280,8 @@ This is some subtitle text
         </select>
       </p>
       <p>
-        <label for="example-select2">Multiple select</label>
-        <select multiple id="example-select2">
+        <label for='example-select2'>Multiple select</label>
+        <select multiple id='example-select2'>
           <option>1</option>
           <option>2</option>
           <option>3</option>
@@ -267,98 +290,97 @@ This is some subtitle text
         </select>
       </p>
       <p>
-        <label for="example-optgroup">Select with optgroup: Favorite Car</label>
-        <select id="example-optgroup">
-          <optgroup label="Swedish Cars">
+        <label for='example-optgroup'>Select with optgroup: Favorite Car</label>
+        <select id='example-optgroup'>
+          <optgroup label='Swedish Cars'>
             <option>Volvo</option>
             <option>Saab</option>
           </optgroup>
-          <optgroup label="German Cars">
+          <optgroup label='German Cars'>
             <option>Mercedes</option>
             <option>Audi</option>
           </optgroup>
         </select>
       </p>
       <p>
-        <label for="example-optgroup2">Select with optgroup and size:Favorite Dish</label>
-        <select id="example-optgroup2" size="2">
-          <optgroup label="Vegetarian">
+        <label for='example-optgroup2'>Select with optgroup and size:Favorite Dish</label>
+        <select id='example-optgroup2' size='2'>
+          <optgroup label='Vegetarian'>
             <option>Green Salad</option>
             <option>French Fries</option>
           </optgroup>
-          <optgroup label="Carnivorous">
+          <optgroup label='Carnivorous'>
             <option>Big Mac</option>
             <option>Roast Beef</option>
           </optgroup>
         </select>
       </p>
       <p>
-        <label for="example-optgroup3">Multiple select with optgroup: Public transport</label>
-        <select id="example-optgroup3" multiple>
-          <optgroup label="Ground">
+        <label for='example-optgroup3'>Multiple select with optgroup: Public transport</label>
+        <select id='example-optgroup3' multiple>
+          <optgroup label='Ground'>
             <option>Train</option>
             <option>Bus</option>
           </optgroup>
-          <optgroup label="Water">
+          <optgroup label='Water'>
             <option>Ship</option>
             <option>Submarine</option>
           </optgroup>
-          <optgroup label="Air">
+          <optgroup label='Air'>
             <option>Plane</option>
             <option>Balloon</option>
           </optgroup>
         </select>
       </p>
       <p>
-        <label for="example-textarea">Textarea</label>
-        <textarea id="example-textarea" rows="3"></textarea>
+        <label for='example-textarea'>Textarea</label>
+        <textarea id='example-textarea' rows='3'></textarea>
       </p>
       <fieldset>
         <legend>I am legend</legend>
         <div>
-          <input type="radio" name="option-radio" id="option-radio1" value="option1" checked>
-          <label for="option-radio1">Option one is this and that&mdash;be sure to include why it's great</label>
+          <input type='radio' name='option-radio' id='option-radio1' value='option1' checked>
+          <label for='option-radio1'>Option one is this and that&mdash;be sure to include why it's great</label>
         </div>
         <div>
-          <input type="radio" name="option-radio" id="option-radio2" value="option2">
+          <input type='radio' name='option-radio' id='option-radio2' value='option2'>
           <label>Option two can be something else and selecting it will deselect option one</label>
         </div>
         <div>
-          <input type="radio" name="option-radio" id="option-radio3" value="option3" disabled>
+          <input type='radio' name='option-radio' id='option-radio3' value='option3' disabled>
           <label>Option three is disabled</label>
         </div>
       </fieldset>
       <fieldset>
         <legend>I am also legend</legend>
-        <input type="checkbox" id="checkbox1">
-        <label for="checkbox1">Check me out</label>
-        <input type="checkbox" id="checkbox2">
-        <label for="checkbox2">and/or check me out</label>
+        <input type='checkbox' id='checkbox1'>
+        <label for='checkbox1'>Check me out</label>
+        <input type='checkbox' id='checkbox2'>
+        <label for='checkbox2'>and/or check me out</label>
       </fieldset>
       <p>
-        <button type="button" name="button">Button</button>
-        <input type="button" name="input" value="Input Button">
-        <input type="submit" name="submit" value="Input Submit">
-        <button type="submit" name="submit2">Submit</button>
-        <input type="reset" name="reset" value="Input Reset">
-        <button type="reset" name="reset2">Reset</button>
+        <button type='button' name='button'>Button</button>
+        <input type='button' name='input' value='Input Button'>
+        <input type='submit' name='submit' value='Input Submit'>
+        <button type='submit' name='submit2'>Submit</button>
+        <input type='reset' name='reset' value='Input Reset'>
+        <button type='reset' name='reset2'>Reset</button>
         <button disabled>Cancel</button>
       </p>
       <p>
-        <button type="button" name="button">Normal</button>
-        <button type="button" name="button" class="primary-button">Primary Button</button>
-        <button type="button" name="button" class="success-button">success Button</button>
-        <button type="button" name="button" class="warning-button">warning Button</button>
-        <button type="button" name="button" class="danger-button">Danger Button</button>
+        <button type='button' name='button'>Normal</button>
+        <button type='button' name='button' class='primary-button'>Primary Button</button>
+        <button type='button' name='button' class='success-button'>success Button</button>
+        <button type='button' name='button' class='warning-button'>warning Button</button>
+        <button type='button' name='button' class='danger-button'>Danger Button</button>
       </p>
     </form>
-
 
 
   </article>
 
 
-  <dl slot="sidebar">
+  <dl slot='sidebar'>
     <dt>Attribute</dt>
     <dd>Value 1</dd>
     <dd>Value 2</dd>
@@ -370,23 +392,23 @@ This is some subtitle text
       <ptu-chip>Draft</ptu-chip>
     </dd>
     <dd>
-      <ptu-chip colour="sand">Archived</ptu-chip>
+      <ptu-chip colour='sand'>Archived</ptu-chip>
     </dd>
 
     <dt>
       Semantic things
     </dt>
     <dd>
-      <ptu-chip colour="blue">Ready</ptu-chip>
+      <ptu-chip colour='blue'>Ready</ptu-chip>
     </dd>
     <dd>
-      <ptu-chip colour="green">Published</ptu-chip>
+      <ptu-chip colour='green'>Published</ptu-chip>
     </dd>
     <dd>
-      <ptu-chip colour="yellow">Scheduled</ptu-chip>
+      <ptu-chip colour='yellow'>Scheduled</ptu-chip>
     </dd>
     <dd>
-      <ptu-chip colour="red">Error</ptu-chip>
+      <ptu-chip colour='red'>Error</ptu-chip>
     </dd>
 
     <dt>
@@ -394,18 +416,18 @@ This is some subtitle text
     </dt>
     <dd>Againly a wword</dd>
   </dl>
-  <ul slot="sidebar" class="list">
+  <ul slot='sidebar' class='list'>
     <li>
-      <a href="#">This is a related article</a>
+      <a href='#'>This is a related article</a>
     </li>
     <li>
-      <a href="#">This is another related article</a>
+      <a href='#'>This is another related article</a>
     </li>
     <li>
-      <a href="#">Here is an article, and it's related</a>
+      <a href='#'>Here is an article, and it's related</a>
     </li>
     <li>
-      <a href="#">This is a related article</a>
+      <a href='#'>This is a related article</a>
     </li>
   </ul>
 </ptu-section>
@@ -415,40 +437,40 @@ This is some subtitle text
     <h3>News</h3>
   </hgroup>
   <ptu-grid>
-    <div class="card">
+    <div class='card'>
       <header>
         This is some card
       </header>
       <p>Description text of the card.</p>
       <p>This is more text</p>
       <footer>
-        <a href="#">Find out more about this</a>
+        <a href='#'>Find out more about this</a>
       </footer>
     </div>
-    <div class="card">
+    <div class='card'>
       <header>
         This is some card
       </header>
       <p>Description text of the card.</p>
       <p>This is more text</p>
       <footer>
-        <a href="#">Find out more about this</a>
+        <a href='#'>Find out more about this</a>
       </footer>
     </div>
-    <div class="card">
+    <div class='card'>
       <header>
         This is some card
       </header>
       <p>Description text of the card.</p>
       <p>This is more text</p>
       <footer>
-        <a href="#">Find out more about this</a>
+        <a href='#'>Find out more about this</a>
       </footer>
     </div>
   </ptu-grid>
 </ptu-section>
 
-<ptu-callout local-number="7736096860"></ptu-callout>
+<ptu-callout local-number='7736096860'></ptu-callout>
 
 <ptu-footer>
   <section>
@@ -473,13 +495,13 @@ This is some subtitle text
     </hgroup>
     <ul>
       <li>
-        <a href="#">Privacy policy</a>
+        <a href='#'>Privacy policy</a>
       </li>
       <li>
-        <a href="#">Data protection policy</a>
+        <a href='#'>Data protection policy</a>
       </li>
       <li>
-        <a href="#">Complaints policy</a>
+        <a href='#'>Complaints policy</a>
       </li>
     </ul>
   </section>

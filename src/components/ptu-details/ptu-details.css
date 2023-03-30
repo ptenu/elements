@@ -1,3 +1,54 @@
 :host {
   display: block;
 }
+
+* {
+  box-sizing: border-box;
+}
+
+article {
+  border-top: 1px solid var(--colour-grey-400);
+  padding: calc(var(--layout-gap) / 2) 0;
+}
+
+button {
+  display: flex;
+  gap: 2ch;
+  justify-content: space-between;
+  width: 100%;
+  appearance: none;
+  font-size: 1.12em;
+  font-family: inherit;
+  font-weight: 600;
+  outline: none;
+  border: none;
+  background: none;
+  padding: 0;
+  cursor: pointer;
+  color: var(--colour-link);
+}
+
+header + section {
+  border-top: 1px solid var(--colour-grey-300);
+  margin: calc(var(--layout-gap) / 2) 0 0;
+  padding-top: calc(var(--layout-gap) / 2);
+}
+
+button:focus {
+  background-color: var(--colour-focus);
+  color: var(--colour-text);
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+}
+
+button:hover {
+  color: var(--colour-link-hover);
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+}
+
+@media print {
+  section {
+    display: block !important;
+  }
+}

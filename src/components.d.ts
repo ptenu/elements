@@ -32,6 +32,8 @@ export namespace Components {
         "caption": string;
     }
     interface PtuDetails {
+        "open": boolean;
+        "summary": string;
     }
     interface PtuFacepile {
         "max": number;
@@ -311,6 +313,8 @@ declare namespace LocalJSX {
         "caption": string;
     }
     interface PtuDetails {
+        "open"?: boolean;
+        "summary"?: string;
     }
     interface PtuFacepile {
         "max"?: number;
