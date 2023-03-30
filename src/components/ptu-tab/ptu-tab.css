@@ -3,15 +3,34 @@
   box-sizing: border-box;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 a {
   display: block;
+  position: relative;
   color: var(--colour-link);
   text-decoration: underline;
   text-decoration-thickness: 1px;
-  background-color: transparent;
-  padding: .5em 1em .66em 1em;
+  padding: .5em .66em .44em 1em;
   border-top-left-radius: var(--border-radius);
+  background-color: hsl(33 20% 84%);
+  box-shadow: 0 -2px 0 inset hsl(33, 20%, 82%);
+}
+
+a::after {
+  display: block;
+  position: absolute;
+  content: " ";
+  height: 100%;
+  top: 0;
+  right: -.66em;
+  background-color: inherit;
   border-top-right-radius: var(--border-radius);
+  width: 20px;
+  transform: skewX(10deg);
+  box-shadow: 0 -2px 0 inset hsl(33, 20%, 82%);
 }
 
 a:hover {
@@ -22,6 +41,11 @@ a:hover {
 
 a.active {
   background-color: var(--colour-background);
+  box-shadow: 2px 2px 0 inset hsl(33, 20%, 82%);
+}
+
+a.active::after {
+  box-shadow: -2.5px 2px 0 inset hsl(33, 20%, 82%);
 }
 
 a:focus {

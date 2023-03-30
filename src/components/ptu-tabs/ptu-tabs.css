@@ -2,6 +2,7 @@
   display: block;
   box-sizing: border-box;
   background-color: var(--colour-brand-sand);
+  box-shadow: 0 -2px 0 inset hsl(33, 20%, 82%);
 }
 
 ptu-section {
@@ -14,5 +15,5 @@ ul {
   margin: 0;
   padding: 0;
   list-style: none;
-  gap: calc(var(--layout-gap) / 2);
+  gap: var(--layout-gap);
 }
