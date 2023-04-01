@@ -91,6 +91,20 @@
   --border-radius: 4px;
   --container-width: 1200px;
   --layout-gap: 1rem;
+
+  /* Fony sizes */
+  --fs-base: calc(10.5pt + .390625vw);
+  --fs-mega: calc(var(--fs-base) * 2.88);
+  --fs-big: calc(var(--fs-base) * 2.256);
+  --fs-h1: calc(var(--fs-base) * 1.898);
+  --fs-h2: calc(var(--fs-base) * 1.666);
+  --fs-h3: calc(var(--fs-base) * 1.415);
+  --fs-h4: calc(var(--fs-base) * 1.303);
+  --fs-h5: calc(var(--fs-base) * 1.111);
+  --fs-h6: calc(var(--fs-base) * 1.088);
+  --fs-small: calc(var(--fs-base) * 0.911);
+  --fs-tiny: calc(var(--fs-base) * 0.678);
+
 }
 
 *,
@@ -113,12 +127,12 @@ html, body {
 }
 
 html {
-  line-height: 1.5;
+  line-height: 1.25;
   -webkit-text-size-adjust: 100%;
   -moz-tab-size: 4;
   tab-size: 4;
   font-family: 'SofiaSans', sans-serif;
-  font-size: 13.5pt;
+  font-size: var(--fs-base);
 }
 
 body {
@@ -175,16 +189,16 @@ kbd,
 samp,
 pre {
   font-family:  ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-  font-size: 1em;
+  font-size: inherit;
 }
 
 small {
-  font-size: 80%;
+  font-size: .8em;
 }
 
 sub,
 sup {
-  font-size: 75%;
+  font-size: .666em;
   line-height: 0;
   position: relative;
   vertical-align: baseline;
@@ -213,7 +227,7 @@ textarea {
   appearance: none;
   box-sizing: border-box;
   font-family: inherit;
-  font-size: 100%;
+  font-size: 1em;
   font-weight: inherit;
   line-height: inherit;
   color: inherit;
@@ -301,7 +315,7 @@ textarea {
 
 input::placeholder,
 textarea::placeholder {
-  opacity: 1; /* 1 */
+  opacity: 1;
   color: var(--colour-grey-400);
 }
 
@@ -329,8 +343,10 @@ object {
 
 img,
 video {
-  max-width: 100%;
-  height: auto;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-position: center center;
+  object-fit: cover;
 }
 
 [hidden] {
@@ -338,42 +354,41 @@ video {
 }
 
 .prose h1 {
-  font-size: 170%;
+  font-size: var(--fs-h1);
   border-bottom: 1px solid var(--colour-grey-300);
   padding-bottom: .23em;
   margin-top: calc(var(--layout-gap) * 1.5);
 }
 .prose h2 {
-  font-size: 160%;
+  font-size: var(--fs-h2);
   border-bottom: 1px solid var(--colour-grey-300);
   padding-bottom: .23em;
   margin-top: calc(var(--layout-gap) * 1.5);
 }
 .prose h3 {
-  font-size: 150%;
+  font-size: var(--fs-h3);
   border-bottom: 1px solid var(--colour-grey-300);
   padding-bottom: .23em;
   margin-top: calc(var(--layout-gap) * 1.5);
 }
 .prose h4 {
-  font-size: 140%;
+  font-size: var(--fs-h4);;
   border-bottom: 1px solid var(--colour-grey-300);
   padding-bottom: .23em;
   margin-top: calc(var(--layout-gap) * 1.5);
 }
 .prose h5 {
-  font-size: 130%;
+  font-size: var(--fs-h5);
   border-bottom: 1px solid var(--colour-grey-300);
   padding-bottom: .23em;
   margin-top: calc(var(--layout-gap) * 1.5);
 }
 .prose h6 {
-  font-size: 120%;
+  font-size: var(--fs-h6);
   border-bottom: 1px solid var(--colour-grey-300);
   padding-bottom: .23em;
   margin-top: calc(var(--layout-gap) * 1.5);
 }
-
 
 hgroup {
   border-bottom: 1px solid var(--colour-border);
@@ -390,49 +405,49 @@ hgroup p {
 }
 
 hgroup h1 {
-  font-size: 200%;
+  font-size: var(--fs-h1);;
   font-weight: 600;
   max-width: 45ch;
   margin: 0;
 }
 
 hgroup h2 {
-  font-size: 180%;
+  font-size: var(--fs-h2);;
   font-weight: 600;
   max-width: 45ch;
   margin: 0;
 }
 
 hgroup h3 {
-  font-size: 160%;
+  font-size: var(--fs-h3);
   font-weight: 600;
   max-width: 45ch;
   margin: 0;
 }
 
 hgroup h4 {
-  font-size: 140%;
+  font-size: var(--fs-h4);
   font-weight: 600;
   max-width: 45ch;
   margin: 0;
 }
 
 hgroup h5 {
-  font-size: 120%;
+  font-size: var(--fs-h5);
   font-weight: 600;
   max-width: 45ch;
   margin: 0;
 }
 
 hgroup h6 {
-  font-size: 100%;
+  font-size: var(--fs-h6);
   font-weight: 600;
   max-width: 45ch;
   margin: 0;
 }
 
 .title {
-  font-size: 5vmax;
+  font-size: var(--fs-mega);
   line-height: 1em;
   font-weight: 700;
   max-width: 26ch;
@@ -499,7 +514,7 @@ svg {
 .card > header {
   margin: .33rem 0 .5rem;
   font-weight: 600;
-  font-size: 110%;
+  font-size: var(--fs-h5);
 }
 
 .card > footer {
@@ -616,7 +631,7 @@ p + ul li::before,
 }
 
 .prose code {
-  font-size: 80%;
+  font-size: .8em;
   padding: .12em;
   background-color: var(--colour-grey-700);
   border-radius: var(--border-radius);
@@ -624,7 +639,7 @@ p + ul li::before,
 }
 
 .prose kbd, .prose samp, .prose var {
-  font-size: 80%;
+  font-size: .8em;
   padding: .12em;
   background-color: var(--colour-grey-300);
   border-radius: var(--border-radius);
@@ -961,7 +976,7 @@ pre {
   white-space: pre-wrap;
   padding: .5rem .66rem;
   background-color: var(--colour-grey-300);
-  font-size: 80%;
+  font-size: .8em;
   font-weight: 300;
   margin: 1rem 0;
   border-radius: var(--border-radius);
@@ -1028,7 +1043,7 @@ button,
   border: 1px solid hsl(190 28% 10% / .18);
   padding: .33em .66em .44em .66em;
   cursor: pointer;
-  font-size: 90%;
+  font-size: .9em;
   font-weight: 600;
   margin: 3px;
   box-shadow: 0 -2px 0 inset var(--edge-color);

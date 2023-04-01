@@ -27,7 +27,7 @@ footer {
 }
 
 .legal {
-  font-size: small;
+  font-size: var(--fs-tiny);
   font-weight: 500;
 }
 

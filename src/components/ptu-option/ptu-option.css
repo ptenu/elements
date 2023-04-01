@@ -12,7 +12,7 @@ ptu-option label {
   border: 1px solid rgba(10,10,10,.23);
   padding: .5em 1em .66em 2.22em;
   cursor: pointer;
-  font-size: 90%;
+  font-size: var(--fs-small);
   font-weight: 400;
   text-shadow: 0 0 6px rgba(200,200,200, .66);
   box-shadow: 0 -2px 0 inset rgba(10,10,10,.17);
@@ -20,8 +20,8 @@ ptu-option label {
 
 ptu-option input[type="radio"],
 ptu-option input[type="checkbox"]{
-  height: 1em;
-  width: 1em;
+  height: 19px;
+  width: 19px;
   margin: .33em 0;
   position: absolute;
   left: .58em;
@@ -49,7 +49,7 @@ ptu-option input[type="checkbox"]:focus + label{
 ptu-option header,
 ptu-option .label-header {
   font-weight: 600;
-  font-size: 110%;
+  font-size: var(--fs-h6);
 }
 
 ptu-option input[type="radio"]:checked + label,

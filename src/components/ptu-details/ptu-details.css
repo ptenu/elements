@@ -17,7 +17,7 @@ button {
   justify-content: space-between;
   width: 100%;
   appearance: none;
-  font-size: 1.12em;
+  font-size: var(--fs-h5);
   font-family: inherit;
   font-weight: 500;
   outline: none;

@@ -37,7 +37,7 @@ caption p {
 }
 
 caption h1 {
-  font-size: 1.12em;
+  font-size: var(--fs-h5);
   font-weight: 500;
 }
 

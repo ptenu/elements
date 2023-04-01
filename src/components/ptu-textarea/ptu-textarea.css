@@ -27,6 +27,7 @@ ptu-textarea textarea {
   outline: none;
   resize: none;
   font-weight: 300;
+  font-size: var(--fs-base);
   width: 100%;
   padding: .5ch 1ch;
   overflow-y: hidden;
@@ -59,7 +60,7 @@ ptu-textarea .counter {
   width: 100%;
   text-align: right;
   font-weight: 500;
-  font-size: .9em
+  font-size: var(--fs-small);
 }
 
 ptu-textarea .counter.red {
@@ -72,7 +73,7 @@ ptu-textarea .counter.yellow {
 
 ptu-textarea .description {
   color: var(--colour-grey-600);
-  font-size: .9em;
+  font-size: var(--fs-small);
   font-style: italic;
   width: 100%;
 }

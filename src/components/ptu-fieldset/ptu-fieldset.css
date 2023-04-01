@@ -19,7 +19,7 @@ legend {
   padding: 0;
   margin: 0 0 -.33em 0;
   font-weight: 600;
-  font-size: 130%;
+  font-size: var(--fs-h4);
 }
 
 p {
@@ -28,12 +28,24 @@ p {
 }
 
 .error {
+  position: relative;
+  display: flex;
+  gap: 1ch;
   padding: .44em 1em;
-  border-left: 5px solid var(--colour-red-500);
-  background-color: var(--colour-red-100);
-  color: var(--colour-red-900);
+  border-left: 5px solid var(--colour-red-300);
+  background-color: var(--colour-red-50);
+  color: var(--colour-red-800);
   border-radius: var(--border-radius);
   font-weight: 400;
+  font-size: var(--fs-small);
+}
+
+.error svg {
+  position: relative;
+  display: inline-block;
+  line-height: 1;
+  height: 1.5em;
+  width: 1.5em;
 }
 
 p + p {
@@ -58,7 +70,7 @@ ul.flex-list {
 }
 
 .tag {
-  font-size: 60%;
+  font-size: var(--fs-small);
   color: var(--colour-grey-500);
   margin: 0.44em;
   vertical-align: top;

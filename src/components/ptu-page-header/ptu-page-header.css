@@ -23,17 +23,17 @@ hgroup {
 h1 {
   display: block;
   position: relative;
-  line-height: 1.12;
+  line-height: 1;
   margin: 0;
   font-weight: 400;
   color: var(--colour-accent-900);
-  font-size: 4vmax;
+  font-size: var(--fs-big);
 }
 
 section {
   margin: calc(var(--layout-gap) / 2) 0 0;
   font-weight: 400;
-  font-size: 16pt;
+  font-size: var(--fs-h4);
   color: var(--colour-grey-700);
 }
 
@@ -42,7 +42,7 @@ aside {
   gap: 1ch;
   margin: calc(var(--layout-gap) / 2) 0 0;
   font-weight: 300;
-  font-size: 16pt;
+  font-size: var(--fs-h6);
   color: var(--colour-grey-700);
   align-items: center;
 }
@@ -50,7 +50,7 @@ aside {
 .category {
   text-transform: uppercase;
   display: inline-block;
-  font-size: .84em;
+  font-size: .868em;
   font-weight: 700;
   padding: .12em .5ch;
   border-radius: var(--border-radius);

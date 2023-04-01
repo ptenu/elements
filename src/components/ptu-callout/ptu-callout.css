@@ -4,6 +4,7 @@
   margin-top: calc(var(--layout-gap) * 2.45);
 }
 
+
 article {
   display: grid;
   grid-template-columns: 3rem auto;
@@ -35,7 +36,7 @@ p {
 a {
   color: var(--colour-red-500);
   text-decoration: none;
-  font-size: 28pt;
+  font-size: var(--fs-big);
   font-weight: 800;
 }
 
@@ -56,5 +57,5 @@ a:focus {
 .meta {
   font-weight: 400;
   color: var(--colour-red-300);
-  font-size: .77em;
+  font-size: var(--fs-tiny);
 }

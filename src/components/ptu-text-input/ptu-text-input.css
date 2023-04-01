@@ -13,5 +13,7 @@ ptu-text-input label {
   display: block;
   font-weight: 300;
   font-style: italic;
-  font-size: 80%;
+  font-size: var(--fs-small);
+  margin-top: .188em;
+  color: var(--colour-grey-700);
 }
