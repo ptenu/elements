@@ -12,7 +12,9 @@ export class PtuTextInput {
   @Prop() initialValue: string | null = null;
   @Prop() type = "text";
   @Prop() autocomplete: string = 'off';
-  @Prop() width: number = 10
+  @Prop() width: number = 10;
+  @Prop() showLabel: boolean = true;
+  @Prop() inputmode: "none" | "text" | "decimal" | "numeric" | "tel" | "search" | "email" | "url" = "text"
 
   render() {
     return (
@@ -22,8 +24,10 @@ export class PtuTextInput {
                name={this.name}
                value={this.initialValue}
                autocomplete={this.autocomplete}
+               aria-label={!this.showLabel && this.label}
+               inputmode={this.inputmode}
         />
-        {this.label && (
+        {this.showLabel && (
           <label htmlFor={this.name + `__input`}>
             {this.label}
           </label>

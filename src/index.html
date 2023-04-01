@@ -163,9 +163,9 @@
     </ptu-fieldset>
 
     <ptu-fieldset optional label='Date of birth' inline description='An example date field'>
-      <ptu-text-input label='Day' name='dob_day' width='2'></ptu-text-input>
-      <ptu-text-input label='Month' name='dob_month' width='2'></ptu-text-input>
-      <ptu-text-input label='Year' name='dob_year' width='4'></ptu-text-input>
+      <ptu-text-input label='Day' name='dob_day' width='2' inputmode="numeric"></ptu-text-input>
+      <ptu-text-input label='Month' name='dob_month' width='2' inputmode="numeric"></ptu-text-input>
+      <ptu-text-input label='Year' name='dob_year' width='4' inputmode="numeric"></ptu-text-input>
     </ptu-fieldset>
 
     <ptu-fieldset required label='Postcode' inline description='A postcode field'>
@@ -333,8 +333,8 @@
         </select>
       </p>
       <p>
-        <label for='example-textarea'>Textarea</label>
-        <textarea id='example-textarea' rows='3'></textarea>
+        <label>Textarea</label>
+        <ptu-textarea description="Write your text here" maxchars="100" id='example-textarea' rows='3'>This textarea has some long pre-defined content which will wrap over to a few lines you'll see, it will, it really will. Friends don't lie but boyfriends do sometimes so watch out for that</ptu-textarea>
       </p>
       <fieldset>
         <legend>I am legend</legend>

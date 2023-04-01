@@ -1,0 +1,78 @@
+ptu-textarea {
+  display: block;
+  background-color: var(--colour-grey-50);
+  color: var(--colour-text);
+  font-weight: inherit;
+  font-size: inherit;
+  font-family: inherit;
+  outline: 3px solid transparent;
+  padding: 0;
+  border: 2px solid var(--colour-text);
+  border-radius: var(--border-radius);
+}
+
+ptu-textarea:hover {
+  box-shadow: 0 0 0 2px inset var(--colour-grey-200);
+}
+
+ptu-textarea:focus-within {
+  outline: 3px solid var(--colour-focus);
+  box-shadow: 0 0 0 1px inset var(--colour-text);
+}
+
+ptu-textarea textarea {
+  appearance: none;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  resize: none;
+  font-weight: 300;
+  width: 100%;
+  padding: .5ch 1ch;
+  overflow-y: hidden;
+}
+
+ptu-textarea textarea:hover {
+  border: none;
+  box-shadow: none;
+}
+
+ptu-textarea textarea:focus {
+  outline: none;
+  border: none;
+  box-shadow: none;
+}
+
+ptu-textarea footer {
+  display: flex;
+  gap: 1ch;
+  margin: 0 1ch;
+  padding: .5ch 0;
+  border-top: 1px solid var(--colour-grey-300);
+}
+
+ptu-textarea footer:empty {
+  display: none;
+}
+
+ptu-textarea .counter {
+  width: 100%;
+  text-align: right;
+  font-weight: 500;
+  font-size: .9em
+}
+
+ptu-textarea .counter.red {
+  color: var(--colour-red-600);
+}
+
+ptu-textarea .counter.yellow {
+  color: var(--colour-yellow-600);
+}
+
+ptu-textarea .description {
+  color: var(--colour-grey-600);
+  font-size: .9em;
+  font-style: italic;
+  width: 100%;
+}

@@ -98,10 +98,18 @@ export namespace Components {
     interface PtuTextInput {
         "autocomplete": string;
         "initialValue": string | null;
+        "inputmode": "none" | "text" | "decimal" | "numeric" | "tel" | "search" | "email" | "url";
         "label": string | null;
         "name": string;
+        "showLabel": boolean;
         "type": string;
         "width": number;
+    }
+    interface PtuTextarea {
+        "description": string;
+        "id": string;
+        "label": string;
+        "maxchars": number;
     }
     interface PtuVisibilityToggle {
         "elementId": string;
@@ -252,6 +260,12 @@ declare global {
         prototype: HTMLPtuTextInputElement;
         new (): HTMLPtuTextInputElement;
     };
+    interface HTMLPtuTextareaElement extends Components.PtuTextarea, HTMLStencilElement {
+    }
+    var HTMLPtuTextareaElement: {
+        prototype: HTMLPtuTextareaElement;
+        new (): HTMLPtuTextareaElement;
+    };
     interface HTMLPtuVisibilityToggleElement extends Components.PtuVisibilityToggle, HTMLStencilElement {
     }
     var HTMLPtuVisibilityToggleElement: {
@@ -283,6 +297,7 @@ declare global {
         "ptu-tab": HTMLPtuTabElement;
         "ptu-tabs": HTMLPtuTabsElement;
         "ptu-text-input": HTMLPtuTextInputElement;
+        "ptu-textarea": HTMLPtuTextareaElement;
         "ptu-visibility-toggle": HTMLPtuVisibilityToggleElement;
     }
 }
@@ -379,10 +394,18 @@ declare namespace LocalJSX {
     interface PtuTextInput {
         "autocomplete"?: string;
         "initialValue"?: string | null;
+        "inputmode"?: "none" | "text" | "decimal" | "numeric" | "tel" | "search" | "email" | "url";
         "label"?: string | null;
         "name"?: string;
+        "showLabel"?: boolean;
         "type"?: string;
         "width"?: number;
+    }
+    interface PtuTextarea {
+        "description"?: string;
+        "id"?: string;
+        "label"?: string;
+        "maxchars"?: number;
     }
     interface PtuVisibilityToggle {
         "elementId"?: string;
@@ -412,6 +435,7 @@ declare namespace LocalJSX {
         "ptu-tab": PtuTab;
         "ptu-tabs": PtuTabs;
         "ptu-text-input": PtuTextInput;
+        "ptu-textarea": PtuTextarea;
         "ptu-visibility-toggle": PtuVisibilityToggle;
     }
 }
@@ -443,6 +467,7 @@ declare module "@stencil/core" {
             "ptu-tab": LocalJSX.PtuTab & JSXBase.HTMLAttributes<HTMLPtuTabElement>;
             "ptu-tabs": LocalJSX.PtuTabs & JSXBase.HTMLAttributes<HTMLPtuTabsElement>;
             "ptu-text-input": LocalJSX.PtuTextInput & JSXBase.HTMLAttributes<HTMLPtuTextInputElement>;
+            "ptu-textarea": LocalJSX.PtuTextarea & JSXBase.HTMLAttributes<HTMLPtuTextareaElement>;
             "ptu-visibility-toggle": LocalJSX.PtuVisibilityToggle & JSXBase.HTMLAttributes<HTMLPtuVisibilityToggleElement>;
         }
     }
