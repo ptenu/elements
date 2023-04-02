@@ -9,6 +9,7 @@ ptu-textarea {
   padding: 0;
   border: 2px solid var(--colour-text);
   border-radius: var(--border-radius);
+  width: 100%;
 }
 
 ptu-textarea:hover {

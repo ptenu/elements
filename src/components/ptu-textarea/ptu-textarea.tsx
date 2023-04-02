@@ -7,7 +7,7 @@ import { Component, Host, h, Prop, State } from '@stencil/core';
 })
 export class PtuTextarea {
 
-  @Prop() id: string;
+  @Prop() name: string;
   @Prop() label: string;
   @Prop() maxchars: number;
   @Prop() description: string;
@@ -34,14 +34,15 @@ export class PtuTextarea {
   }
 
   componentDidLoad() {
-    this.el = document.getElementById(this.id + "__control")
+    this.el = document.getElementById(this.name + "__control")
     this.update()
   }
 
   render() {
     return (
       <Host>
-        <textarea id={this.id + "__control"}
+        <textarea id={this.name + "__control"}
+                  name={this.name}
                   aria-label={this.label}
                   maxlength={this.maxchars}
                   onReset={() => this.update()}
@@ -52,7 +53,7 @@ export class PtuTextarea {
         </textarea>
         <footer>
           {this.description && (
-            <div id={this.id + "__description"} class="description">{this.description}</div>
+            <div id={this.name + "__description"} class="description">{this.description}</div>
           )}
           {this.maxchars > 0 && (
             <div class={this.counterClass}>{this.length} / {this.maxchars}</div>

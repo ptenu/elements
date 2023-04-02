@@ -113,9 +113,13 @@ export namespace Components {
     }
     interface PtuTextarea {
         "description": string;
-        "id": string;
         "label": string;
         "maxchars": number;
+        "name": string;
+    }
+    interface PtuUpload {
+        "multiple": boolean;
+        "name": string;
     }
     interface PtuVisibilityToggle {
         "elementId": string;
@@ -278,6 +282,12 @@ declare global {
         prototype: HTMLPtuTextareaElement;
         new (): HTMLPtuTextareaElement;
     };
+    interface HTMLPtuUploadElement extends Components.PtuUpload, HTMLStencilElement {
+    }
+    var HTMLPtuUploadElement: {
+        prototype: HTMLPtuUploadElement;
+        new (): HTMLPtuUploadElement;
+    };
     interface HTMLPtuVisibilityToggleElement extends Components.PtuVisibilityToggle, HTMLStencilElement {
     }
     var HTMLPtuVisibilityToggleElement: {
@@ -311,6 +321,7 @@ declare global {
         "ptu-tabs": HTMLPtuTabsElement;
         "ptu-text-input": HTMLPtuTextInputElement;
         "ptu-textarea": HTMLPtuTextareaElement;
+        "ptu-upload": HTMLPtuUploadElement;
         "ptu-visibility-toggle": HTMLPtuVisibilityToggleElement;
     }
 }
@@ -422,9 +433,13 @@ declare namespace LocalJSX {
     }
     interface PtuTextarea {
         "description"?: string;
-        "id"?: string;
         "label"?: string;
         "maxchars"?: number;
+        "name"?: string;
+    }
+    interface PtuUpload {
+        "multiple"?: boolean;
+        "name"?: string;
     }
     interface PtuVisibilityToggle {
         "elementId"?: string;
@@ -456,6 +471,7 @@ declare namespace LocalJSX {
         "ptu-tabs": PtuTabs;
         "ptu-text-input": PtuTextInput;
         "ptu-textarea": PtuTextarea;
+        "ptu-upload": PtuUpload;
         "ptu-visibility-toggle": PtuVisibilityToggle;
     }
 }
@@ -489,6 +505,7 @@ declare module "@stencil/core" {
             "ptu-tabs": LocalJSX.PtuTabs & JSXBase.HTMLAttributes<HTMLPtuTabsElement>;
             "ptu-text-input": LocalJSX.PtuTextInput & JSXBase.HTMLAttributes<HTMLPtuTextInputElement>;
             "ptu-textarea": LocalJSX.PtuTextarea & JSXBase.HTMLAttributes<HTMLPtuTextareaElement>;
+            "ptu-upload": LocalJSX.PtuUpload & JSXBase.HTMLAttributes<HTMLPtuUploadElement>;
             "ptu-visibility-toggle": LocalJSX.PtuVisibilityToggle & JSXBase.HTMLAttributes<HTMLPtuVisibilityToggleElement>;
         }
     }

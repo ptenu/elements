@@ -24,8 +24,7 @@ export class PtuOption {
                checked={this.checked}
                value={this.value}
         />
-        <label htmlFor={this.name + '__' + this.value}>
-
+        <label htmlFor={this.name + '__' + this.value} class="button">
             <div>
               <slot></slot>
             </div>
