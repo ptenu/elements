@@ -1,0 +1,44 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  background-color: var(--colour-accent-600);
+  color: var(--colour-accent-50);
+  padding: .33em;
+  aspect-ratio: 16 / 9;
+  max-height: 3.5em;
+  border-radius: var(--border-radius);
+  font-weight: 300;
+  font-size: var(--fs-mega);
+}
+
+header {
+  font-size: var(--fs-h3);
+  font-weight: 600;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1ch;
+  margin: .22em 0;
+}
+
+footer {
+  text-align: left;
+  font-size: var(--fs-small);
+  font-weight: 700;
+}
+
+a {
+  text-decoration: underline;
+  cursor: pointer;
+  color: inherit;
+}
+
+a:hover {
+  text-decoration-thickness: 2px;
+  color: #fff;
+}

@@ -449,7 +449,7 @@ hgroup h6 {
 .title {
   font-size: var(--fs-mega);
   line-height: 1em;
-  font-weight: 700;
+  font-weight: 900;
   max-width: 26ch;
   margin-bottom: .33em;
   font-style: normal;

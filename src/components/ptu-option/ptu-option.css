@@ -20,8 +20,8 @@ ptu-option label {
 
 ptu-option input[type="radio"],
 ptu-option input[type="checkbox"]{
-  height: 19px;
-  width: 19px;
+  height: 1em;
+  width: 1em;
   margin: .33em 0;
   position: absolute;
   left: .58em;

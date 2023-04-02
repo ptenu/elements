@@ -89,6 +89,12 @@ export namespace Components {
     interface PtuSection {
         "sidebar": "none" | "left" | "right";
     }
+    interface PtuStatistic {
+        "colour": "accent" | "green" | "red" | "yellow" | "blue" | "grey";
+        "href": string;
+        "linkText": string;
+        "title": string;
+    }
     interface PtuTab {
         "href": string;
         "selected": boolean;
@@ -242,6 +248,12 @@ declare global {
         prototype: HTMLPtuSectionElement;
         new (): HTMLPtuSectionElement;
     };
+    interface HTMLPtuStatisticElement extends Components.PtuStatistic, HTMLStencilElement {
+    }
+    var HTMLPtuStatisticElement: {
+        prototype: HTMLPtuStatisticElement;
+        new (): HTMLPtuStatisticElement;
+    };
     interface HTMLPtuTabElement extends Components.PtuTab, HTMLStencilElement {
     }
     var HTMLPtuTabElement: {
@@ -294,6 +306,7 @@ declare global {
         "ptu-page-header": HTMLPtuPageHeaderElement;
         "ptu-row": HTMLPtuRowElement;
         "ptu-section": HTMLPtuSectionElement;
+        "ptu-statistic": HTMLPtuStatisticElement;
         "ptu-tab": HTMLPtuTabElement;
         "ptu-tabs": HTMLPtuTabsElement;
         "ptu-text-input": HTMLPtuTextInputElement;
@@ -385,6 +398,12 @@ declare namespace LocalJSX {
     interface PtuSection {
         "sidebar"?: "none" | "left" | "right";
     }
+    interface PtuStatistic {
+        "colour"?: "accent" | "green" | "red" | "yellow" | "blue" | "grey";
+        "href"?: string;
+        "linkText"?: string;
+        "title"?: string;
+    }
     interface PtuTab {
         "href"?: string;
         "selected"?: boolean;
@@ -432,6 +451,7 @@ declare namespace LocalJSX {
         "ptu-page-header": PtuPageHeader;
         "ptu-row": PtuRow;
         "ptu-section": PtuSection;
+        "ptu-statistic": PtuStatistic;
         "ptu-tab": PtuTab;
         "ptu-tabs": PtuTabs;
         "ptu-text-input": PtuTextInput;
@@ -464,6 +484,7 @@ declare module "@stencil/core" {
             "ptu-page-header": LocalJSX.PtuPageHeader & JSXBase.HTMLAttributes<HTMLPtuPageHeaderElement>;
             "ptu-row": LocalJSX.PtuRow & JSXBase.HTMLAttributes<HTMLPtuRowElement>;
             "ptu-section": LocalJSX.PtuSection & JSXBase.HTMLAttributes<HTMLPtuSectionElement>;
+            "ptu-statistic": LocalJSX.PtuStatistic & JSXBase.HTMLAttributes<HTMLPtuStatisticElement>;
             "ptu-tab": LocalJSX.PtuTab & JSXBase.HTMLAttributes<HTMLPtuTabElement>;
             "ptu-tabs": LocalJSX.PtuTabs & JSXBase.HTMLAttributes<HTMLPtuTabsElement>;
             "ptu-text-input": LocalJSX.PtuTextInput & JSXBase.HTMLAttributes<HTMLPtuTextInputElement>;
