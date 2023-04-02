@@ -571,7 +571,7 @@ select {
   font-size: inherit;
   font-family: inherit;
   outline: 3px solid transparent;
-  padding: .5ch 1ch;
+  padding: .77ch 1ch;
   border: 2px solid var(--colour-text);
   border-radius: var(--border-radius);
 }
