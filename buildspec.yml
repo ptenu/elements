@@ -1,0 +1,23 @@
+version: 0.2
+
+env:
+  shell: bash
+
+phases:
+  install:
+    on-failure: ABORT
+    commands:
+      - echo Entered the install phase...
+      - apt-get update -y
+      - apt-get install -y nodejs npm
+  build:
+    on-failure: ABORT
+    commands:
+      - echo Building...
+      - npm run install
+      - npm run build
+
+artifacts:
+  files:
+    - dist/**/*
+    - loader/**/*
