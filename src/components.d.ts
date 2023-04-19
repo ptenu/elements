@@ -26,7 +26,6 @@ export namespace Components {
     interface PtuComplete {
         "colour": "green" | "red" | "grey" | "yellow";
         "headline": string;
-        "status": string;
     }
     interface PtuDatatable {
         "caption": string;
@@ -346,7 +345,6 @@ declare namespace LocalJSX {
     interface PtuComplete {
         "colour"?: "green" | "red" | "grey" | "yellow";
         "headline"?: string;
-        "status"?: string;
     }
     interface PtuDatatable {
         "caption": string;

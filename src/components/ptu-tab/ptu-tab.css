@@ -13,25 +13,12 @@ a {
   color: var(--colour-link);
   text-decoration: underline;
   text-decoration-thickness: 1px;
-  padding: .5em .66em .44em 1em;
-  border-top-left-radius: var(--border-radius);
+  padding: .25em .5em;
+  border-radius: var(--border-radius);
   background-color: hsl(33 20% 84%);
-  box-shadow: 0 -2px 0 inset hsl(33, 20%, 82%);
+  border: 2px solid var(--colour-yellow-50);
 }
 
-a::after {
-  display: block;
-  position: absolute;
-  content: " ";
-  height: 100%;
-  top: 0;
-  right: -.66em;
-  background-color: inherit;
-  border-top-right-radius: var(--border-radius);
-  width: 20px;
-  transform: skewX(10deg);
-  box-shadow: 0 -2px 0 inset hsl(33, 20%, 82%);
-}
 
 a:hover {
   background-color: hsl(33, 20%, 82%);
@@ -41,12 +28,19 @@ a:hover {
 
 a.active {
   background-color: var(--colour-background);
-  box-shadow: 2px 2px 0 inset hsl(33, 20%, 82%);
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  border-left-color: hsl(33, 20%, 82%);
+  border-top-color: hsl(33, 20%, 82%);
+  border-right-color: hsl(33, 20%, 82%);
+  border-bottom-color: var(--colour-background);
+  padding: .5em 1em .66em;
 }
 
-a.active::after {
-  box-shadow: -2.5px 2px 0 inset hsl(33, 20%, 82%);
+a:not(.active) {
+  margin-bottom: .12em;
 }
+
 
 a:focus {
   background-color: var(--colour-focus);
