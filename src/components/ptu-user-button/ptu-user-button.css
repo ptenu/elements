@@ -2,7 +2,7 @@
   display: block;
 }
 
-button {
+a {
   display: flex;
   position: relative;
   gap: .66ch;
@@ -13,16 +13,20 @@ button {
   color: inherit;
   font-family: inherit;
   font-size: inherit;
-  padding: calc(var(--layout-gap) / 2) 1ch calc(var(--layout-gap) / 2) .25ch;
+  padding: calc(var(--layout-gap) / 2) 1ch calc(var(--layout-gap) / 2);
   border-bottom: 1px solid transparent;
   align-items: center;
 }
 
-button:hover {
+a:hover {
   border-bottom: 1px solid var(--colour-background);
 }
 
-button:focus {
+a:focus {
   background-color: var(--colour-focus);
   color: var(--colour-text);
+}
+
+a svg {
+  height: 1em;
 }

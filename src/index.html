@@ -13,9 +13,8 @@
 <body>
 <ptu-navbar>
   <ptu-logo variant='colour'></ptu-logo>
-  <aside slot='right'>
-    <ptu-visibility-toggle element-id='main-menu'>Menu</ptu-visibility-toggle>
-  </aside>
+    <ptu-visibility-toggle slot='right' element-id='main-menu'>Menu</ptu-visibility-toggle>
+    <ptu-user-button authenticated="false" slot='right'>Login</ptu-user-button>
 </ptu-navbar>
 <ptu-nav-menu id='main-menu'>
   <section>

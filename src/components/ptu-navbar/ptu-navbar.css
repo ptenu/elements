@@ -19,13 +19,6 @@ nav {
 .right-aligned {
   margin-left: auto;
   position: relative;
-}
-
-.right-aligned:before {
-  position: absolute;
-  content: "";
-  top: .66em;
-  bottom: .66em;
-  left: -1ch;
-  border-left: 1px solid var(--colour-background);
+  display: flex;
+  align-items: flex-end;
 }
