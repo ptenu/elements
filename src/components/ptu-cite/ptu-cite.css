@@ -1,0 +1,24 @@
+body, article, .prose, .has-footnotes {
+  counter-reset: footnotes;
+}
+
+ptu-cite {
+  display: inline;
+  counter-increment: footnotes;
+}
+
+ptu-cite cite {
+  font-style: normal;
+}
+
+ptu-cite .footnote-reference {
+  vertical-align: super;
+  font-size: small;
+  margin-right: .5ch;
+}
+
+ptu-cite .footnote-reference cite::before {
+  content: counter(footnotes);
+}
+
+

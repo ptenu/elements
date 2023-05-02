@@ -21,9 +21,8 @@
 <body>
 <ptu-navbar>
   <ptu-logo variant='colour'></ptu-logo>
-  <aside slot='right'>
-    <ptu-visibility-toggle element-id='main-menu'>Menu</ptu-visibility-toggle>
-  </aside>
+    <ptu-visibility-toggle slot='right' element-id='main-menu'>Menu</ptu-visibility-toggle>
+    <ptu-user-button authenticated="false" slot='right'>Login</ptu-user-button>
 </ptu-navbar>
 <ptu-nav-menu id='main-menu'>
   <section>
@@ -310,6 +309,23 @@
       </footer>
     </div>
   </ptu-grid>
+</ptu-section>
+
+<ptu-section>
+  <article class="prose">
+    <p>This is some text <ptu-cite title="Housing Act" date="1988" citation="s35" type="statute"></ptu-cite> isn't it good.</p>
+    <p>As was shown in the case of Jones and Smith (<ptu-cite show="inline" defendant="Jones" claimant="Smith" date="2001" citation="EWCA Crim 10" type="case"></ptu-cite>)
+      many things can be derrived from court cases, and it is always nessesary to think about them.
+      It's also true in the case of one of my favourite bookes, by Alex Hall.
+      <ptu-cite title="Some book I like" publisher="OUP" date="1998" citation="1st edn" author="Hall AW" href="/#" summary="This is some information I found." type="article"></ptu-cite>
+    </p>
+  </article>
+  <aside class="top-padding">
+    <hgroup>
+      <h2>References</h2>
+    </hgroup>
+    <ptu-footnotes></ptu-footnotes>
+  </aside>
 </ptu-section>
 
 <ptu-callout local-number='7736096860'></ptu-callout>
