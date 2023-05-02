@@ -1,0 +1,12 @@
+ptu-footnotes ol {
+  column-gap: 2ch;
+  column-width: 40ch;
+  list-style: decimal;
+  list-style-position: inside;
+  font-weight: 300;
+}
+
+ptu-footnotes ol li {
+  margin-bottom: .66rem;
+  margin-top: 0;
+}

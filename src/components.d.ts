@@ -23,6 +23,21 @@ export namespace Components {
     interface PtuChip {
         "colour": "grey" | "blue" | "green" | "red" | "yellow" | "outline" | string;
     }
+    interface PtuCite {
+        "author": string | null;
+        "citation": string | null;
+        "claimant": string | null;
+        "date": string | number | null;
+        "defendant": string | null;
+        "edition": string | null;
+        "href": string | null;
+        "page": number | null;
+        "publisher": string | null;
+        "show": "inline" | "full" | "number";
+        "summary": string | null;
+        "title": string | null;
+        "type": "case" | "statute" | "book" | "web" | "article";
+    }
     interface PtuComplete {
         "colour": "green" | "red" | "grey" | "yellow";
         "headline": string;
@@ -53,6 +68,9 @@ export namespace Components {
         "required": boolean;
     }
     interface PtuFooter {
+    }
+    interface PtuFootnotes {
+        "parentSelector": string;
     }
     interface PtuGrid {
     }
@@ -150,6 +168,12 @@ declare global {
         prototype: HTMLPtuChipElement;
         new (): HTMLPtuChipElement;
     };
+    interface HTMLPtuCiteElement extends Components.PtuCite, HTMLStencilElement {
+    }
+    var HTMLPtuCiteElement: {
+        prototype: HTMLPtuCiteElement;
+        new (): HTMLPtuCiteElement;
+    };
     interface HTMLPtuCompleteElement extends Components.PtuComplete, HTMLStencilElement {
     }
     var HTMLPtuCompleteElement: {
@@ -191,6 +215,12 @@ declare global {
     var HTMLPtuFooterElement: {
         prototype: HTMLPtuFooterElement;
         new (): HTMLPtuFooterElement;
+    };
+    interface HTMLPtuFootnotesElement extends Components.PtuFootnotes, HTMLStencilElement {
+    }
+    var HTMLPtuFootnotesElement: {
+        prototype: HTMLPtuFootnotesElement;
+        new (): HTMLPtuFootnotesElement;
     };
     interface HTMLPtuGridElement extends Components.PtuGrid, HTMLStencilElement {
     }
@@ -299,6 +329,7 @@ declare global {
         "ptu-callout": HTMLPtuCalloutElement;
         "ptu-checkbox": HTMLPtuCheckboxElement;
         "ptu-chip": HTMLPtuChipElement;
+        "ptu-cite": HTMLPtuCiteElement;
         "ptu-complete": HTMLPtuCompleteElement;
         "ptu-datatable": HTMLPtuDatatableElement;
         "ptu-details": HTMLPtuDetailsElement;
@@ -306,6 +337,7 @@ declare global {
         "ptu-field": HTMLPtuFieldElement;
         "ptu-fieldset": HTMLPtuFieldsetElement;
         "ptu-footer": HTMLPtuFooterElement;
+        "ptu-footnotes": HTMLPtuFootnotesElement;
         "ptu-grid": HTMLPtuGridElement;
         "ptu-hero": HTMLPtuHeroElement;
         "ptu-logo": HTMLPtuLogoElement;
@@ -343,6 +375,21 @@ declare namespace LocalJSX {
     interface PtuChip {
         "colour"?: "grey" | "blue" | "green" | "red" | "yellow" | "outline" | string;
     }
+    interface PtuCite {
+        "author"?: string | null;
+        "citation"?: string | null;
+        "claimant"?: string | null;
+        "date"?: string | number | null;
+        "defendant"?: string | null;
+        "edition"?: string | null;
+        "href"?: string | null;
+        "page"?: number | null;
+        "publisher"?: string | null;
+        "show"?: "inline" | "full" | "number";
+        "summary"?: string | null;
+        "title"?: string | null;
+        "type"?: "case" | "statute" | "book" | "web" | "article";
+    }
     interface PtuComplete {
         "colour"?: "green" | "red" | "grey" | "yellow";
         "headline"?: string;
@@ -373,6 +420,9 @@ declare namespace LocalJSX {
         "required"?: boolean;
     }
     interface PtuFooter {
+    }
+    interface PtuFootnotes {
+        "parentSelector"?: string;
     }
     interface PtuGrid {
     }
@@ -449,6 +499,7 @@ declare namespace LocalJSX {
         "ptu-callout": PtuCallout;
         "ptu-checkbox": PtuCheckbox;
         "ptu-chip": PtuChip;
+        "ptu-cite": PtuCite;
         "ptu-complete": PtuComplete;
         "ptu-datatable": PtuDatatable;
         "ptu-details": PtuDetails;
@@ -456,6 +507,7 @@ declare namespace LocalJSX {
         "ptu-field": PtuField;
         "ptu-fieldset": PtuFieldset;
         "ptu-footer": PtuFooter;
+        "ptu-footnotes": PtuFootnotes;
         "ptu-grid": PtuGrid;
         "ptu-hero": PtuHero;
         "ptu-logo": PtuLogo;
@@ -483,6 +535,7 @@ declare module "@stencil/core" {
             "ptu-callout": LocalJSX.PtuCallout & JSXBase.HTMLAttributes<HTMLPtuCalloutElement>;
             "ptu-checkbox": LocalJSX.PtuCheckbox & JSXBase.HTMLAttributes<HTMLPtuCheckboxElement>;
             "ptu-chip": LocalJSX.PtuChip & JSXBase.HTMLAttributes<HTMLPtuChipElement>;
+            "ptu-cite": LocalJSX.PtuCite & JSXBase.HTMLAttributes<HTMLPtuCiteElement>;
             "ptu-complete": LocalJSX.PtuComplete & JSXBase.HTMLAttributes<HTMLPtuCompleteElement>;
             "ptu-datatable": LocalJSX.PtuDatatable & JSXBase.HTMLAttributes<HTMLPtuDatatableElement>;
             "ptu-details": LocalJSX.PtuDetails & JSXBase.HTMLAttributes<HTMLPtuDetailsElement>;
@@ -490,6 +543,7 @@ declare module "@stencil/core" {
             "ptu-field": LocalJSX.PtuField & JSXBase.HTMLAttributes<HTMLPtuFieldElement>;
             "ptu-fieldset": LocalJSX.PtuFieldset & JSXBase.HTMLAttributes<HTMLPtuFieldsetElement>;
             "ptu-footer": LocalJSX.PtuFooter & JSXBase.HTMLAttributes<HTMLPtuFooterElement>;
+            "ptu-footnotes": LocalJSX.PtuFootnotes & JSXBase.HTMLAttributes<HTMLPtuFootnotesElement>;
             "ptu-grid": LocalJSX.PtuGrid & JSXBase.HTMLAttributes<HTMLPtuGridElement>;
             "ptu-hero": LocalJSX.PtuHero & JSXBase.HTMLAttributes<HTMLPtuHeroElement>;
             "ptu-logo": LocalJSX.PtuLogo & JSXBase.HTMLAttributes<HTMLPtuLogoElement>;
