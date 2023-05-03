@@ -21,4 +21,5 @@ nav {
   position: relative;
   display: flex;
   align-items: flex-end;
+  font-size: 90%;
 }

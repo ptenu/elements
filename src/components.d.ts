@@ -75,6 +75,8 @@ export namespace Components {
     }
     interface PtuHero {
     }
+    interface PtuHeroButton {
+    }
     interface PtuLogo {
         "variant": "colour" | "white";
     }
@@ -98,6 +100,16 @@ export namespace Components {
         "headline": string;
         "topic": string;
         "topicHref": string;
+    }
+    interface PtuPasswordInput {
+        "autocomplete": string;
+        "initialValue": string | null;
+        "inputmode": "none" | "text" | "decimal" | "numeric" | "tel" | "search" | "email" | "url";
+        "label": string | null;
+        "name": string;
+        "showLabel": boolean;
+        "type": string;
+        "width": number;
     }
     interface PtuRow {
         "status": string;
@@ -237,6 +249,12 @@ declare global {
         prototype: HTMLPtuHeroElement;
         new (): HTMLPtuHeroElement;
     };
+    interface HTMLPtuHeroButtonElement extends Components.PtuHeroButton, HTMLStencilElement {
+    }
+    var HTMLPtuHeroButtonElement: {
+        prototype: HTMLPtuHeroButtonElement;
+        new (): HTMLPtuHeroButtonElement;
+    };
     interface HTMLPtuLogoElement extends Components.PtuLogo, HTMLStencilElement {
     }
     var HTMLPtuLogoElement: {
@@ -272,6 +290,12 @@ declare global {
     var HTMLPtuPageHeaderElement: {
         prototype: HTMLPtuPageHeaderElement;
         new (): HTMLPtuPageHeaderElement;
+    };
+    interface HTMLPtuPasswordInputElement extends Components.PtuPasswordInput, HTMLStencilElement {
+    }
+    var HTMLPtuPasswordInputElement: {
+        prototype: HTMLPtuPasswordInputElement;
+        new (): HTMLPtuPasswordInputElement;
     };
     interface HTMLPtuRowElement extends Components.PtuRow, HTMLStencilElement {
     }
@@ -349,12 +373,14 @@ declare global {
         "ptu-footnotes": HTMLPtuFootnotesElement;
         "ptu-grid": HTMLPtuGridElement;
         "ptu-hero": HTMLPtuHeroElement;
+        "ptu-hero-button": HTMLPtuHeroButtonElement;
         "ptu-logo": HTMLPtuLogoElement;
         "ptu-membership-card": HTMLPtuMembershipCardElement;
         "ptu-nav-menu": HTMLPtuNavMenuElement;
         "ptu-navbar": HTMLPtuNavbarElement;
         "ptu-option": HTMLPtuOptionElement;
         "ptu-page-header": HTMLPtuPageHeaderElement;
+        "ptu-password-input": HTMLPtuPasswordInputElement;
         "ptu-row": HTMLPtuRowElement;
         "ptu-section": HTMLPtuSectionElement;
         "ptu-statistic": HTMLPtuStatisticElement;
@@ -437,6 +463,8 @@ declare namespace LocalJSX {
     }
     interface PtuHero {
     }
+    interface PtuHeroButton {
+    }
     interface PtuLogo {
         "variant"?: "colour" | "white";
     }
@@ -460,6 +488,16 @@ declare namespace LocalJSX {
         "headline"?: string;
         "topic"?: string;
         "topicHref"?: string;
+    }
+    interface PtuPasswordInput {
+        "autocomplete"?: string;
+        "initialValue"?: string | null;
+        "inputmode"?: "none" | "text" | "decimal" | "numeric" | "tel" | "search" | "email" | "url";
+        "label"?: string | null;
+        "name"?: string;
+        "showLabel"?: boolean;
+        "type"?: string;
+        "width"?: number;
     }
     interface PtuRow {
         "status"?: string;
@@ -523,12 +561,14 @@ declare namespace LocalJSX {
         "ptu-footnotes": PtuFootnotes;
         "ptu-grid": PtuGrid;
         "ptu-hero": PtuHero;
+        "ptu-hero-button": PtuHeroButton;
         "ptu-logo": PtuLogo;
         "ptu-membership-card": PtuMembershipCard;
         "ptu-nav-menu": PtuNavMenu;
         "ptu-navbar": PtuNavbar;
         "ptu-option": PtuOption;
         "ptu-page-header": PtuPageHeader;
+        "ptu-password-input": PtuPasswordInput;
         "ptu-row": PtuRow;
         "ptu-section": PtuSection;
         "ptu-statistic": PtuStatistic;
@@ -560,12 +600,14 @@ declare module "@stencil/core" {
             "ptu-footnotes": LocalJSX.PtuFootnotes & JSXBase.HTMLAttributes<HTMLPtuFootnotesElement>;
             "ptu-grid": LocalJSX.PtuGrid & JSXBase.HTMLAttributes<HTMLPtuGridElement>;
             "ptu-hero": LocalJSX.PtuHero & JSXBase.HTMLAttributes<HTMLPtuHeroElement>;
+            "ptu-hero-button": LocalJSX.PtuHeroButton & JSXBase.HTMLAttributes<HTMLPtuHeroButtonElement>;
             "ptu-logo": LocalJSX.PtuLogo & JSXBase.HTMLAttributes<HTMLPtuLogoElement>;
             "ptu-membership-card": LocalJSX.PtuMembershipCard & JSXBase.HTMLAttributes<HTMLPtuMembershipCardElement>;
             "ptu-nav-menu": LocalJSX.PtuNavMenu & JSXBase.HTMLAttributes<HTMLPtuNavMenuElement>;
             "ptu-navbar": LocalJSX.PtuNavbar & JSXBase.HTMLAttributes<HTMLPtuNavbarElement>;
             "ptu-option": LocalJSX.PtuOption & JSXBase.HTMLAttributes<HTMLPtuOptionElement>;
             "ptu-page-header": LocalJSX.PtuPageHeader & JSXBase.HTMLAttributes<HTMLPtuPageHeaderElement>;
+            "ptu-password-input": LocalJSX.PtuPasswordInput & JSXBase.HTMLAttributes<HTMLPtuPasswordInputElement>;
             "ptu-row": LocalJSX.PtuRow & JSXBase.HTMLAttributes<HTMLPtuRowElement>;
             "ptu-section": LocalJSX.PtuSection & JSXBase.HTMLAttributes<HTMLPtuSectionElement>;
             "ptu-statistic": LocalJSX.PtuStatistic & JSXBase.HTMLAttributes<HTMLPtuStatisticElement>;
