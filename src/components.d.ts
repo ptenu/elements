@@ -76,6 +76,9 @@ export namespace Components {
     interface PtuHero {
     }
     interface PtuHeroButton {
+        "href": string;
+        "link": string;
+        "title": string;
     }
     interface PtuLogo {
         "variant": "colour" | "white";
@@ -464,6 +467,9 @@ declare namespace LocalJSX {
     interface PtuHero {
     }
     interface PtuHeroButton {
+        "href"?: string;
+        "link"?: string;
+        "title"?: string;
     }
     interface PtuLogo {
         "variant"?: "colour" | "white";

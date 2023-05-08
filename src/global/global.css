@@ -1129,3 +1129,11 @@ ol.facepile {
   flex-wrap: wrap;
   gap: .5ch;
 }
+
+svg {
+  height: 1em;
+}
+
+svg.double {
+  height: 2em;
+}

@@ -1,3 +1,50 @@
 :host {
-  display: block;
+  display: flex;
+  font-weight: 300;
+  gap: 1ch;
+}
+
+.icon {
+  height: 2em;
+}
+
+article {
+  border-left: 2.5px solid var(--colour-grey-900);
+  padding: 0 0 1ch 1ch;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+header {
+  font-size: var(--fs-h5);
+  font-weight: 600;
+  margin-bottom: .33em;
+  flex-grow: 0;
+}
+
+footer {
+  flex-grow: 0;
+}
+
+section {
+  flex: 1 1 auto;
+}
+
+a {
+  color: var(--colour-link);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+}
+
+a:focus {
+  background-color: var(--colour-focus);
+  color: var(--colour-text);
+  outline: none;
+  text-decoration-thickness: 3px;
+}
+
+a:hover {
+  color: var(--colour-link-hover);
+  text-decoration-thickness: 2px;
 }
