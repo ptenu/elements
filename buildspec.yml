@@ -15,6 +15,7 @@ phases:
     commands:
       - echo Building...
       - npm install --save-dev workbox-build@4.3.1
+      - npm install
       - npm run build
 
 artifacts:

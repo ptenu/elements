@@ -535,6 +535,10 @@ ol.list {
   list-style-position: inside;
 }
 
+ul.list li:first-child, ol.list li:first-child {
+  margin-top: 0;
+}
+
 dl {
   display: grid;
   grid-template-columns: 2fr 3fr;
@@ -727,6 +731,10 @@ tbody tr {
 .prose ul li
 {
   padding: 0 0 0 1ch;
+}
+
+.prose:first-child {
+  margin-top: 0;
 }
 
 .legal-prose {
