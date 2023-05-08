@@ -14,7 +14,7 @@ phases:
     on-failure: ABORT
     commands:
       - echo Building...
-      - npm install
+      - npm install --save-dev workbox-build@4.3.1
       - npm run build
 
 artifacts:
