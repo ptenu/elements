@@ -97,6 +97,7 @@ export namespace Components {
         "value": string;
     }
     interface PtuPageHeader {
+        "bigHeadline": boolean;
         "category": string;
         "categoryColour": "red" | "blue" | "accent" | "yellow" | "green";
         "categoryHref": string;
@@ -488,6 +489,7 @@ declare namespace LocalJSX {
         "value"?: string;
     }
     interface PtuPageHeader {
+        "bigHeadline"?: boolean;
         "category"?: string;
         "categoryColour"?: "red" | "blue" | "accent" | "yellow" | "green";
         "categoryHref"?: string;

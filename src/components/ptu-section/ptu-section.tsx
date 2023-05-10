@@ -12,19 +12,21 @@ export class PtuSection {
   render() {
     return (
       <Host>
-        {this.sidebar === "left" && (
-          <aside>
-            <slot name="sidebar"></slot>
-          </aside>
-        )}
-        <section class={"sidebar_" + this.sidebar}>
-          <slot></slot>
-        </section>
-        {this.sidebar === "right" && (
-          <aside>
-            <slot name="sidebar"></slot>
-          </aside>
-        )}
+        <article class={"sidebar_" + this.sidebar}>
+          {this.sidebar === "left" && (
+            <aside>
+              <slot name="sidebar"></slot>
+            </aside>
+          )}
+          <section>
+            <slot></slot>
+          </section>
+          {this.sidebar === "right" && (
+            <aside>
+              <slot name="sidebar"></slot>
+            </aside>
+          )}
+        </article>
       </Host>
     );
   }

@@ -15,13 +15,13 @@ a {
   text-decoration-thickness: 1px;
   padding: .25em .5em;
   border-radius: var(--border-radius);
-  background-color: hsl(33 20% 84%);
-  border: 2px solid var(--colour-yellow-50);
+  background-color: var(--colour-grey-200);
+  border: 2px solid transparent;
 }
 
 
 a:hover {
-  background-color: hsl(33, 20%, 82%);
+  background-color: var(--colour-grey-300);
   color: var(--colour-link-hover);
   text-decoration-thickness: 2px;
 }

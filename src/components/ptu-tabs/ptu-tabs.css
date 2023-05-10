@@ -1,13 +1,11 @@
 :host {
   display: block;
   box-sizing: border-box;
-  background-color: var(--colour-brand-sand);
   box-shadow: 0 -2px 0 inset hsl(33, 20%, 82%);
 }
 
 ptu-section {
   padding-bottom: 0;
-  padding-top: .5rem;
 }
 
 ul {
