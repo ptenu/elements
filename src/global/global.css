@@ -567,6 +567,7 @@ input,
 input[type="search"],
 textarea,
 select {
+  position: relative;
   background-color: var(--colour-grey-50);
   color: var(--colour-text);
   font-weight: inherit;
@@ -588,6 +589,7 @@ textarea:focus,
 select:focus {
   outline: 3px solid var(--colour-focus);
   box-shadow: 0 0 0 1px inset var(--colour-text);
+  z-index: 100;
 }
 
 input[disabled] {

@@ -1,0 +1,64 @@
+ptu-form-row {
+  display: grid;
+  grid-template-columns: 1.5em minmax(166px, 22vw) 1fr;
+  grid-template-rows: minmax(0, min-content) auto;
+  counter-increment: form-questions;
+  align-items: start;
+  border-top: 1px solid var(--colour-grey-400);
+  counter-reset: form-subquestion
+}
+
+ptu-form-row::before {
+  display: block;
+  content: counter(form-questions);
+  padding: .2em;
+  text-align: center;
+  background-color: var(--colour-blue-50);
+  border-right: 1px solid var(--colour-grey-400);
+}
+
+ptu-form-row > label {
+  display: block;
+  padding: .2em .4em;
+  width: auto;
+}
+
+ptu-form-row > label p {
+  font-weight: 300;
+  font-size: var(--fs-small);
+}
+
+ptu-form-row details {
+  padding: .2rem .4rem;
+  font-size: var(--fs-small);
+  grid-column: 2 / 3;
+}
+
+ptu-form-row details[open] {
+  background-color: var(--colour-grey-200);
+}
+
+ptu-form-row details[open] summary {
+  margin-bottom: .33em;
+}
+
+ptu-form-row fieldset label {
+  counter-increment: form-subquestion;
+  font-size: var(--fs-small);
+  font-style: italic;
+  border-left: 1px solid var(--colour-grey-400);
+  margin-left: -1px;
+  padding: .2em calc(.4em + 1px);
+}
+
+ptu-form-row fieldset label > * {
+  margin: -.2em -.4em;
+}
+
+ptu-form-row fieldset.inline label {
+  width: auto;
+}
+
+ptu-form-row fieldset label::before {
+  content: "(" counter(form-subquestion, lower-alpha) ")";
+}

@@ -336,6 +336,64 @@
 </ptu-section>
 
 <ptu-section>
+  <hgroup><h1>Single-page form elements</h1></hgroup>
+  <ptu-form>
+    <ptu-form-row label="Case Reference"
+                  description="If you don't have a case reference, leave this blank."
+                  help-text="How to find this">
+      <input type="text" name="test" size="10">
+      <p slot="help">This will be on the front of the yellow book, or in the initial email when the case was created.</p>
+    </ptu-form-row>
+    <ptu-form-row label="Date of birth" help-text="When were you born?" inline>
+          <label>
+            Given name
+            <input type="text">
+          </label>
+          <label>
+            Family name
+            <input type="text">
+          </label>
+          <label>
+            Other name(s)
+            <input type="text">
+          </label>
+      <p slot="help">Look on your fucking passport you idiot.</p>
+    </ptu-form-row>
+    <ptu-form-row label="Select from a list" description="Which of the following best describes your situation">
+      <select name="somefield" id="somefield">
+        <option value="1">First option</option>
+        <option value="2">Another option</option>
+        <option value="3">A third, much longer, option</option>
+      </select>
+    </ptu-form-row>
+    <ptu-form-row label="Checkboxes">
+      <label class="option">
+        <input type="checkbox" name="field1" value="1">
+        An option
+      </label>
+      <label class="option">
+        <input type="checkbox" name="field1" value="2">
+        A different option
+      </label>
+    </ptu-form-row>
+    <ptu-form-row label="Radios">
+      <label class="option">
+        <input type="radio" name="field1" value="1">
+        An option
+      </label>
+      <label class="option">
+        <input type="radio" name="field1" value="2">
+        A different option
+      </label>
+    </ptu-form-row>
+    <ptu-form-row label="Textarea example">
+      <ptu-textarea name='example-textarea-2' rows='3' maxchars="300"></ptu-textarea>
+    </ptu-form-row>
+  </ptu-form>
+</ptu-section>
+
+<ptu-section>
+  <hgroup><h1>Some article</h1></hgroup>
   <article class="prose">
     <p>This is some text <ptu-cite title="Housing Act" date="1988" citation="s35" type="statute"></ptu-cite> isn't it good.</p>
     <p>As was shown in the case of Jones and Smith (<ptu-cite show="inline" defendant="Jones" claimant="Smith" date="2001" citation="EWCA Crim 10" type="case"></ptu-cite>)

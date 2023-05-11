@@ -1,0 +1,94 @@
+ptu-form form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--layout-gap);
+  counter-reset: form-questions;
+}
+
+ptu-form summary {
+  color: var(--colour-link);
+  cursor: pointer;
+  text-decoration: underline;
+}
+ptu-form summary:hover {
+  color: var(--colour-link-hover);
+  text-decoration-thickness: 2px;
+}
+
+ptu-form form fieldset label {
+  position: relative;
+  display: block;
+  width: 100%;
+  font-weight: 300;
+}
+
+ptu-form form fieldset {
+  display: flex;
+  grid-row: 1 / -1;
+  grid-column: 3 / -1;
+  flex-direction: column;
+  align-items: start;
+  gap: calc(var(--layout-gap) / 2);
+  padding-bottom: .2em;
+  justify-self: stretch;
+  border-left: 1px solid var(--colour-grey-400);
+  margin-left: -1px;
+}
+
+ptu-form form fieldset.inline {
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 0;
+}
+
+ptu-form form input,
+ptu-form form ptu-textarea,
+ptu-form form select {
+  position: relative;
+  border: 0;
+  border-bottom: 1px solid var(--colour-grey-500);
+  border-radius: 0;
+  justify-self: start;
+  margin-top: 1px;
+  display: block;
+  box-shadow: none;
+}
+
+ptu-form form input:not([size]) {
+  width: 100%;
+}
+
+ptu-form form fieldset.inline input{
+  width: auto;
+}
+
+ptu-form form label input,
+ptu-form form label ptu-textarea,
+ptu-form form label select {
+  margin-top: .33rem;
+  font-size: var(--fs-base);
+}
+
+ptu-form form fieldset label.option {
+  display: flex;
+  align-items: center;
+  gap: 1ch;
+}
+
+ptu-form label input[type="checkbox"],
+ptu-form label input[type="radio"] {
+  height: 2em !important;
+  width: 2em !important;
+  border: 1px solid var(--colour-grey-500);
+}
+
+@media screen and (max-width: 744px) {
+  ptu-form form fieldset {
+    grid-column: 2 / -1;
+    grid-row: unset;
+  }
+
+  ptu-form form ptu-form-row details {
+    grid-column: 2 / -1;
+  }
+}

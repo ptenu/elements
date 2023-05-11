@@ -71,6 +71,17 @@ export namespace Components {
     interface PtuFootnotes {
         "parentSelector": string;
     }
+    interface PtuForm {
+        "action": string;
+        "method": string;
+    }
+    interface PtuFormRow {
+        "description": string;
+        "for": string;
+        "helpText": string;
+        "inline": boolean;
+        "label": string;
+    }
     interface PtuGrid {
     }
     interface PtuHero {
@@ -241,6 +252,18 @@ declare global {
         prototype: HTMLPtuFootnotesElement;
         new (): HTMLPtuFootnotesElement;
     };
+    interface HTMLPtuFormElement extends Components.PtuForm, HTMLStencilElement {
+    }
+    var HTMLPtuFormElement: {
+        prototype: HTMLPtuFormElement;
+        new (): HTMLPtuFormElement;
+    };
+    interface HTMLPtuFormRowElement extends Components.PtuFormRow, HTMLStencilElement {
+    }
+    var HTMLPtuFormRowElement: {
+        prototype: HTMLPtuFormRowElement;
+        new (): HTMLPtuFormRowElement;
+    };
     interface HTMLPtuGridElement extends Components.PtuGrid, HTMLStencilElement {
     }
     var HTMLPtuGridElement: {
@@ -375,6 +398,8 @@ declare global {
         "ptu-fieldset": HTMLPtuFieldsetElement;
         "ptu-footer": HTMLPtuFooterElement;
         "ptu-footnotes": HTMLPtuFootnotesElement;
+        "ptu-form": HTMLPtuFormElement;
+        "ptu-form-row": HTMLPtuFormRowElement;
         "ptu-grid": HTMLPtuGridElement;
         "ptu-hero": HTMLPtuHeroElement;
         "ptu-hero-button": HTMLPtuHeroButtonElement;
@@ -462,6 +487,17 @@ declare namespace LocalJSX {
     }
     interface PtuFootnotes {
         "parentSelector"?: string;
+    }
+    interface PtuForm {
+        "action"?: string;
+        "method"?: string;
+    }
+    interface PtuFormRow {
+        "description"?: string;
+        "for"?: string;
+        "helpText"?: string;
+        "inline"?: boolean;
+        "label"?: string;
     }
     interface PtuGrid {
     }
@@ -567,6 +603,8 @@ declare namespace LocalJSX {
         "ptu-fieldset": PtuFieldset;
         "ptu-footer": PtuFooter;
         "ptu-footnotes": PtuFootnotes;
+        "ptu-form": PtuForm;
+        "ptu-form-row": PtuFormRow;
         "ptu-grid": PtuGrid;
         "ptu-hero": PtuHero;
         "ptu-hero-button": PtuHeroButton;
@@ -606,6 +644,8 @@ declare module "@stencil/core" {
             "ptu-fieldset": LocalJSX.PtuFieldset & JSXBase.HTMLAttributes<HTMLPtuFieldsetElement>;
             "ptu-footer": LocalJSX.PtuFooter & JSXBase.HTMLAttributes<HTMLPtuFooterElement>;
             "ptu-footnotes": LocalJSX.PtuFootnotes & JSXBase.HTMLAttributes<HTMLPtuFootnotesElement>;
+            "ptu-form": LocalJSX.PtuForm & JSXBase.HTMLAttributes<HTMLPtuFormElement>;
+            "ptu-form-row": LocalJSX.PtuFormRow & JSXBase.HTMLAttributes<HTMLPtuFormRowElement>;
             "ptu-grid": LocalJSX.PtuGrid & JSXBase.HTMLAttributes<HTMLPtuGridElement>;
             "ptu-hero": LocalJSX.PtuHero & JSXBase.HTMLAttributes<HTMLPtuHeroElement>;
             "ptu-hero-button": LocalJSX.PtuHeroButton & JSXBase.HTMLAttributes<HTMLPtuHeroButtonElement>;
