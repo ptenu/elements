@@ -86,7 +86,7 @@
   --colour-shadow: var(--colour-grey-800);
 
   /* Other properties */
-  --border-radius: 4px;
+  --border-radius: 0;
   --container-width: 1200px;
   --layout-gap: 1rem;
 
@@ -503,6 +503,22 @@ svg {
   border-radius: calc(var(--border-radius) * 2);
   padding: .5em 1em;
   font-weight: 300;
+}
+
+.card.danger {
+  background-color: var(--colour-red-100);
+}
+
+.card.success {
+  background-color: var(--colour-green-100);
+}
+
+.card.warning {
+  background-color: var(--colour-yellow-100);
+}
+
+.card.info {
+  background-color: var(--colour-blue-100);
 }
 
 .card p {

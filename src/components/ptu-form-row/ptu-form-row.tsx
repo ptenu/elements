@@ -15,23 +15,25 @@ export class PtuFormRow {
   render() {
     return (
       <Host>
-        <label htmlFor={this.for}>
-          {this.label}
+        <header>
+          <label htmlFor={this.for}>
+            {this.label}
+          </label>
           {this.description && (
             <p>
               {this.description}
             </p>
           )}
-        </label>
+          {this.helpText && (
+            <details>
+              <summary>{this.helpText}</summary>
+              <slot name="help"></slot>
+            </details>
+          )}
+        </header>
         <fieldset class={this.inline && "inline"}>
           <slot></slot>
         </fieldset>
-        {this.helpText && (
-          <details>
-            <summary>{this.helpText}</summary>
-            <slot name="help"></slot>
-          </details>
-        )}
       </Host>
     );
   }

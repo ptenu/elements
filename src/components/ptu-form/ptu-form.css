@@ -88,7 +88,8 @@ ptu-form label input[type="radio"] {
     grid-row: unset;
   }
 
-  ptu-form form ptu-form-row details {
+  ptu-form form ptu-form-row details,
+  ptu-form header {
     grid-column: 2 / -1;
   }
 }

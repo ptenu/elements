@@ -1,7 +1,7 @@
 ptu-form-row {
   display: grid;
   grid-template-columns: 1.5em minmax(166px, 22vw) 1fr;
-  grid-template-rows: minmax(0, min-content) auto;
+  /*grid-template-rows: minmax(0, min-content) auto;*/
   counter-increment: form-questions;
   align-items: start;
   border-top: 1px solid var(--colour-grey-400);
@@ -17,13 +17,13 @@ ptu-form-row::before {
   border-right: 1px solid var(--colour-grey-400);
 }
 
-ptu-form-row > label {
+ptu-form-row header {
   display: block;
   padding: .2em .4em;
   width: auto;
 }
 
-ptu-form-row > label p {
+ptu-form-row header label p {
   font-weight: 300;
   font-size: var(--fs-small);
 }
@@ -32,6 +32,7 @@ ptu-form-row details {
   padding: .2rem .4rem;
   font-size: var(--fs-small);
   grid-column: 2 / 3;
+  margin: 0 -.4rem;
 }
 
 ptu-form-row details[open] {
