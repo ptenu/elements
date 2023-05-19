@@ -105,6 +105,7 @@
 
   /* Default fonts */
   --brand-font: system-ui;
+  --header-font: var(--brand-font);
   --system-fonts: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 
 }
@@ -165,6 +166,7 @@ h6 {
   font-weight: inherit;
   line-height: 1.12em;
   margin: .33rem 0 1rem 0;
+  font-family: var(--header-font);
 }
 
 p {
@@ -452,12 +454,12 @@ hgroup h6 {
   margin-bottom: .33em;
   font-style: normal;
   text-align: inherit;
-  font-family: var(--brand-font), var(--system-fonts);
+  font-family: var(--header-font);
 }
 
 ptu-hero .title {
   color: var(--colour-text);
-  font-family: var(--brand-font), var(--system-fonts);
+  font-family: var(--header-font);
   padding: 0;
   margin: 0 0 1.5vmax 0;
 }
@@ -529,6 +531,7 @@ svg {
   margin: .33rem 0 .5rem;
   font-weight: 600;
   font-size: var(--fs-h5);
+  font-family: var(--header-font);
 }
 
 .card > footer {
@@ -566,6 +569,7 @@ dt {
   font-weight: 450;
   grid-column: 1 / 2;
   border-top: 1px solid var(--colour-grey-400);
+  font-family: var(--header-font);
 }
 
 dd {
@@ -692,12 +696,14 @@ caption, legend {
   margin: .5rem 0;
   color: var(--colour-grey-600);
   font-weight: 400;
+  font-family: var(--header-font);
 }
 
 th {
   font-weight: 600;
   text-align: left;
   padding: .24rem 1ch .24rem 0;
+  font-family: var(--header-font);
 }
 
 td {
@@ -762,6 +768,7 @@ tbody tr {
   padding: 1ch;
   margin: var(--layout-gap) 0;
   font-size: 12pt;
+  font-family: var(--brand-font);
 }
 
 .legal-prose h1 {
@@ -1068,7 +1075,7 @@ button,
   padding: .33em .66em .44em .66em;
   cursor: pointer;
   font-size: .9em;
-  font-weight: 600;
+  font-weight: 400;
   margin: 3px;
   box-shadow: 0 -2px 0 inset var(--edge-color);
 }

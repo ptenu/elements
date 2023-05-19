@@ -9,7 +9,7 @@ ptu-section {
 
 .nav-menu-section {
   position: relative;
-  background-color: var(--colour-background);
+  background-color: var(--colour-brand-sand);
   color: var(--colour-text);
   border-bottom: 2px solid var(--colour-shadow);
 }
