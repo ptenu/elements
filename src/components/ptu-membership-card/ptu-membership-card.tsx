@@ -1,4 +1,4 @@
-import { Component, Host, h } from '@stencil/core';
+import {Component, Host, h, Prop} from '@stencil/core';
 
 @Component({
   tag: 'ptu-membership-card',
@@ -6,6 +6,9 @@ import { Component, Host, h } from '@stencil/core';
   shadow: true,
 })
 export class PtuMembershipCard {
+
+  @Prop() name: string;
+  @Prop() membershipNumber: string;
 
   render() {
     return (
@@ -16,9 +19,9 @@ export class PtuMembershipCard {
         </header>
         <section class="details">
           <h2>Name</h2>
-          <p>Alex Hall</p>
+          <p>{this.name}</p>
           <h2>Membership No.</h2>
-          <p>ABC12345</p>
+          <p>{this.membershipNumber}</p>
         </section>
       </Host>
     );

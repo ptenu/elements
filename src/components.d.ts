@@ -95,6 +95,8 @@ export namespace Components {
         "variant": "colour" | "white";
     }
     interface PtuMembershipCard {
+        "membershipNumber": string;
+        "name": string;
     }
     interface PtuNavMenu {
         "visible": boolean;
@@ -512,6 +514,8 @@ declare namespace LocalJSX {
         "variant"?: "colour" | "white";
     }
     interface PtuMembershipCard {
+        "membershipNumber"?: string;
+        "name"?: string;
     }
     interface PtuNavMenu {
         "visible"?: boolean;
