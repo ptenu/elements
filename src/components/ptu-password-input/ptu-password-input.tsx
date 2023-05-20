@@ -20,6 +20,7 @@ export class PtuPasswordInput {
 
   toggle(e) {
     e.preventDefault();
+    e.stopPropagation();
     this.isHidden = !this.isHidden;
   }
 

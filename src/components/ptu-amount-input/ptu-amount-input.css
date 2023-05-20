@@ -1,0 +1,99 @@
+ptu-amount-input {
+  display: block;
+}
+
+ptu-amount-input ul {
+  display: flex;
+  gap: 2ch;
+}
+
+ptu-amount-input .statistic header {
+  text-transform: uppercase;
+  font-size: var(--fs-small);
+  font-weight: 700;
+}
+
+ptu-amount-input .statistic p {
+  font-size: var(--fs-h2)
+}
+
+ptu-amount-input footer {
+  font-size: var(--fs-tiny);
+}
+
+ptu-amount-input input[type=range] {
+  appearance: none;
+  -webkit-appearance: none;
+  background: var(--colour-grey-50);
+  cursor: pointer;
+  height: 2.12em;
+  position: relative;
+  font-size: var(--fs-base);
+}
+
+ptu-amount-input input[type=range]::-moz-range-track {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 2px;
+  background-color: var(--colour-grey-500);
+  background: var(--colour-grey-500);
+}
+
+ptu-amount-input input[type=range]::-webkit-slider-runnable-track {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 2px;
+  background-color: var(--colour-grey-500);
+  background: var(--colour-grey-500);
+}
+
+ptu-amount-input input[type=range]:focus::-moz-range-track {
+  height: 2px;
+  background-color: var(--colour-text);
+  background: var(--colour-text);
+  width: 100%;
+}
+ptu-amount-input input[type=range]:focus::-webkit-slider-runnable-track {
+  height: 2px;
+  background-color: var(--colour-text);
+  background: var(--colour-text);
+  width: 100%;
+}
+
+ptu-amount-input input[type=range]::-moz-range-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 1.33em;
+  width: 1ch;
+  border-radius: var(--border-radius);
+  background-color: var(--colour-grey-700);
+  border: 2px solid var(--colour-grey-50);
+}
+ptu-amount-input input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 1.33em;
+  width: 1ch;
+  border-radius: var(--border-radius);
+  background-color: var(--colour-grey-700);
+  border: 2px solid var(--colour-grey-50);
+  position: relative;
+  top: calc(1.33em / -2 + 1px);
+}
+
+ptu-amount-input input[type=range]:focus::-moz-range-thumb {
+  height: calc(1.33em - 3px);
+  width: calc(1ch - 3px);
+  background-color: var(--colour-grey-700);
+  border-color: transparent;
+  outline: 3px solid var(--colour-focus);
+}
+ptu-amount-input input[type=range]:focus::-webkit-slider-thumb {
+  height: calc(1.33em - 3px);
+  width: calc(1ch - 3px);
+  background-color: var(--colour-grey-700);
+  border-color: transparent;
+  outline: 3px solid var(--colour-focus);
+  position: relative;
+  top: calc(1.33em / -2 + 2px);
+}

@@ -6,6 +6,10 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
+    interface PtuAmountInput {
+        "id": string;
+        "name": string;
+    }
     interface PtuAvatar {
         "name": string;
         "src": string | false;
@@ -128,6 +132,12 @@ export namespace Components {
         "type": string;
         "width": number;
     }
+    interface PtuPaymentMethod {
+        "accountNo": string;
+        "brand": string;
+        "sortCode": string;
+        "type": "card" | "bacs_debit" | "paypal";
+    }
     interface PtuRow {
         "status": string;
         "statusColour": "grey" | "outline" | "blue" | "green" | "yellow" | "red";
@@ -176,6 +186,12 @@ export namespace Components {
     }
 }
 declare global {
+    interface HTMLPtuAmountInputElement extends Components.PtuAmountInput, HTMLStencilElement {
+    }
+    var HTMLPtuAmountInputElement: {
+        prototype: HTMLPtuAmountInputElement;
+        new (): HTMLPtuAmountInputElement;
+    };
     interface HTMLPtuAvatarElement extends Components.PtuAvatar, HTMLStencilElement {
     }
     var HTMLPtuAvatarElement: {
@@ -326,6 +342,12 @@ declare global {
         prototype: HTMLPtuPasswordInputElement;
         new (): HTMLPtuPasswordInputElement;
     };
+    interface HTMLPtuPaymentMethodElement extends Components.PtuPaymentMethod, HTMLStencilElement {
+    }
+    var HTMLPtuPaymentMethodElement: {
+        prototype: HTMLPtuPaymentMethodElement;
+        new (): HTMLPtuPaymentMethodElement;
+    };
     interface HTMLPtuRowElement extends Components.PtuRow, HTMLStencilElement {
     }
     var HTMLPtuRowElement: {
@@ -387,6 +409,7 @@ declare global {
         new (): HTMLPtuVisibilityToggleElement;
     };
     interface HTMLElementTagNameMap {
+        "ptu-amount-input": HTMLPtuAmountInputElement;
         "ptu-avatar": HTMLPtuAvatarElement;
         "ptu-callout": HTMLPtuCalloutElement;
         "ptu-checkbox": HTMLPtuCheckboxElement;
@@ -412,6 +435,7 @@ declare global {
         "ptu-option": HTMLPtuOptionElement;
         "ptu-page-header": HTMLPtuPageHeaderElement;
         "ptu-password-input": HTMLPtuPasswordInputElement;
+        "ptu-payment-method": HTMLPtuPaymentMethodElement;
         "ptu-row": HTMLPtuRowElement;
         "ptu-section": HTMLPtuSectionElement;
         "ptu-statistic": HTMLPtuStatisticElement;
@@ -425,6 +449,10 @@ declare global {
     }
 }
 declare namespace LocalJSX {
+    interface PtuAmountInput {
+        "id"?: string;
+        "name"?: string;
+    }
     interface PtuAvatar {
         "name"?: string;
         "src"?: string | false;
@@ -547,6 +575,12 @@ declare namespace LocalJSX {
         "type"?: string;
         "width"?: number;
     }
+    interface PtuPaymentMethod {
+        "accountNo"?: string;
+        "brand"?: string;
+        "sortCode"?: string;
+        "type"?: "card" | "bacs_debit" | "paypal";
+    }
     interface PtuRow {
         "status"?: string;
         "statusColour"?: "grey" | "outline" | "blue" | "green" | "yellow" | "red";
@@ -594,6 +628,7 @@ declare namespace LocalJSX {
         "elementId"?: string;
     }
     interface IntrinsicElements {
+        "ptu-amount-input": PtuAmountInput;
         "ptu-avatar": PtuAvatar;
         "ptu-callout": PtuCallout;
         "ptu-checkbox": PtuCheckbox;
@@ -619,6 +654,7 @@ declare namespace LocalJSX {
         "ptu-option": PtuOption;
         "ptu-page-header": PtuPageHeader;
         "ptu-password-input": PtuPasswordInput;
+        "ptu-payment-method": PtuPaymentMethod;
         "ptu-row": PtuRow;
         "ptu-section": PtuSection;
         "ptu-statistic": PtuStatistic;
@@ -635,6 +671,7 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
+            "ptu-amount-input": LocalJSX.PtuAmountInput & JSXBase.HTMLAttributes<HTMLPtuAmountInputElement>;
             "ptu-avatar": LocalJSX.PtuAvatar & JSXBase.HTMLAttributes<HTMLPtuAvatarElement>;
             "ptu-callout": LocalJSX.PtuCallout & JSXBase.HTMLAttributes<HTMLPtuCalloutElement>;
             "ptu-checkbox": LocalJSX.PtuCheckbox & JSXBase.HTMLAttributes<HTMLPtuCheckboxElement>;
@@ -660,6 +697,7 @@ declare module "@stencil/core" {
             "ptu-option": LocalJSX.PtuOption & JSXBase.HTMLAttributes<HTMLPtuOptionElement>;
             "ptu-page-header": LocalJSX.PtuPageHeader & JSXBase.HTMLAttributes<HTMLPtuPageHeaderElement>;
             "ptu-password-input": LocalJSX.PtuPasswordInput & JSXBase.HTMLAttributes<HTMLPtuPasswordInputElement>;
+            "ptu-payment-method": LocalJSX.PtuPaymentMethod & JSXBase.HTMLAttributes<HTMLPtuPaymentMethodElement>;
             "ptu-row": LocalJSX.PtuRow & JSXBase.HTMLAttributes<HTMLPtuRowElement>;
             "ptu-section": LocalJSX.PtuSection & JSXBase.HTMLAttributes<HTMLPtuSectionElement>;
             "ptu-statistic": LocalJSX.PtuStatistic & JSXBase.HTMLAttributes<HTMLPtuStatisticElement>;

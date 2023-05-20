@@ -1,0 +1,32 @@
+:host {
+  display: inline-block;
+}
+
+article {
+  border: 1px solid var(--colour-grey-400);
+  padding: .33em .99em .33em .33em;
+  font-size: var(--fs-base);
+  display: flex;
+  gap: 1.33ch;
+  align-items: center;
+}
+
+img {
+  height: 2em;
+  width: auto;
+}
+
+svg {
+  height: auto;
+  width: 1.1ch;
+}
+
+.account-no {
+  display: flex;
+  align-items: center;
+}
+
+.sort-code {
+  padding-right: 1.33ch;
+  border-right: 1px solid var(--colour-grey-500)
+}
