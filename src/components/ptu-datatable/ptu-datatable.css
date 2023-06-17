@@ -3,10 +3,12 @@
   position: relative;
   width: 100%;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 * {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 table {
@@ -157,6 +159,7 @@ select {
   color: var(--colour-link);
   text-decoration: underline;
   border-radius: var(--border-radius);
+  margin-left: 1ch;
 }
 
 select:hover {
