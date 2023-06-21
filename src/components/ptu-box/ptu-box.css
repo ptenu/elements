@@ -1,0 +1,42 @@
+ptu-box {
+  display: block;
+  font-family: var(--font-family);
+  font-size: var(--fs-base);
+  max-width: 70ch;
+}
+
+ptu-box * {
+  font-size: inherit;
+  font-family: inherit;
+}
+
+ptu-box header {
+  background-color: var(--colour-brand-sand);
+  border: 1px solid var(--colour-grey-400);
+  display: flex;
+  align-items: center;
+  padding: calc(var(--layout-gap) / 2);
+}
+
+ptu-box header aside {
+  display: flex;
+  gap: 1ch;
+  align-items: center;
+}
+
+ptu-box header h1 {
+  font-size: var(--fs-h3);
+  margin: 0;
+  font-weight: normal;
+}
+
+ptu-box header aside {
+  margin-left: auto;
+}
+
+ptu-box article {
+  border-width: 0 1px 1px;
+  border-color: var(--colour-grey-400);
+  border-style: solid;
+  padding: calc(var(--layout-gap) / 2);
+}

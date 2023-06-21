@@ -36,7 +36,9 @@ export class PtuNavbar {
     }
 
     // Close the others
-    this.appDialogue.close();
+    if (this.showApps) {
+      this.appDialogue.close();
+    }
     this.menuDialogue.close();
 
     this.userDialogue.show();
@@ -52,7 +54,9 @@ export class PtuNavbar {
     if (this.userName) {
       this.userDialogue.close();
     }
-    this.appDialogue.close();
+    if (this.showApps) {
+      this.appDialogue.close();
+    }
 
     this.menuDialogue.show();
   }

@@ -14,6 +14,9 @@ export namespace Components {
         "name": string;
         "src": string | false;
     }
+    interface PtuBox {
+        "heading": string;
+    }
     interface PtuCallout {
         "dialingCode": string;
         "localNumber": string;
@@ -205,6 +208,12 @@ declare global {
     var HTMLPtuAvatarElement: {
         prototype: HTMLPtuAvatarElement;
         new (): HTMLPtuAvatarElement;
+    };
+    interface HTMLPtuBoxElement extends Components.PtuBox, HTMLStencilElement {
+    }
+    var HTMLPtuBoxElement: {
+        prototype: HTMLPtuBoxElement;
+        new (): HTMLPtuBoxElement;
     };
     interface HTMLPtuCalloutElement extends Components.PtuCallout, HTMLStencilElement {
     }
@@ -413,6 +422,7 @@ declare global {
     interface HTMLElementTagNameMap {
         "ptu-amount-input": HTMLPtuAmountInputElement;
         "ptu-avatar": HTMLPtuAvatarElement;
+        "ptu-box": HTMLPtuBoxElement;
         "ptu-callout": HTMLPtuCalloutElement;
         "ptu-checkbox": HTMLPtuCheckboxElement;
         "ptu-chip": HTMLPtuChipElement;
@@ -457,6 +467,9 @@ declare namespace LocalJSX {
     interface PtuAvatar {
         "name"?: string;
         "src"?: string | false;
+    }
+    interface PtuBox {
+        "heading"?: string;
     }
     interface PtuCallout {
         "dialingCode"?: string;
@@ -636,6 +649,7 @@ declare namespace LocalJSX {
     interface IntrinsicElements {
         "ptu-amount-input": PtuAmountInput;
         "ptu-avatar": PtuAvatar;
+        "ptu-box": PtuBox;
         "ptu-callout": PtuCallout;
         "ptu-checkbox": PtuCheckbox;
         "ptu-chip": PtuChip;
@@ -678,6 +692,7 @@ declare module "@stencil/core" {
         interface IntrinsicElements {
             "ptu-amount-input": LocalJSX.PtuAmountInput & JSXBase.HTMLAttributes<HTMLPtuAmountInputElement>;
             "ptu-avatar": LocalJSX.PtuAvatar & JSXBase.HTMLAttributes<HTMLPtuAvatarElement>;
+            "ptu-box": LocalJSX.PtuBox & JSXBase.HTMLAttributes<HTMLPtuBoxElement>;
             "ptu-callout": LocalJSX.PtuCallout & JSXBase.HTMLAttributes<HTMLPtuCalloutElement>;
             "ptu-checkbox": LocalJSX.PtuCheckbox & JSXBase.HTMLAttributes<HTMLPtuCheckboxElement>;
             "ptu-chip": LocalJSX.PtuChip & JSXBase.HTMLAttributes<HTMLPtuChipElement>;
