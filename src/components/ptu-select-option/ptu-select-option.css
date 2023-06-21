@@ -1,0 +1,55 @@
+* {
+  box-sizing: border-box;
+}
+
+:host {
+  display: block;
+  width: 100%;
+  font-family: var(--font-family);
+}
+
+button.select-option {
+  display: flex;
+  appearance: none;
+  align-items: center;
+  gap: .66ch;
+  width: 100%;
+  text-align: left;
+  border: 2px solid var(--colour-text);
+  border-radius: var(--border-radius);
+  font-size: var(--fs-base);
+  background-color: transparent;
+  padding: .55em 1ch;
+  color: var(--colour-grey-700);
+  cursor: pointer;
+  font-family: inherit;
+}
+
+button.select-option:hover {
+  background-color: var(--colour-grey-200);
+}
+
+button.select-option:focus {
+  border-radius: var(--border-radius);
+  box-shadow: 0 0 0 2px inset var(--colour-text);
+  outline: 3px solid var(--colour-focus)
+}
+
+button.select-option svg {
+  height: auto;
+  width: 2ch;
+  visibility: hidden;
+}
+
+button.select-option.selected {
+  --hover-colour: hsl(190 33% 10% / .41);
+  --edge-color: hsl(190 28% 8% / .44);
+  --edge-color-hover: hsl(190 28% 8% / .55);
+  --edge-color-focus: hsl(190 28% 8% / .66);
+  background-color: var(--colour-blue-600);
+  color: #fff;
+}
+
+button.select-option.selected svg {
+  visibility: unset;
+}

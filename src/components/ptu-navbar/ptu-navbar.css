@@ -1,25 +1,161 @@
-:host {
+ptu-navbar {
   box-sizing: border-box;
   display: block;
   background-color: var(--colour-red-600);
   color: var(--colour-grey-50);
   max-width: 100%;
+  font-family: var(--font-family);
+  box-shadow: 0px -2px 0 inset var(--colour-red-700);
 }
 
-.header-section {
+ptu-navbar .header-section {
   padding: 0 var(--layout-gap);
+  font-family: inherit;
+  font-size: var(--fs-small);
 }
 
-nav {
-  display: flex;
-  align-items: center;
-  width: 100%;
-}
-
-.right-aligned {
-  margin-left: auto;
+ptu-navbar nav {
   position: relative;
   display: flex;
-  align-items: flex-end;
-  font-size: 90%;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  height: 100%;
+  font-family: inherit;
+  font-size: inherit;
+  min-height: 2rem;
+}
+
+ptu-navbar nav > * {
+  flex: 0 1 auto;
+}
+
+ptu-navbar svg {
+  height: 1.12em;
+}
+
+ptu-navbar svg path {
+  fill: currentColor;
+}
+
+ptu-navbar button {
+  position: relative;
+  appearance: none;
+  border: none;
+  background-color: var(--colour-red-600);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1ch;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: inherit;
+  color: var(--colour-grey-50);
+  padding: .55em 1ch;
+  height: 100%;
+  overflow: hidden;
+  margin: 0;
+  box-shadow: 0px -2px 0 inset var(--colour-red-700);
+}
+
+ptu-navbar button > svg {
+  flex: 0 0 auto;
+}
+
+ptu-navbar button > span {
+  flex: 0 1 auto;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+ptu-navbar button:hover {
+  background-color: rgba(10,10,10,.22);
+  border: none;
+}
+
+ptu-navbar button:focus:not([disabled]) {
+  background-color: var(--colour-focus);
+  color: var(--colour-text);
+  outline: none;
+  border: none;
+  box-shadow: 0px -2px 0 inset var(--colour-red-700);
+}
+
+ptu-navbar hr {
+  appearance: none;
+  height: 1.5em;
+  width: 1px;
+  border: none;
+  border-left: 1px solid var(--colour-brand-sand);
+  outline: none;
+  font-family: inherit;
+  font-size: inherit;
+  margin: 0 1ch;
+}
+
+ptu-navbar dialog {
+  appearance: none;
+  position: absolute;
+  font-family: inherit;
+  font-size: inherit;
+  left: 0;
+  top: calc(100% - 2px);
+  margin: 0;
+  z-index: 1000;
+  outline: none;
+  border: 2px solid var(--colour-red-700);
+  border-top: none;
+  background-color: var(--colour-red-600);
+  color: var(--colour-background);
+  padding: var(--layout-gap);
+}
+
+ptu-navbar dialog.right {
+  left: unset;
+  right: 0;
+}
+
+ptu-navbar .close-button {
+  border-radius: var(--border-radius);
+  width: 2em;
+  height: 2em;
+  float: right;
+  display: flex;
+  align-items: center;
+  background-color: var(--colour-red-700);
+  justify-content: center;
+  margin: 0 0 1ch 1ch;
+}
+
+ptu-navbar .close-button:hover {
+  background-color: var(--colour-red-800);
+}
+
+ptu-navbar dialog a {
+  color: #fff;
+}
+
+ptu-navbar dialog a:hover {
+  color: var(--colour-red-100);
+}
+
+
+ptu-navbar dialog * {
+  border-color: rgba(240,240,240, 0.44)
+}
+
+ptu-navbar ptu-avatar {
+  filter: drop-shadow(0 0 3px rgba(10,10,10,.33));
+}
+
+@media screen and (max-width: 554px) {
+  ptu-navbar ptu-avatar,
+  ptu-navbar hr {
+    display: none;
+  }
+
+  ptu-navbar ptu-logo {
+    width: 6.5ch;
+  }
 }

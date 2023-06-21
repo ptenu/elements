@@ -19,45 +19,42 @@
   <script nomodule src='/build/ptu-elements.js'></script>
 </head>
 <body>
-<ptu-navbar>
-  <ptu-logo></ptu-logo>
-    <ptu-visibility-toggle slot='right' element-id='main-menu'>Menu</ptu-visibility-toggle>
-    <ptu-user-button authenticated="false" slot='right'>Login</ptu-user-button>
+<ptu-navbar show-apps user-name="Alexander Hall">
+    <ptu-grid>
+      <section>
+        <hgroup>
+          <h5>About us</h5>
+        </hgroup>
+        <ul>
+          <li><a href='#'>Home</a></li>
+          <li><a href='#'>What we do</a></li>
+          <li><a href='#'>News</a></li>
+          <li><a href='#'>Join</a></li>
+        </ul>
+      </section>
+      <section>
+        <hgroup>
+          <h5>Guidance</h5>
+        </hgroup>
+        <ul>
+          <li><a href='#'>Getting help</a></li>
+          <li><a href='#'>Common problems for tenants</a></li>
+          <li><a href='#'>Advice for landlords</a></li>
+        </ul>
+      </section>
+      <section>
+        <hgroup>
+          <h5>For members</h5>
+        </hgroup>
+        <ul>
+          <li><a href='#'>Manage your membership</a></li>
+          <li><a href='#'>Request help</a></li>
+          <li><a href='#'>Renew or update your payment details</a></li>
+          <li><a href='#'>View the union's policies</a></li>
+        </ul>
+      </section>
+    </ptu-grid>
 </ptu-navbar>
-<ptu-nav-menu id='main-menu'>
-  <section>
-    <hgroup>
-      <h5>About us</h5>
-    </hgroup>
-    <ul>
-      <li><a href='#'>Home</a></li>
-      <li><a href='#'>What we do</a></li>
-      <li><a href='#'>News</a></li>
-      <li><a href='#'>Join</a></li>
-    </ul>
-  </section>
-  <section>
-    <hgroup>
-      <h5>Guidance</h5>
-    </hgroup>
-    <ul>
-      <li><a href='#'>Getting help</a></li>
-      <li><a href='#'>Common problems for tenants</a></li>
-      <li><a href='#'>Advice for landlords</a></li>
-    </ul>
-  </section>
-  <section>
-    <hgroup>
-      <h5>For members</h5>
-    </hgroup>
-    <ul>
-      <li><a href='#'>Manage your membership</a></li>
-      <li><a href='#'>Request help</a></li>
-      <li><a href='#'>Renew or update your payment details</a></li>
-      <li><a href='#'>View the union's policies</a></li>
-    </ul>
-  </section>
-</ptu-nav-menu>
 <ptu-hero>
   <h1 class='title'>We Fight for Renters. <br> Together, We Win.</h1>
   <p><b>Peterborough Tenants Union — like a trade union, but for renters.</b></p>
@@ -211,6 +208,7 @@
       <ptu-password-input label='One-time code' name='password'></ptu-password-input>
     </ptu-fieldset>
 
+
     <h4 id='buttons'><a href='#buttons'>#</a> Buttons</h4>
       <p>
         <button type='button' name='button'>Normal</button>
@@ -337,11 +335,13 @@
 
 <ptu-section>
   <hgroup><h1>Single-page form elements</h1></hgroup>
-  <ptu-form>
+  <ptu-form method="GET">
     <ptu-form-row label="Case Reference"
                   description="If you don't have a case reference, leave this blank."
-                  help-text="How to find this">
-      <input type="text" name="test" size="10">
+                  help-text="How to find this"
+                  for='text1'
+    >
+      <input id="text1" type="text" name="test" size="10">
       <p slot="help">This will be on the front of the yellow book, or in the initial email when the case was created.</p>
     </ptu-form-row>
     <ptu-form-row label="Date of birth" help-text="When were you born?" inline>
@@ -388,6 +388,18 @@
     </ptu-form-row>
     <ptu-form-row label="Textarea example">
       <ptu-textarea name='example-textarea-2' rows='3' maxchars="300"></ptu-textarea>
+    </ptu-form-row>
+    <ptu-form-row required label='Selector' description='Allows selecting from a list of options'>
+      <ptu-select id="testSelect" name='test-select'>
+        <ptu-select-option value='1' text="Option 1">The first option</ptu-select-option>
+        <ptu-select-option value='2' text='Option 2'>The second option</ptu-select-option>
+        <ptu-select-option value='3' text="Option 3">
+          <p><strong>HTML content in an option</strong></p>
+          <p>This is some description of this choice</p>
+        </ptu-select-option>
+        <ptu-select-option value='4' text='Option 4 longer'>The fourth option</ptu-select-option>
+        <ptu-select-option value='5' text='Option 5'>The fith option</ptu-select-option>
+      </ptu-select>
     </ptu-form-row>
   </ptu-form>
 </ptu-section>

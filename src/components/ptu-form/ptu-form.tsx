@@ -7,7 +7,7 @@ import {Component, Host, h, Prop} from '@stencil/core';
 })
 export class PtuForm {
 
-  @Prop() action: string = "/";
+  @Prop() action: string = "";
   @Prop() method: string = "POST";
 
   render() {

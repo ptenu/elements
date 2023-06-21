@@ -102,10 +102,10 @@ export namespace Components {
         "membershipNumber": string;
         "name": string;
     }
-    interface PtuNavMenu {
-        "visible": boolean;
-    }
     interface PtuNavbar {
+        "avatarUrl": string | false;
+        "showApps": boolean;
+        "userName": string | false;
     }
     interface PtuOption {
         "checked": boolean;
@@ -145,6 +145,17 @@ export namespace Components {
     interface PtuSection {
         "sidebar": "none" | "left" | "right";
     }
+    interface PtuSelect {
+        "id": string;
+        "label": string;
+        "multiple": boolean;
+        "name": string;
+    }
+    interface PtuSelectOption {
+        "selected": boolean;
+        "text": string | null;
+        "value": string;
+    }
     interface PtuStatistic {
         "colour": "accent" | "green" | "red" | "yellow" | "blue" | "grey";
         "href": string;
@@ -177,13 +188,10 @@ export namespace Components {
         "multiple": boolean;
         "name": string;
     }
-    interface PtuUserButton {
-        "authenticated": boolean;
-        "href": string | null;
-    }
-    interface PtuVisibilityToggle {
-        "elementId": string;
-    }
+}
+export interface PtuSelectOptionCustomEvent<T> extends CustomEvent<T> {
+    detail: T;
+    target: HTMLPtuSelectOptionElement;
 }
 declare global {
     interface HTMLPtuAmountInputElement extends Components.PtuAmountInput, HTMLStencilElement {
@@ -312,12 +320,6 @@ declare global {
         prototype: HTMLPtuMembershipCardElement;
         new (): HTMLPtuMembershipCardElement;
     };
-    interface HTMLPtuNavMenuElement extends Components.PtuNavMenu, HTMLStencilElement {
-    }
-    var HTMLPtuNavMenuElement: {
-        prototype: HTMLPtuNavMenuElement;
-        new (): HTMLPtuNavMenuElement;
-    };
     interface HTMLPtuNavbarElement extends Components.PtuNavbar, HTMLStencilElement {
     }
     var HTMLPtuNavbarElement: {
@@ -360,6 +362,18 @@ declare global {
         prototype: HTMLPtuSectionElement;
         new (): HTMLPtuSectionElement;
     };
+    interface HTMLPtuSelectElement extends Components.PtuSelect, HTMLStencilElement {
+    }
+    var HTMLPtuSelectElement: {
+        prototype: HTMLPtuSelectElement;
+        new (): HTMLPtuSelectElement;
+    };
+    interface HTMLPtuSelectOptionElement extends Components.PtuSelectOption, HTMLStencilElement {
+    }
+    var HTMLPtuSelectOptionElement: {
+        prototype: HTMLPtuSelectOptionElement;
+        new (): HTMLPtuSelectOptionElement;
+    };
     interface HTMLPtuStatisticElement extends Components.PtuStatistic, HTMLStencilElement {
     }
     var HTMLPtuStatisticElement: {
@@ -396,18 +410,6 @@ declare global {
         prototype: HTMLPtuUploadElement;
         new (): HTMLPtuUploadElement;
     };
-    interface HTMLPtuUserButtonElement extends Components.PtuUserButton, HTMLStencilElement {
-    }
-    var HTMLPtuUserButtonElement: {
-        prototype: HTMLPtuUserButtonElement;
-        new (): HTMLPtuUserButtonElement;
-    };
-    interface HTMLPtuVisibilityToggleElement extends Components.PtuVisibilityToggle, HTMLStencilElement {
-    }
-    var HTMLPtuVisibilityToggleElement: {
-        prototype: HTMLPtuVisibilityToggleElement;
-        new (): HTMLPtuVisibilityToggleElement;
-    };
     interface HTMLElementTagNameMap {
         "ptu-amount-input": HTMLPtuAmountInputElement;
         "ptu-avatar": HTMLPtuAvatarElement;
@@ -430,7 +432,6 @@ declare global {
         "ptu-hero-button": HTMLPtuHeroButtonElement;
         "ptu-logo": HTMLPtuLogoElement;
         "ptu-membership-card": HTMLPtuMembershipCardElement;
-        "ptu-nav-menu": HTMLPtuNavMenuElement;
         "ptu-navbar": HTMLPtuNavbarElement;
         "ptu-option": HTMLPtuOptionElement;
         "ptu-page-header": HTMLPtuPageHeaderElement;
@@ -438,14 +439,14 @@ declare global {
         "ptu-payment-method": HTMLPtuPaymentMethodElement;
         "ptu-row": HTMLPtuRowElement;
         "ptu-section": HTMLPtuSectionElement;
+        "ptu-select": HTMLPtuSelectElement;
+        "ptu-select-option": HTMLPtuSelectOptionElement;
         "ptu-statistic": HTMLPtuStatisticElement;
         "ptu-tab": HTMLPtuTabElement;
         "ptu-tabs": HTMLPtuTabsElement;
         "ptu-text-input": HTMLPtuTextInputElement;
         "ptu-textarea": HTMLPtuTextareaElement;
         "ptu-upload": HTMLPtuUploadElement;
-        "ptu-user-button": HTMLPtuUserButtonElement;
-        "ptu-visibility-toggle": HTMLPtuVisibilityToggleElement;
     }
 }
 declare namespace LocalJSX {
@@ -545,10 +546,10 @@ declare namespace LocalJSX {
         "membershipNumber"?: string;
         "name"?: string;
     }
-    interface PtuNavMenu {
-        "visible"?: boolean;
-    }
     interface PtuNavbar {
+        "avatarUrl"?: string | false;
+        "showApps"?: boolean;
+        "userName"?: string | false;
     }
     interface PtuOption {
         "checked"?: boolean;
@@ -588,6 +589,18 @@ declare namespace LocalJSX {
     interface PtuSection {
         "sidebar"?: "none" | "left" | "right";
     }
+    interface PtuSelect {
+        "id"?: string;
+        "label"?: string;
+        "multiple"?: boolean;
+        "name"?: string;
+    }
+    interface PtuSelectOption {
+        "onToggleOption"?: (event: PtuSelectOptionCustomEvent<{ value: string, text: string }>) => void;
+        "selected"?: boolean;
+        "text"?: string | null;
+        "value"?: string;
+    }
     interface PtuStatistic {
         "colour"?: "accent" | "green" | "red" | "yellow" | "blue" | "grey";
         "href"?: string;
@@ -620,13 +633,6 @@ declare namespace LocalJSX {
         "multiple"?: boolean;
         "name"?: string;
     }
-    interface PtuUserButton {
-        "authenticated"?: boolean;
-        "href"?: string | null;
-    }
-    interface PtuVisibilityToggle {
-        "elementId"?: string;
-    }
     interface IntrinsicElements {
         "ptu-amount-input": PtuAmountInput;
         "ptu-avatar": PtuAvatar;
@@ -649,7 +655,6 @@ declare namespace LocalJSX {
         "ptu-hero-button": PtuHeroButton;
         "ptu-logo": PtuLogo;
         "ptu-membership-card": PtuMembershipCard;
-        "ptu-nav-menu": PtuNavMenu;
         "ptu-navbar": PtuNavbar;
         "ptu-option": PtuOption;
         "ptu-page-header": PtuPageHeader;
@@ -657,14 +662,14 @@ declare namespace LocalJSX {
         "ptu-payment-method": PtuPaymentMethod;
         "ptu-row": PtuRow;
         "ptu-section": PtuSection;
+        "ptu-select": PtuSelect;
+        "ptu-select-option": PtuSelectOption;
         "ptu-statistic": PtuStatistic;
         "ptu-tab": PtuTab;
         "ptu-tabs": PtuTabs;
         "ptu-text-input": PtuTextInput;
         "ptu-textarea": PtuTextarea;
         "ptu-upload": PtuUpload;
-        "ptu-user-button": PtuUserButton;
-        "ptu-visibility-toggle": PtuVisibilityToggle;
     }
 }
 export { LocalJSX as JSX };
@@ -692,7 +697,6 @@ declare module "@stencil/core" {
             "ptu-hero-button": LocalJSX.PtuHeroButton & JSXBase.HTMLAttributes<HTMLPtuHeroButtonElement>;
             "ptu-logo": LocalJSX.PtuLogo & JSXBase.HTMLAttributes<HTMLPtuLogoElement>;
             "ptu-membership-card": LocalJSX.PtuMembershipCard & JSXBase.HTMLAttributes<HTMLPtuMembershipCardElement>;
-            "ptu-nav-menu": LocalJSX.PtuNavMenu & JSXBase.HTMLAttributes<HTMLPtuNavMenuElement>;
             "ptu-navbar": LocalJSX.PtuNavbar & JSXBase.HTMLAttributes<HTMLPtuNavbarElement>;
             "ptu-option": LocalJSX.PtuOption & JSXBase.HTMLAttributes<HTMLPtuOptionElement>;
             "ptu-page-header": LocalJSX.PtuPageHeader & JSXBase.HTMLAttributes<HTMLPtuPageHeaderElement>;
@@ -700,14 +704,14 @@ declare module "@stencil/core" {
             "ptu-payment-method": LocalJSX.PtuPaymentMethod & JSXBase.HTMLAttributes<HTMLPtuPaymentMethodElement>;
             "ptu-row": LocalJSX.PtuRow & JSXBase.HTMLAttributes<HTMLPtuRowElement>;
             "ptu-section": LocalJSX.PtuSection & JSXBase.HTMLAttributes<HTMLPtuSectionElement>;
+            "ptu-select": LocalJSX.PtuSelect & JSXBase.HTMLAttributes<HTMLPtuSelectElement>;
+            "ptu-select-option": LocalJSX.PtuSelectOption & JSXBase.HTMLAttributes<HTMLPtuSelectOptionElement>;
             "ptu-statistic": LocalJSX.PtuStatistic & JSXBase.HTMLAttributes<HTMLPtuStatisticElement>;
             "ptu-tab": LocalJSX.PtuTab & JSXBase.HTMLAttributes<HTMLPtuTabElement>;
             "ptu-tabs": LocalJSX.PtuTabs & JSXBase.HTMLAttributes<HTMLPtuTabsElement>;
             "ptu-text-input": LocalJSX.PtuTextInput & JSXBase.HTMLAttributes<HTMLPtuTextInputElement>;
             "ptu-textarea": LocalJSX.PtuTextarea & JSXBase.HTMLAttributes<HTMLPtuTextareaElement>;
             "ptu-upload": LocalJSX.PtuUpload & JSXBase.HTMLAttributes<HTMLPtuUploadElement>;
-            "ptu-user-button": LocalJSX.PtuUserButton & JSXBase.HTMLAttributes<HTMLPtuUserButtonElement>;
-            "ptu-visibility-toggle": LocalJSX.PtuVisibilityToggle & JSXBase.HTMLAttributes<HTMLPtuVisibilityToggleElement>;
         }
     }
 }

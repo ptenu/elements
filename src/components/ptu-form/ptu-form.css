@@ -43,7 +43,8 @@ ptu-form form fieldset.inline {
 
 ptu-form form input,
 ptu-form form ptu-textarea,
-ptu-form form select {
+ptu-form form select
+{
   position: relative;
   border: 0;
   border-bottom: 1px solid var(--colour-grey-500);
