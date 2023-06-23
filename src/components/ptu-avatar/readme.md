@@ -18,11 +18,13 @@
 ### Used by
 
  - [ptu-facepile](../ptu-facepile)
+ - [ptu-navbar](../ptu-navbar)
 
 ### Graph
 ```mermaid
 graph TD;
   ptu-facepile --> ptu-avatar
+  ptu-navbar --> ptu-avatar
   style ptu-avatar fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

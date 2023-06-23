@@ -80,8 +80,19 @@
   <ptu-box heading="This is a box">
     <a slot="actions" href="#">Add</a>
     <a slot="actions" href="#">Edit</a>
-    <section>
-
+    <section class="value">
+      <header>Full name</header>
+      Alexander Hall
+      <aside>
+        <a href='#'>Change</a>
+      </aside>
+    </section>
+    <section class="value">
+      <header>Date of Birth</header>
+      23rd December 1993
+      <aside>
+        <a href='#'>Change</a>
+      </aside>
     </section>
   </ptu-box>
 </ptu-section>
@@ -95,6 +106,8 @@
       This will show every basic html element and ptu-elements such as buttons etc.
     </p>
   </hgroup>
+
+  <ptu-app-icon app='learning'>Main Website</ptu-app-icon>
 
   <ptu-grid>
     <ptu-statistic title="New Members" colour='green' href='#' link-text='More information'>12</ptu-statistic>

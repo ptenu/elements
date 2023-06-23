@@ -5,6 +5,14 @@
 <!-- Auto Generated Below -->
 
 
+## Properties
+
+| Property           | Attribute           | Description | Type     | Default     |
+| ------------------ | ------------------- | ----------- | -------- | ----------- |
+| `membershipNumber` | `membership-number` |             | `string` | `undefined` |
+| `name`             | `name`              |             | `string` | `undefined` |
+
+
 ## Dependencies
 
 ### Depends on

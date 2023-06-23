@@ -10,6 +10,10 @@ export namespace Components {
         "id": string;
         "name": string;
     }
+    interface PtuAppIcon {
+        "app": string;
+        "href": string | null;
+    }
     interface PtuAvatar {
         "name": string;
         "src": string | false;
@@ -202,6 +206,12 @@ declare global {
     var HTMLPtuAmountInputElement: {
         prototype: HTMLPtuAmountInputElement;
         new (): HTMLPtuAmountInputElement;
+    };
+    interface HTMLPtuAppIconElement extends Components.PtuAppIcon, HTMLStencilElement {
+    }
+    var HTMLPtuAppIconElement: {
+        prototype: HTMLPtuAppIconElement;
+        new (): HTMLPtuAppIconElement;
     };
     interface HTMLPtuAvatarElement extends Components.PtuAvatar, HTMLStencilElement {
     }
@@ -421,6 +431,7 @@ declare global {
     };
     interface HTMLElementTagNameMap {
         "ptu-amount-input": HTMLPtuAmountInputElement;
+        "ptu-app-icon": HTMLPtuAppIconElement;
         "ptu-avatar": HTMLPtuAvatarElement;
         "ptu-box": HTMLPtuBoxElement;
         "ptu-callout": HTMLPtuCalloutElement;
@@ -463,6 +474,10 @@ declare namespace LocalJSX {
     interface PtuAmountInput {
         "id"?: string;
         "name"?: string;
+    }
+    interface PtuAppIcon {
+        "app"?: string;
+        "href"?: string | null;
     }
     interface PtuAvatar {
         "name"?: string;
@@ -648,6 +663,7 @@ declare namespace LocalJSX {
     }
     interface IntrinsicElements {
         "ptu-amount-input": PtuAmountInput;
+        "ptu-app-icon": PtuAppIcon;
         "ptu-avatar": PtuAvatar;
         "ptu-box": PtuBox;
         "ptu-callout": PtuCallout;
@@ -691,6 +707,7 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "ptu-amount-input": LocalJSX.PtuAmountInput & JSXBase.HTMLAttributes<HTMLPtuAmountInputElement>;
+            "ptu-app-icon": LocalJSX.PtuAppIcon & JSXBase.HTMLAttributes<HTMLPtuAppIconElement>;
             "ptu-avatar": LocalJSX.PtuAvatar & JSXBase.HTMLAttributes<HTMLPtuAvatarElement>;
             "ptu-box": LocalJSX.PtuBox & JSXBase.HTMLAttributes<HTMLPtuBoxElement>;
             "ptu-callout": LocalJSX.PtuCallout & JSXBase.HTMLAttributes<HTMLPtuCalloutElement>;

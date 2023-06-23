@@ -19,7 +19,6 @@
  - [ptu-callout](../ptu-callout)
  - [ptu-footer](../ptu-footer)
  - [ptu-hero](../ptu-hero)
- - [ptu-nav-menu](../ptu-nav-menu)
  - [ptu-navbar](../ptu-navbar)
  - [ptu-page-header](../ptu-page-header)
  - [ptu-tabs](../ptu-tabs)
@@ -30,7 +29,6 @@ graph TD;
   ptu-callout --> ptu-section
   ptu-footer --> ptu-section
   ptu-hero --> ptu-section
-  ptu-nav-menu --> ptu-section
   ptu-navbar --> ptu-section
   ptu-page-header --> ptu-section
   ptu-tabs --> ptu-section

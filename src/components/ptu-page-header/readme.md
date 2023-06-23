@@ -9,6 +9,7 @@
 
 | Property         | Attribute         | Description | Type                                                 | Default     |
 | ---------------- | ----------------- | ----------- | ---------------------------------------------------- | ----------- |
+| `bigHeadline`    | `big-headline`    |             | `boolean`                                            | `false`     |
 | `category`       | `category`        |             | `string`                                             | `undefined` |
 | `categoryColour` | `category-colour` |             | `"accent" \| "blue" \| "green" \| "red" \| "yellow"` | `"red"`     |
 | `categoryHref`   | `category-href`   |             | `string`                                             | `undefined` |

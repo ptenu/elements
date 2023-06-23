@@ -85,8 +85,8 @@ export class PtuNavbar {
                 </button>
                 <slot name='apps'></slot>
               </dialog>,
+              <hr />
             ]}
-            <hr />
             <ptu-logo></ptu-logo>
             <button style={{ marginLeft: 'auto' }} onClick={() => this.toggleMenuDialogue()}>
               <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'>
