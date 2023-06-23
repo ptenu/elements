@@ -21,6 +21,7 @@ ptu-form-row header {
   display: block;
   padding: .2em .4em;
   width: auto;
+  font-weight: bold;
 }
 
 ptu-form-row header label p {

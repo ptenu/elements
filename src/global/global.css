@@ -82,7 +82,7 @@
   --colour-link-hover: var(--colour-blue-800);
   --colour-focus: var(--colour-yellow-300);
   --colour-background: var(--colour-grey-100);
-  --colour-border: var(--colour-grey-500);
+  --colour-border: var(--colour-grey-400);
   --colour-shadow: var(--colour-grey-800);
 
   /* Other properties */
@@ -359,30 +359,35 @@ video {
   padding-bottom: .23em;
   margin-top: calc(var(--layout-gap) * 1.5);
 }
+
 .prose h2 {
   font-size: var(--fs-h2);
   border-bottom: 1px solid var(--colour-grey-300);
   padding-bottom: .23em;
   margin-top: calc(var(--layout-gap) * 1.5);
 }
+
 .prose h3 {
   font-size: var(--fs-h3);
   border-bottom: 1px solid var(--colour-grey-300);
   padding-bottom: .23em;
   margin-top: calc(var(--layout-gap) * 1.5);
 }
+
 .prose h4 {
   font-size: var(--fs-h4);;
   border-bottom: 1px solid var(--colour-grey-300);
   padding-bottom: .23em;
   margin-top: calc(var(--layout-gap) * 1.5);
 }
+
 .prose h5 {
   font-size: var(--fs-h5);
   border-bottom: 1px solid var(--colour-grey-300);
   padding-bottom: .23em;
   margin-top: calc(var(--layout-gap) * 1.5);
 }
+
 .prose h6 {
   font-size: var(--fs-h6);
   border-bottom: 1px solid var(--colour-grey-300);
@@ -646,14 +651,12 @@ input[readonly] {
 }
 
 p + ul li,
-.prose ul li
-{
+.prose ul li {
   position: relative;
 }
 
 p + ul li::before,
-.prose ul li::before
-{
+.prose ul li::before {
   position: relative;
   margin-right: 1ch;
   content: " ";
@@ -691,6 +694,7 @@ p + ul li::before,
   background-color: var(--colour-grey-200);
   color: var(--colour-green-700);
 }
+
 .prose del {
   background-color: var(--colour-grey-200);
   color: var(--colour-red-700);
@@ -770,8 +774,7 @@ tbody tr {
 }
 
 .prose ol li,
-.prose ul li
-{
+.prose ul li {
   padding: 0 0 0 1ch;
 }
 
@@ -855,8 +858,7 @@ tbody tr {
   margin-right: 1ch;
 }
 
-.legal-prose p
-{
+.legal-prose p {
   position: relative;
   margin-bottom: 3mm;
   break-inside: avoid-page;
@@ -1082,56 +1084,42 @@ button,
 [type='button'],
 [type='reset'],
 [type='submit'] {
-  --hover-colour: hsl(190 33% 10% / .16);
-  --edge-color: hsl(190 28% 10% / .22);
-  --edge-color-hover: hsl(190 28% 10% / .44);
-  --edge-color-focus: hsl(190 28% 8% / .66);
-  appearance: none;
-  border-radius: var(--border-radius);
-  background-color: var(--colour-blue-50);
-  border: 1px solid hsl(190 28% 10% / .18);
-  padding: .33em .66em .44em .66em;
+  border: 0;
+  outline: 0;
   cursor: pointer;
-  font-size: .9em;
-  font-weight: 400;
-  margin: 3px;
-  box-shadow: 0 -2px 0 inset var(--edge-color);
+  color: var(--colour-text);
+  background-color: var(--colour-grey-50);
+  box-shadow: rgb(0 0 0 / 0%) 0px 0px 0px 0px,
+              rgb(0 0 0 / 0%) 0px 0px 0px 0px,
+              rgb(0 0 0 / 12%) 0px 1px 1px 0px,
+              rgb(60 66 87 / 16%) 0px 0px 0px 1px,
+              rgb(0 0 0 / 0%) 0px 0px 0px 0px,
+              rgb(0 0 0 / 0%) 0px 0px 0px 0px,
+              rgb(60 66 87 / 8%) 0px 2px 5px 0px;
+  border-radius: var(--border-radius);
+  font-size: var(--fs-base);
+  font-weight: normal;
+  padding: .34em .66em;
+  display: inline-block;
+  min-height: 1.1rem;
+  transition: background-color .12s, box-shadow .12s;
 }
 
 .danger-button {
-  --hover-colour:  hsl(341 33% 10% / .41);
-  --edge-color: hsl(341 28% 8% / .44);
-  --edge-color-hover: hsl(341 28% 8% / .55);
-  --edge-color-focus: hsl(190 28% 8% / .66);
-  background-color: var(--colour-red-600);
-  color: #fff;
+  border-color: var(--colour-red-700);
+  color: var(--colour-red-600);
 }
 
 .primary-button {
-  --hover-colour:  hsl(190 33% 10% / .41);
-  --edge-color: hsl(190 28% 8% / .44);
-  --edge-color-hover: hsl(190 28% 8% / .55);
-  --edge-color-focus: hsl(190 28% 8% / .66);
+  color: var(--colour-grey-50);
   background-color: var(--colour-blue-600);
-  color: #fff;
-}
-
-.success-button {
-  --hover-colour:  hsl(83 33% 10% / .41);
-  --edge-color: hsl(83 28% 8% / .44);
-  --edge-color-hover: hsl(83 28% 8% / .55);
-  --edge-color-focus: hsl(83 28% 8% / .66);
-  background-color: var(--colour-green-700);
-  color: #fff;
-}
-
-.warning-button {
-  --hover-colour:  hsl(33 33% 10% / .41);
-  --edge-color: hsl(33 28% 8% / .33);
-  --edge-color-hover: hsl(33 28% 8% / .44);
-  --edge-color-focus: hsl(33 28% 8% / .55);
-  background-color: var(--colour-yellow-600);
-  color: #fff;
+  box-shadow: rgb(0 0 0 / 0%) 0px 0px 0px 0px,
+              rgb(0 0 0 / 0%) 0px 0px 0px 0px,
+              rgb(0 0 0 / 12%) 0px 1px 1px 0px,
+              var(--colour-blue-700) 0px 0px 0px 1px,
+              rgb(0 0 0 / 0%) 0px 0px 0px 0px,
+              rgb(0 0 0 / 0%) 0px 0px 0px 0px,
+              rgb(60 66 87 / 25%) 0px 2px 5px 0px;
 }
 
 button:hover:not([disabled]),
@@ -1139,9 +1127,28 @@ button:hover:not([disabled]),
 [type='button']:hover:not([disabled]),
 [type='reset']:hover:not([disabled]),
 [type='submit']:hover:not([disabled]) {
-  box-shadow: 0 -2px 0 inset var(--edge-color-hover),
-              0 0 30px inset var(--hover-colour);
-;
+  box-shadow: rgb(0 0 0 / 0%) 0px 0px 0px 0px,
+              rgb(0 0 0 / 0%) 0px 0px 0px 0px,
+              rgb(0 0 0 / 12%) 0px 1px 1px 0px,
+              rgb(60 66 87 / 16%) 0px 0px 0px 1px,
+              rgb(0 0 0 / 0%) 0px 0px 0px 0px,
+              rgb(60 66 87 / 8%) 0px 3px 9px 0px,
+              rgb(60 66 87 / 8%) 0px 2px 5px 0px;
+}
+
+button.primary-button:hover:not([disabled]),
+.button.primary-button:hover:not([disabled]),
+.primary-button[type='button']:hover:not([disabled]),
+.primary-button[type='reset']:hover:not([disabled]),
+.primary-button[type='submit']:hover:not([disabled]) {
+  box-shadow: rgb(0 0 0 / 0%) 0px 0px 0px 0px,
+              rgb(0 0 0 / 0%) 0px 0px 0px 0px,
+              rgb(0 0 0 / 12%) 0px 1px 1px 0px,
+              var(--colour-blue-700) 0px 0px 0px 1px,
+              rgb(0 0 0 / 0%) 0px 0px 0px 0px,
+              rgb(60 66 87 / 21%) 0px 3px 9px 0px,
+              rgb(60 66 87 / 25%) 0px 2px 5px 0px;
+
 }
 
 button:focus:not([disabled]),
@@ -1150,17 +1157,16 @@ button:focus:not([disabled]),
 [type='reset']:focus:not([disabled]),
 [type='submit']:focus:not([disabled]) {
   outline: 3px solid var(--colour-focus);
-  border: 1px solid var(--edge-color);
-  box-shadow: 0 -2px 0 inset var(--edge-color-focus);
-}
-
-button:active:not([disabled]),
-.button:active:not([disabled]),
-[type='button']:active:not([disabled]),
-[type='reset']:active:not([disabled]),
-[type='submit']:active:not([disabled]) {
-  box-shadow: 0 -1px 0 inset var(--edge-color-focus),
-              0 0 30px inset var(--hover-colour);
+  outline-offset: 1px;
+  z-index: 100;
+  box-shadow: rgb(0 0 0 / 0%) 0px 0px 0px 0px,
+              rgb(0 0 0 / 0%) 0px 0px 0px 0px,
+              rgb(0 0 0 / 12%) 0px 1px 1px 0px,
+              var(--colour-text) 0px 0px 0px 1px,
+              rgb(0 0 0 / 0%) 0px 0px 0px 0px,
+              rgb(60 66 87 / 16%) 0px 3px 9px 0px,
+              rgb(60 66 87 / 16%) 0px 2px 5px 0px
+              !important;
 }
 
 button[disabled], input[disabled] {
@@ -1201,5 +1207,5 @@ svg path {
 }
 
 .nav-link:hover {
-  background-color: rgba(10,10,10,.23);
+  background-color: rgba(10, 10, 10, .23);
 }

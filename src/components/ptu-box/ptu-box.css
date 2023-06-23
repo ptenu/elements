@@ -3,6 +3,7 @@ ptu-box {
   font-family: var(--font-family);
   font-size: var(--fs-base);
   max-width: 70ch;
+  margin: var(--layout-gap) 0;
 }
 
 ptu-box * {
@@ -12,7 +13,7 @@ ptu-box * {
 
 ptu-box > header {
   background-color: var(--colour-brand-sand);
-  border: 1px solid var(--colour-grey-400);
+  border: 1px solid var(--colour-border);
   display: flex;
   align-items: center;
   padding: calc(var(--layout-gap) / 2);
@@ -25,9 +26,9 @@ ptu-box > header aside {
 }
 
 ptu-box > header h1 {
-  font-size: var(--fs-h3);
+  font-size: var(--fs-h5);
   margin: 0;
-  font-weight: normal;
+  font-weight: bold;
 }
 
 ptu-box > header aside {
@@ -36,7 +37,7 @@ ptu-box > header aside {
 
 ptu-box article {
   border-width: 0 1px 1px;
-  border-color: var(--colour-grey-400);
+  border-color: var(--colour-border);
   border-style: solid;
   padding: calc(var(--layout-gap) / 2);
 }

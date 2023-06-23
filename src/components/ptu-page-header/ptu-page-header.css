@@ -28,7 +28,7 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
   line-height: 1;
   margin: 0;
-  font-weight: 600;
+  font-weight: bold;
   font-size: var(--fs-h2);
   color: var(--colour-text);
   font-family: var(--header-font);
@@ -78,13 +78,12 @@ aside {
 
 .topic {
   color: var(--colour-blue-700);
-  font-weight: 600;
+  font-weight: bold;
   font-size: .866em;
 }
 
 .topic:hover {
   color: var(--colour-blue-900);
-  font-weight: 500;
   text-decoration-thickness: 2px;
 }
 

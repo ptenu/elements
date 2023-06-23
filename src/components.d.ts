@@ -145,10 +145,6 @@ export namespace Components {
         "sortCode": string;
         "type": "card" | "bacs_debit" | "paypal";
     }
-    interface PtuRow {
-        "status": string;
-        "statusColour": "grey" | "outline" | "blue" | "green" | "yellow" | "red";
-    }
     interface PtuSection {
         "sidebar": "none" | "left" | "right";
     }
@@ -369,12 +365,6 @@ declare global {
         prototype: HTMLPtuPaymentMethodElement;
         new (): HTMLPtuPaymentMethodElement;
     };
-    interface HTMLPtuRowElement extends Components.PtuRow, HTMLStencilElement {
-    }
-    var HTMLPtuRowElement: {
-        prototype: HTMLPtuRowElement;
-        new (): HTMLPtuRowElement;
-    };
     interface HTMLPtuSectionElement extends Components.PtuSection, HTMLStencilElement {
     }
     var HTMLPtuSectionElement: {
@@ -458,7 +448,6 @@ declare global {
         "ptu-page-header": HTMLPtuPageHeaderElement;
         "ptu-password-input": HTMLPtuPasswordInputElement;
         "ptu-payment-method": HTMLPtuPaymentMethodElement;
-        "ptu-row": HTMLPtuRowElement;
         "ptu-section": HTMLPtuSectionElement;
         "ptu-select": HTMLPtuSelectElement;
         "ptu-select-option": HTMLPtuSelectOptionElement;
@@ -610,10 +599,6 @@ declare namespace LocalJSX {
         "sortCode"?: string;
         "type"?: "card" | "bacs_debit" | "paypal";
     }
-    interface PtuRow {
-        "status"?: string;
-        "statusColour"?: "grey" | "outline" | "blue" | "green" | "yellow" | "red";
-    }
     interface PtuSection {
         "sidebar"?: "none" | "left" | "right";
     }
@@ -690,7 +675,6 @@ declare namespace LocalJSX {
         "ptu-page-header": PtuPageHeader;
         "ptu-password-input": PtuPasswordInput;
         "ptu-payment-method": PtuPaymentMethod;
-        "ptu-row": PtuRow;
         "ptu-section": PtuSection;
         "ptu-select": PtuSelect;
         "ptu-select-option": PtuSelectOption;
@@ -734,7 +718,6 @@ declare module "@stencil/core" {
             "ptu-page-header": LocalJSX.PtuPageHeader & JSXBase.HTMLAttributes<HTMLPtuPageHeaderElement>;
             "ptu-password-input": LocalJSX.PtuPasswordInput & JSXBase.HTMLAttributes<HTMLPtuPasswordInputElement>;
             "ptu-payment-method": LocalJSX.PtuPaymentMethod & JSXBase.HTMLAttributes<HTMLPtuPaymentMethodElement>;
-            "ptu-row": LocalJSX.PtuRow & JSXBase.HTMLAttributes<HTMLPtuRowElement>;
             "ptu-section": LocalJSX.PtuSection & JSXBase.HTMLAttributes<HTMLPtuSectionElement>;
             "ptu-select": LocalJSX.PtuSelect & JSXBase.HTMLAttributes<HTMLPtuSelectElement>;
             "ptu-select-option": LocalJSX.PtuSelectOption & JSXBase.HTMLAttributes<HTMLPtuSelectOptionElement>;

@@ -13,12 +13,12 @@ export class PtuComplete {
   render() {
     return (
       <Host style={{backgroundColor: `var(--colour-${this.colour}-700)`, color: `var(--colour-${this.colour}-50)`}}>
-        <section>
-          <slot></slot>
-        </section>
         <header>
           {this.headline}
         </header>
+        <section>
+          <slot></slot>
+        </section>
       </Host>
     );
   }

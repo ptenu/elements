@@ -3,7 +3,7 @@ import { Component, Host, h, Prop, getAssetPath } from '@stencil/core';
 @Component({
   tag: 'ptu-app-icon',
   styleUrl: 'ptu-app-icon.css',
-  shadow: true,
+  shadow: false,
   assetsDirs: ['app-icons']
 })
 export class PtuAppIcon {

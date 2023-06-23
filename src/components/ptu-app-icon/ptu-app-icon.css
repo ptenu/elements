@@ -1,20 +1,17 @@
-:host {
-  display: block;
-  color: inherit;
-  font-size: inherit;
-  font-weight: inherit;
+ptu-app-icon {
+  display: inline-block;
 }
 
-a {
+ptu-app-icon a {
   display: flex;
   align-items: center;
   justify-content: flex-start;
   gap: 1ch;
-  font-size: inherit;
-  font-weight: inherit;
-  font-family: var(--font-family);
+  white-space: nowrap;
 }
 
-img {
+ptu-app-icon img {
+  object-fit: contain;
   height: 1.8em;
+  width: 1.8em;
 }
