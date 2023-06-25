@@ -38,7 +38,7 @@ ptu-navbar svg path {
   fill: currentColor;
 }
 
-ptu-navbar button {
+ptu-navbar .navbar > button {
   position: relative;
   appearance: none;
   border: none;
@@ -58,23 +58,23 @@ ptu-navbar button {
   box-shadow: 0px -2px 0 inset var(--colour-red-700);
 }
 
-ptu-navbar button > svg {
+ptu-navbar .navbar > button > svg {
   flex: 0 0 auto;
 }
 
-ptu-navbar button > span {
+ptu-navbar .navbar > button > span {
   flex: 0 1 auto;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
 
-ptu-navbar button:hover {
+ptu-navbar .navbar > button:hover {
   background-color: rgba(10,10,10,.22);
   border: none;
 }
 
-ptu-navbar button:focus:not([disabled]) {
+ptu-navbar .navbar > button:focus:not([disabled]) {
   background-color: var(--colour-focus);
   color: var(--colour-text);
   outline: none;
@@ -100,15 +100,16 @@ ptu-navbar dialog {
   font-family: inherit;
   font-size: inherit;
   left: 0;
-  top: calc(100% - 2px);
+  top: 66%;
   margin: 0;
   z-index: 1000;
   outline: none;
   border: 2px solid var(--colour-red-700);
-  border-top: none;
-  background-color: var(--colour-red-600);
-  color: var(--colour-background);
+  background-color: var(--colour-background);
   padding: var(--layout-gap);
+  width: 100%;
+  box-shadow: 0 0 10px -5px var(--colour-shadow),
+              0 10px 30px -10px var(--colour-shadow);
 }
 
 ptu-navbar dialog.right {
@@ -117,32 +118,15 @@ ptu-navbar dialog.right {
 }
 
 ptu-navbar .close-button {
-  border-radius: var(--border-radius);
-  width: 2em;
-  height: 2em;
   float: right;
+  height: 2em;
+  width: 2em;
   display: flex;
-  align-items: center;
-  background-color: var(--colour-red-700);
   justify-content: center;
+  align-items: center;
+  padding: 0;
   margin: 0 0 1ch 1ch;
-}
-
-ptu-navbar .close-button:hover {
-  background-color: var(--colour-red-800);
-}
-
-ptu-navbar dialog a {
-  color: #fff;
-}
-
-ptu-navbar dialog a:hover {
-  color: #fff;
-}
-
-
-ptu-navbar dialog * {
-  border-color: rgba(240,240,240, 0.44)
+  border-radius: 100%;
 }
 
 ptu-navbar ptu-avatar {

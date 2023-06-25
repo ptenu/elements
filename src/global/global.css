@@ -1200,12 +1200,6 @@ svg path {
 }
 
 .nav-link {
-  width: 100%;
-  border-radius: var(--border-radius);
   display: block;
-  padding: .5em 1ch;
-}
-
-.nav-link:hover {
-  background-color: rgba(10, 10, 10, .23);
+  margin: .5em 0;
 }
