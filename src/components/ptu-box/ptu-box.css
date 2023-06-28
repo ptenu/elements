@@ -72,5 +72,11 @@ ptu-box .value header {
 ptu-box .value aside {
   grid-column: 2 / -1;
   grid-row: 1 / 2;
-  text-align: right;
+  display: flex;
+  justify-content: end;
+  gap: 1ch;
+}
+
+ptu-box table tr:last-of-type {
+  border: none;
 }

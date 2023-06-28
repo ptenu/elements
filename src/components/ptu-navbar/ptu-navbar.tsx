@@ -26,7 +26,7 @@ export class PtuNavbar {
     }
     this.menuDialogue.close();
 
-    this.appDialogue.show();
+    this.appDialogue.showModal();
   }
 
   toggleUserDialogue() {
@@ -41,7 +41,7 @@ export class PtuNavbar {
     }
     this.menuDialogue.close();
 
-    this.userDialogue.show();
+    this.userDialogue.showModal();
   }
 
   toggleMenuDialogue() {
@@ -58,7 +58,7 @@ export class PtuNavbar {
       this.appDialogue.close();
     }
 
-    this.menuDialogue.show();
+    this.menuDialogue.showModal();
   }
 
   render() {
@@ -77,15 +77,19 @@ export class PtuNavbar {
                     </span>
               </button>,
               <dialog ref={el => this.appDialogue = el as HTMLDialogElement}>
-                <button onClick={() => this.toggleAppDialogue()} class='close-button'>
-                  <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'>
-                    <path
-                      d='M12.0007 10.5865L16.9504 5.63672L18.3646 7.05093L13.4149 12.0007L18.3646 16.9504L16.9504 18.3646L12.0007 13.4149L7.05093 18.3646L5.63672 16.9504L10.5865 12.0007L5.63672 7.05093L7.05093 5.63672L12.0007 10.5865Z'></path>
-                  </svg>
-                </button>
-                <slot name='apps'></slot>
+                <article class='flex'>
+                  <button onClick={() => this.toggleAppDialogue()} class='close-button'>
+                    <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'>
+                      <path
+                        d='M12.0007 10.5865L16.9504 5.63672L18.3646 7.05093L13.4149 12.0007L18.3646 16.9504L16.9504 18.3646L12.0007 13.4149L7.05093 18.3646L5.63672 16.9504L10.5865 12.0007L5.63672 7.05093L7.05093 5.63672L12.0007 10.5865Z'></path>
+                    </svg>
+                  </button>
+                  <section class='container'>
+                    <slot name='apps'></slot>
+                  </section>
+                </article>
               </dialog>,
-              <hr />
+              <hr />,
             ]}
             <ptu-logo></ptu-logo>
             <button style={{ marginLeft: 'auto' }} onClick={() => this.toggleMenuDialogue()}>
@@ -93,17 +97,21 @@ export class PtuNavbar {
                 <path d='M3 4H21V6H3V4ZM3 11H21V13H3V11ZM3 18H21V20H3V18Z'></path>
               </svg>
               <span>
-                    Menu
-                  </span>
+                Menu
+              </span>
             </button>
             <dialog ref={el => this.menuDialogue = el as HTMLDialogElement} class='right'>
-              <button onClick={() => this.toggleMenuDialogue()} class='close-button'>
-                <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'>
-                  <path
-                    d='M12.0007 10.5865L16.9504 5.63672L18.3646 7.05093L13.4149 12.0007L18.3646 16.9504L16.9504 18.3646L12.0007 13.4149L7.05093 18.3646L5.63672 16.9504L10.5865 12.0007L5.63672 7.05093L7.05093 5.63672L12.0007 10.5865Z'></path>
-                </svg>
-              </button>
-              <slot></slot>
+              <article class='flex'>
+                <button onClick={() => this.toggleMenuDialogue()} class='close-button'>
+                  <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'>
+                    <path
+                      d='M12.0007 10.5865L16.9504 5.63672L18.3646 7.05093L13.4149 12.0007L18.3646 16.9504L16.9504 18.3646L12.0007 13.4149L7.05093 18.3646L5.63672 16.9504L10.5865 12.0007L5.63672 7.05093L7.05093 5.63672L12.0007 10.5865Z'></path>
+                  </svg>
+                </button>
+                <section class='container'>
+                  <slot></slot>
+                </section>
+              </article>
             </dialog>
             {this.userName && [
               <hr />,
@@ -118,14 +126,17 @@ export class PtuNavbar {
                 </svg>
               </button>,
               <dialog ref={el => this.userDialogue = el as HTMLDialogElement} class='right'>
-
-                <button onClick={() => this.toggleUserDialogue()} class='close-button'>
-                  <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'>
-                    <path
-                      d='M12.0007 10.5865L16.9504 5.63672L18.3646 7.05093L13.4149 12.0007L18.3646 16.9504L16.9504 18.3646L12.0007 13.4149L7.05093 18.3646L5.63672 16.9504L10.5865 12.0007L5.63672 7.05093L7.05093 5.63672L12.0007 10.5865Z'></path>
-                  </svg>
-                </button>
-                <slot name='user-menu'></slot>
+                <article class='flex'>
+                  <button onClick={() => this.toggleUserDialogue()} class='close-button'>
+                    <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'>
+                      <path
+                        d='M12.0007 10.5865L16.9504 5.63672L18.3646 7.05093L13.4149 12.0007L18.3646 16.9504L16.9504 18.3646L12.0007 13.4149L7.05093 18.3646L5.63672 16.9504L10.5865 12.0007L5.63672 7.05093L7.05093 5.63672L12.0007 10.5865Z'></path>
+                    </svg>
+                  </button>
+                  <section class='container'>
+                    <slot name='user-menu'></slot>
+                  </section>
+                </article>
               </dialog>,
             ]}
           </nav>

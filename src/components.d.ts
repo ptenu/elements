@@ -53,6 +53,12 @@ export namespace Components {
         "colour": "green" | "red" | "grey" | "yellow";
         "headline": string;
     }
+    interface PtuConfirmButton {
+        "formId": string | null;
+        "label": string;
+        "size": "small" | null;
+        "variant": "primary" | "danger" | null;
+    }
     interface PtuDatatable {
         "caption": string;
     }
@@ -251,6 +257,12 @@ declare global {
         prototype: HTMLPtuCompleteElement;
         new (): HTMLPtuCompleteElement;
     };
+    interface HTMLPtuConfirmButtonElement extends Components.PtuConfirmButton, HTMLStencilElement {
+    }
+    var HTMLPtuConfirmButtonElement: {
+        prototype: HTMLPtuConfirmButtonElement;
+        new (): HTMLPtuConfirmButtonElement;
+    };
     interface HTMLPtuDatatableElement extends Components.PtuDatatable, HTMLStencilElement {
     }
     var HTMLPtuDatatableElement: {
@@ -429,6 +441,7 @@ declare global {
         "ptu-chip": HTMLPtuChipElement;
         "ptu-cite": HTMLPtuCiteElement;
         "ptu-complete": HTMLPtuCompleteElement;
+        "ptu-confirm-button": HTMLPtuConfirmButtonElement;
         "ptu-datatable": HTMLPtuDatatableElement;
         "ptu-details": HTMLPtuDetailsElement;
         "ptu-facepile": HTMLPtuFacepileElement;
@@ -506,6 +519,12 @@ declare namespace LocalJSX {
     interface PtuComplete {
         "colour"?: "green" | "red" | "grey" | "yellow";
         "headline"?: string;
+    }
+    interface PtuConfirmButton {
+        "formId"?: string | null;
+        "label"?: string;
+        "size"?: "small" | null;
+        "variant"?: "primary" | "danger" | null;
     }
     interface PtuDatatable {
         "caption": string;
@@ -656,6 +675,7 @@ declare namespace LocalJSX {
         "ptu-chip": PtuChip;
         "ptu-cite": PtuCite;
         "ptu-complete": PtuComplete;
+        "ptu-confirm-button": PtuConfirmButton;
         "ptu-datatable": PtuDatatable;
         "ptu-details": PtuDetails;
         "ptu-facepile": PtuFacepile;
@@ -699,6 +719,7 @@ declare module "@stencil/core" {
             "ptu-chip": LocalJSX.PtuChip & JSXBase.HTMLAttributes<HTMLPtuChipElement>;
             "ptu-cite": LocalJSX.PtuCite & JSXBase.HTMLAttributes<HTMLPtuCiteElement>;
             "ptu-complete": LocalJSX.PtuComplete & JSXBase.HTMLAttributes<HTMLPtuCompleteElement>;
+            "ptu-confirm-button": LocalJSX.PtuConfirmButton & JSXBase.HTMLAttributes<HTMLPtuConfirmButtonElement>;
             "ptu-datatable": LocalJSX.PtuDatatable & JSXBase.HTMLAttributes<HTMLPtuDatatableElement>;
             "ptu-details": LocalJSX.PtuDetails & JSXBase.HTMLAttributes<HTMLPtuDetailsElement>;
             "ptu-facepile": LocalJSX.PtuFacepile & JSXBase.HTMLAttributes<HTMLPtuFacepileElement>;

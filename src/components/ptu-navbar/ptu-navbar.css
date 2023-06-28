@@ -95,30 +95,34 @@ ptu-navbar hr {
 }
 
 ptu-navbar dialog {
-  appearance: none;
-  position: absolute;
-  font-family: inherit;
-  font-size: inherit;
-  left: 0;
-  top: 66%;
-  margin: 0;
-  z-index: 1000;
-  outline: none;
-  border: 2px solid var(--colour-red-700);
-  background-color: var(--colour-background);
-  padding: var(--layout-gap);
   width: 100%;
-  box-shadow: 0 0 10px -5px var(--colour-shadow),
-              0 10px 30px -10px var(--colour-shadow);
+  appearance: none;
+  background: transparent;
+  overflow: visible;
+  margin: var(--layout-gap) auto;
 }
 
-ptu-navbar dialog.right {
-  left: unset;
-  right: 0;
+ptu-navbar dialog::backdrop {
+  background: linear-gradient(rgb(39 39 49 / .55), rgb(19 19 29 / .88));
+}
+
+ptu-navbar dialog .flex {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+ptu-navbar dialog .container {
+  flex:
+    1 1 auto;
+  padding: var(--layout-gap);
+  background-color: var(--colour-background);
+  box-shadow: var(--dialog-shadow);
 }
 
 ptu-navbar .close-button {
-  float: right;
+  flex: 0 0 2em;
   height: 2em;
   width: 2em;
   display: flex;
@@ -127,6 +131,7 @@ ptu-navbar .close-button {
   padding: 0;
   margin: 0 0 1ch 1ch;
   border-radius: 100%;
+  box-shadow: var(--dialog-shadow);
 }
 
 ptu-navbar ptu-avatar {

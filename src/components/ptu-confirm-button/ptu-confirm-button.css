@@ -1,0 +1,29 @@
+ptu-confirm-button {
+  display: block;
+  position: relative;
+}
+
+ptu-confirm-button dialog {
+  text-align: center;
+  padding: var(--layout-gap);
+  border: 1px solid var(--colour-grey-500);
+  border-radius: var(--border-radius);
+  background-color: var(--colour-background);
+  box-shadow: var(--dialog-shadow);
+}
+
+ptu-confirm-button dialog footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1ch;
+  margin-top: .66em;
+}
+
+ptu-confirm-button dialog::backdrop {
+  background-color: rgb(39 39 49 / .55);
+}
+
+ptu-confirm-button dialog footer button {
+}
+

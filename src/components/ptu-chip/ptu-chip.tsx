@@ -14,6 +14,7 @@ export class PtuChip {
       <Host style={{
         backgroundColor: `var(--colour-${this.colour}-100)`,
         color: `var(--colour-${this.colour}-900)`,
+        fontSize: 'var(--fs-tiny)'
       }}>
         <slot></slot>
       </Host>

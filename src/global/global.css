@@ -83,7 +83,7 @@
   --colour-focus: var(--colour-yellow-300);
   --colour-background: var(--colour-grey-100);
   --colour-border: var(--colour-grey-400);
-  --colour-shadow: var(--colour-grey-800);
+  --colour-shadow: rgb(39 39 42 / .33);
 
   /* Other properties */
   --border-radius: 0;
@@ -108,6 +108,8 @@
   --header-font: var(--brand-font);
   --system-fonts: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 
+  --dialog-shadow: 0 0 10px -5px var(--colour-shadow),
+                   0 10px 30px -10px var(--colour-shadow);
 }
 
 *,
