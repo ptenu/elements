@@ -483,7 +483,7 @@ button[type="button"].link-button:focus {
   box-shadow: none;
 }
 
-a,
+a:not(.button),
 .link-button,
 button[type="button"].link-button {
   color: var(--colour-link);
