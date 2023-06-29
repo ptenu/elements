@@ -491,7 +491,7 @@ button[type="button"].link-button {
   text-decoration-thickness: 1px;
 }
 
-a:focus,
+a:focus:not(.button),
 .link-button:focus,
 button[type="button"].link-button:focus {
   background-color: var(--colour-focus);
@@ -500,7 +500,7 @@ button[type="button"].link-button:focus {
   text-decoration-thickness: 3px;
 }
 
-a:hover,
+a:hover:not(.button),
 .link-button:hover,
 button[type="button"].link-button:hover {
   color: var(--colour-link-hover);
