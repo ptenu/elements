@@ -10,9 +10,14 @@ export namespace Components {
         "id": string;
         "name": string;
     }
+    interface PtuAppBar {
+        "app": string;
+    }
     interface PtuAppIcon {
         "app": string;
         "href": string | null;
+    }
+    interface PtuAppLayout {
     }
     interface PtuAvatar {
         "name": string;
@@ -209,11 +214,23 @@ declare global {
         prototype: HTMLPtuAmountInputElement;
         new (): HTMLPtuAmountInputElement;
     };
+    interface HTMLPtuAppBarElement extends Components.PtuAppBar, HTMLStencilElement {
+    }
+    var HTMLPtuAppBarElement: {
+        prototype: HTMLPtuAppBarElement;
+        new (): HTMLPtuAppBarElement;
+    };
     interface HTMLPtuAppIconElement extends Components.PtuAppIcon, HTMLStencilElement {
     }
     var HTMLPtuAppIconElement: {
         prototype: HTMLPtuAppIconElement;
         new (): HTMLPtuAppIconElement;
+    };
+    interface HTMLPtuAppLayoutElement extends Components.PtuAppLayout, HTMLStencilElement {
+    }
+    var HTMLPtuAppLayoutElement: {
+        prototype: HTMLPtuAppLayoutElement;
+        new (): HTMLPtuAppLayoutElement;
     };
     interface HTMLPtuAvatarElement extends Components.PtuAvatar, HTMLStencilElement {
     }
@@ -433,7 +450,9 @@ declare global {
     };
     interface HTMLElementTagNameMap {
         "ptu-amount-input": HTMLPtuAmountInputElement;
+        "ptu-app-bar": HTMLPtuAppBarElement;
         "ptu-app-icon": HTMLPtuAppIconElement;
+        "ptu-app-layout": HTMLPtuAppLayoutElement;
         "ptu-avatar": HTMLPtuAvatarElement;
         "ptu-box": HTMLPtuBoxElement;
         "ptu-callout": HTMLPtuCalloutElement;
@@ -477,9 +496,14 @@ declare namespace LocalJSX {
         "id"?: string;
         "name"?: string;
     }
+    interface PtuAppBar {
+        "app"?: string;
+    }
     interface PtuAppIcon {
         "app"?: string;
         "href"?: string | null;
+    }
+    interface PtuAppLayout {
     }
     interface PtuAvatar {
         "name"?: string;
@@ -667,7 +691,9 @@ declare namespace LocalJSX {
     }
     interface IntrinsicElements {
         "ptu-amount-input": PtuAmountInput;
+        "ptu-app-bar": PtuAppBar;
         "ptu-app-icon": PtuAppIcon;
+        "ptu-app-layout": PtuAppLayout;
         "ptu-avatar": PtuAvatar;
         "ptu-box": PtuBox;
         "ptu-callout": PtuCallout;
@@ -711,7 +737,9 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "ptu-amount-input": LocalJSX.PtuAmountInput & JSXBase.HTMLAttributes<HTMLPtuAmountInputElement>;
+            "ptu-app-bar": LocalJSX.PtuAppBar & JSXBase.HTMLAttributes<HTMLPtuAppBarElement>;
             "ptu-app-icon": LocalJSX.PtuAppIcon & JSXBase.HTMLAttributes<HTMLPtuAppIconElement>;
+            "ptu-app-layout": LocalJSX.PtuAppLayout & JSXBase.HTMLAttributes<HTMLPtuAppLayoutElement>;
             "ptu-avatar": LocalJSX.PtuAvatar & JSXBase.HTMLAttributes<HTMLPtuAvatarElement>;
             "ptu-box": LocalJSX.PtuBox & JSXBase.HTMLAttributes<HTMLPtuBoxElement>;
             "ptu-callout": LocalJSX.PtuCallout & JSXBase.HTMLAttributes<HTMLPtuCalloutElement>;
