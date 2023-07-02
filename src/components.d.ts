@@ -18,6 +18,11 @@ export namespace Components {
         "href": string | null;
     }
     interface PtuAppLayout {
+        "app": string;
+        "appHref": string;
+        "pageTitle": string;
+        "section": string;
+        "sectionHref": string;
     }
     interface PtuAvatar {
         "name": string;
@@ -504,6 +509,11 @@ declare namespace LocalJSX {
         "href"?: string | null;
     }
     interface PtuAppLayout {
+        "app"?: string;
+        "appHref"?: string;
+        "pageTitle"?: string;
+        "section"?: string;
+        "sectionHref"?: string;
     }
     interface PtuAvatar {
         "name"?: string;

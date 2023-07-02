@@ -16,3 +16,7 @@ ptu-app-bar section {
   margin: 0 auto;
   height: auto;
 }
+
+ptu-app-bar header {
+  font-size: var(--fs-h6);
+}

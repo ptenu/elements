@@ -14,7 +14,9 @@ export class PtuAppBar {
       <Host>
           <section>
             <ptu-app-icon app={this.app}></ptu-app-icon>
-            <slot></slot>
+            <header>
+              <slot></slot>
+            </header>
           </section>
       </Host>
     );

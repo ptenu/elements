@@ -57,6 +57,21 @@
     </ptu-grid>
 </ptu-navbar>
 <ptu-app-bar app="organisation">Organisation</ptu-app-bar>
+<ptu-app-layout app="organisation"
+                app-href='/'
+                section="Members"
+                section-href='/'
+                page-title="This is a page about something"
+>
+  <nav slot="menu">
+    <a href='/'>Members</a>
+    <a href='/'>Branches</a>
+    <a href='/'>Events</a>
+  </nav>
+  <article>
+    This is the main content
+  </article>
+</ptu-app-layout>
 <ptu-hero>
   <h1 class='title'>We Fight for Renters. <br> Together, We Win.</h1>
   <p><b>Peterborough Tenants Union — like a trade union, but for renters.</b></p>
