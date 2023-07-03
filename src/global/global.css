@@ -1205,3 +1205,12 @@ svg path {
   display: block;
   margin: .5em 0;
 }
+
+.columns {
+  column-width: 25ch;
+  column-gap: 1.5ch;
+}
+
+.columns *:first-child {
+  margin-top: 0;
+}
