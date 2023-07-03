@@ -11,10 +11,19 @@ ptu-app-layout {
 }
 
 ptu-app-layout header.app-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--layout-gap);
   grid-column: 2 / -1;
   grid-row: 1 / 2;
   font-weight: bold;
   font-size: var(--fs-h2);
+}
+
+ptu-app-layout header.app-header h1 {
+  margin: 0;
 }
 
 ptu-app-layout aside.sidebar {
@@ -27,6 +36,7 @@ ptu-app-layout aside.sidebar {
 ptu-app-layout main {
   grid-column: 2 / -1;
   grid-row: 2 / -2;
+  max-width: 60ch;
 }
 
 ptu-app-layout aside.sidebar header {

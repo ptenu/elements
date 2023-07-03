@@ -16,7 +16,12 @@ export class PtuAppLayout {
   render() {
     return (
       <Host>
-        <header class='app-header'>{this.pageTitle}</header>
+        <header class='app-header'>
+          <h1>{this.pageTitle}</h1>
+          <aside>
+            <slot name="actions"></slot>
+          </aside>
+        </header>
         <aside class='sidebar'>
           <input id='menu-toggler' class='toggler' type='checkbox' />
 
