@@ -1,6 +1,6 @@
 {
   "name": "ptu-elements",
-  "version": "0.0.1",
+  "version": "2.0.2",
   "main": "dist/index.cjs.js",
   "module": "dist/index.js",
   "es2015": "dist/esm/index.mjs",
@@ -10,7 +10,7 @@
   "unpkg": "dist/ptu-elements/ptu-elements.esm.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ionic-team/stencil-component-starter.git"
+    "url": "https://github.com/ptenu/elements"
   },
   "files": [
     "dist/",
@@ -24,7 +24,7 @@
     "generate": "stencil generate"
   },
   "dependencies": {
-    "@stencil/core": "^3.0.0",
+    "@stencil/core": "^4.12.2",
     "remixicon": "^3.4.0"
   },
   "devDependencies": {

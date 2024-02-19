@@ -1,4 +1,4 @@
-# ptu-app-icon
+# ptu-app-bar
 
 
 
@@ -10,20 +10,19 @@
 | Property | Attribute | Description | Type     | Default     |
 | -------- | --------- | ----------- | -------- | ----------- |
 | `app`    | `app`     |             | `string` | `undefined` |
-| `href`   | `href`    |             | `string` | `undefined` |
 
 
 ## Dependencies
 
-### Used by
+### Depends on
 
- - [ptu-app-bar](../ptu-app-bar)
+- [ptu-app-icon](../ptu-app-icon)
 
 ### Graph
 ```mermaid
 graph TD;
   ptu-app-bar --> ptu-app-icon
-  style ptu-app-icon fill:#f9f,stroke:#333,stroke-width:4px
+  style ptu-app-bar fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
 ----------------------------------------------

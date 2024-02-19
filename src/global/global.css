@@ -1214,3 +1214,14 @@ svg path {
 .columns *:first-child {
   margin-top: 0;
 }
+
+@media print {
+  ptu-app-bar,
+  ptu-navbar,
+  ptu-tabs,
+  ptu-footer,
+  ptu-callout
+  {
+    display: none;
+  }
+}
